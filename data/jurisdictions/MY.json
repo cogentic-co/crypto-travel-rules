@@ -1,0 +1,28 @@
+{
+  "countryCode": "MY",
+  "name": "Malaysia",
+  "authority": "Securities Commission Malaysia (SC)",
+  "rules": [
+    {
+      "versionId": "MY-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 3000,
+        "currency": "MYR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 3000,
+        "notes": "SC-registered DAX operators must comply with AMLA travel rule requirements. MyKad number required for Malaysian originators."
+      },
+      "authorityUrl": "https://www.sc.com.my/regulation/guidelines/recognizedmarkets/guidelines-on-digital-assets"
+    }
+  ]
+}

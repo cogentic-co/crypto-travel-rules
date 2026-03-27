@@ -1,0 +1,27 @@
+{
+  "countryCode": "ID",
+  "name": "Indonesia",
+  "authority": "Otoritas Jasa Keuangan (OJK) / Bappebti",
+  "rules": [
+    {
+      "versionId": "ID-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 5000000,
+        "currency": "IDR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "OJK assumed crypto oversight from Bappebti in Jan 2025. Licensed crypto asset exchanges must comply with PPATK (FIU) travel rule requirements. NIK (national ID number) required for Indonesian originators."
+      },
+      "authorityUrl": "https://www.ojk.go.id/"
+    }
+  ]
+}

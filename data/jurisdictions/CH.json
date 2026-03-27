@@ -1,0 +1,28 @@
+{
+  "countryCode": "CH",
+  "name": "Switzerland",
+  "authority": "Swiss Financial Market Supervisory Authority (FINMA)",
+  "rules": [
+    {
+      "versionId": "CH-2023-001",
+      "status": "active",
+      "effectiveFrom": "2023-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "CHF",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address", "dateOfBirth"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "FINMA requires VASPs to comply with AMLA travel rule obligations. Transfers to/from unhosted wallets above CHF 1,000 require identity verification of the wallet holder."
+      },
+      "authorityUrl": "https://www.finma.ch/en/documentation/finma-guidance/guidance/finma-guidance-02-2019/"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "countryCode": "PH",
+  "name": "Philippines",
+  "authority": "Bangko Sentral ng Pilipinas (BSP)",
+  "rules": [
+    {
+      "versionId": "PH-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 50000,
+        "currency": "PHP",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "BSP Circular 1108 requires VASPs to comply with AMLA travel rule for virtual asset transfers above PHP 50,000."
+      },
+      "authorityUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf"
+    }
+  ]
+}

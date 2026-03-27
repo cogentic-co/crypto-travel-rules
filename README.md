@@ -49,15 +49,41 @@ src/
 
 ## Jurisdiction Coverage
 
-| Code | Jurisdiction     | Authority | Threshold         | Status  |
-|------|------------------|-----------|--------------------|---------|
-| AU   | Australia        | AUSTRAC   | AUD 1,000 (Jul 2026) | Pending |
-| EU   | European Union   | EBA       | EUR 0 (Jul 2026)  | Pending |
-| SG   | Singapore        | MAS       | SGD 0              | Active  |
-| HK   | Hong Kong        | SFC       | HKD 8,000          | Active  |
-| UK   | United Kingdom   | FCA       | GBP 1,000          | Active  |
+| Code | Jurisdiction       | Authority | Threshold              | Status  |
+|------|--------------------|-----------|------------------------|---------|
+| AE   | UAE                | VARA/SCA  | AED 3,500              | Active  |
+| AR   | Argentina          | CNV       | USD 1,000 equiv.       | Active  |
+| AU   | Australia          | AUSTRAC   | AUD 1,000 (Jul 2026)  | Pending |
+| BH   | Bahrain            | CBB       | BHD 0                  | Active  |
+| BM   | Bermuda            | BMA       | USD 1,000 equiv.       | Active  |
+| BR   | Brazil             | BCB       | BRL 5,000              | Active  |
+| CA   | Canada             | FINTRAC   | CAD 1,000              | Active  |
+| CH   | Switzerland        | FINMA     | CHF 1,000              | Active  |
+| DE   | Germany            | BaFin     | EUR 0 (Jul 2026)      | Pending |
+| EU   | European Union     | EBA       | EUR 0 (Jul 2026)      | Pending |
+| FR   | France             | AMF       | EUR 0 (Jul 2026)      | Pending |
+| HK   | Hong Kong          | SFC       | HKD 8,000              | Active  |
+| ID   | Indonesia          | OJK       | IDR 5,000,000          | Active  |
+| IL   | Israel             | CMISA     | ILS 5,000              | Active  |
+| IN   | India              | FIU-IND   | INR 50,000             | Active  |
+| JP   | Japan              | JFSA      | JPY 0                  | Active  |
+| KE   | Kenya              | CMA       | KES 100,000            | Active  |
+| KR   | South Korea        | FSC/KoFIU | KRW 1,000,000          | Active  |
+| KY   | Cayman Islands     | CIMA      | USD 1,000 equiv.       | Active  |
+| LI   | Liechtenstein      | FMA       | EUR 0 (Jul 2026)      | Pending |
+| MX   | Mexico             | CNBV      | MXN 8,000              | Active  |
+| MY   | Malaysia           | SC        | MYR 3,000              | Active  |
+| NG   | Nigeria            | SEC       | NGN 1,500,000          | Active  |
+| NZ   | New Zealand        | DIA       | NZD 1,000              | Active  |
+| PH   | Philippines        | BSP       | PHP 50,000             | Active  |
+| SG   | Singapore          | MAS       | SGD 0                  | Active  |
+| TH   | Thailand           | SEC       | THB 50,000             | Active  |
+| TR   | Turkey             | SPK       | TRY 15,000             | Active  |
+| UK   | United Kingdom     | FCA       | GBP 1,000              | Active  |
+| US   | United States      | FinCEN    | USD 3,000              | Active  |
+| ZA   | South Africa       | FSCA/FIC  | ZAR 5,000              | Active  |
 
-**Goal: 200+ jurisdictions.** See [Contributing](#contributing) below.
+**31 jurisdictions covered. Goal: 200+.** See [Contributing](#contributing) below.
 
 ## JSON Schema
 

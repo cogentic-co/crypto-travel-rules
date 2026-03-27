@@ -1,0 +1,28 @@
+{
+  "countryCode": "ZA",
+  "name": "South Africa",
+  "authority": "Financial Sector Conduct Authority (FSCA) / Financial Intelligence Centre (FIC)",
+  "rules": [
+    {
+      "versionId": "ZA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 5000,
+        "currency": "ZAR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 5000,
+        "notes": "CASPs licensed under FSCA must comply with FIC Act travel rule requirements. South African ID number required for domestic originators."
+      },
+      "authorityUrl": "https://www.fsca.co.za/Regulatory%20Frameworks/Pages/Crypto-Assets.aspx"
+    }
+  ]
+}

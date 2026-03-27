@@ -1,0 +1,34 @@
+{
+  "countryCode": "ML",
+  "name": "Mali",
+  "authority": "BCEAO",
+  "rules": [
+    {
+      "versionId": "ML-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "FATF-aligned threshold (~USD 1,000 equivalent). BCEAO regional AML framework applies."
+      },
+      "authorityUrl": "https://www.bceao.int/",
+      "threshold": {
+        "amount": 625000,
+        "currency": "XOF",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

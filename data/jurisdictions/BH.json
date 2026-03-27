@@ -1,0 +1,34 @@
+{
+  "countryCode": "BH",
+  "name": "Bahrain",
+  "authority": "Central Bank of Bahrain (CBB)",
+  "rules": [
+    {
+      "versionId": "BH-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "notes": "CBB Crypto-Asset Module requires licensed crypto-asset service providers to transmit originator/beneficiary information for all transfers. Bahrain was among the first MENA jurisdictions to implement comprehensive crypto regulation."
+      },
+      "authorityUrl": "https://www.cbb.gov.bh/",
+      "threshold": {
+        "amount": 0,
+        "currency": "BHD",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "countryCode": "MA",
+  "name": "Morocco",
+  "authority": "Bank Al-Maghrib",
+  "rules": [
+    {
+      "versionId": "MA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 10000,
+        "notes": "Morocco developing crypto regulatory framework after prior ban. Bank Al-Maghrib overseeing AML/CFT. Draft law expected."
+      },
+      "authorityUrl": "https://www.bkam.ma/",
+      "threshold": {
+        "amount": 10000,
+        "currency": "MAD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

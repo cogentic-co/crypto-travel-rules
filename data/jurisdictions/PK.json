@@ -1,0 +1,34 @@
+{
+  "countryCode": "PK",
+  "name": "Pakistan",
+  "authority": "State Bank of Pakistan (SBP) / SECP",
+  "rules": [
+    {
+      "versionId": "PK-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "SBP has not authorized crypto. SECP exploring regulatory framework. AML Act applies."
+      },
+      "authorityUrl": "https://www.sbp.org.pk/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

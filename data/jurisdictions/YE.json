@@ -1,0 +1,34 @@
+{
+  "countryCode": "YE",
+  "name": "Yemen",
+  "authority": "Central Bank of Yemen",
+  "rules": [
+    {
+      "versionId": "YE-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Central Bank has not regulated crypto. Ongoing conflict limits regulatory capacity."
+      },
+      "authorityUrl": "https://www.centralbank.gov.ye/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

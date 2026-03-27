@@ -1,0 +1,35 @@
+{
+  "countryCode": "JE",
+  "name": "Jersey",
+  "authority": "Jersey Financial Services Commission (JFSC)",
+  "rules": [
+    {
+      "versionId": "JE-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "JFSC registers virtual currency exchanges. Proceeds of Crime (Jersey) Law applies."
+      },
+      "authorityUrl": "https://www.jerseyfsc.org/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "GBP",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

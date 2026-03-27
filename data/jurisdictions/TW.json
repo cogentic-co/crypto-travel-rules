@@ -1,0 +1,36 @@
+{
+  "countryCode": "TW",
+  "name": "Taiwan",
+  "authority": "Financial Supervisory Commission (FSC)",
+  "rules": [
+    {
+      "versionId": "TW-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-11-30",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 30000,
+        "notes": "FSC requires VASPs to register and comply with AML/CFT travel rule. Threshold aligned with FATF recommendation (approximately USD/EUR 1,000 equivalent)."
+      },
+      "authorityUrl": "https://www.fsc.gov.tw/en/",
+      "threshold": {
+        "amount": 30000,
+        "currency": "TWD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

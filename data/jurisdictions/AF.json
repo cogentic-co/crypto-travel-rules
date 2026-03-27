@@ -1,0 +1,34 @@
+{
+  "countryCode": "AF",
+  "name": "Afghanistan",
+  "authority": "Da Afghanistan Bank",
+  "rules": [
+    {
+      "versionId": "AF-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Crypto transactions largely unregulated. Da Afghanistan Bank has issued warnings against virtual currency use."
+      },
+      "authorityUrl": "https://dab.gov.af/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

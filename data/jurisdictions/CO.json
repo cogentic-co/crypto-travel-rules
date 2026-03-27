@@ -1,0 +1,34 @@
+{
+  "countryCode": "CO",
+  "name": "Colombia",
+  "authority": "Superintendencia Financiera de Colombia (SFC)",
+  "rules": [
+    {
+      "versionId": "CO-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "SFC regulatory sandbox for crypto. UIAF (FIU) oversees AML reporting. Developing comprehensive crypto regulation."
+      },
+      "authorityUrl": "https://www.superfinanciera.gov.co/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "countryCode": "AI",
+  "name": "Anguilla",
+  "authority": "ECCB / Anguilla Financial Services Commission",
+  "rules": [
+    {
+      "versionId": "AI-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "ECCB member. AFSC AML framework applies. Utility Token Offering Act passed."
+      },
+      "authorityUrl": "https://www.eccb-centralbank.org/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "XCD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

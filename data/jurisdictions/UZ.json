@@ -1,0 +1,34 @@
+{
+  "countryCode": "UZ",
+  "name": "Uzbekistan",
+  "authority": "National Agency of Perspective Projects (NAPP)",
+  "rules": [
+    {
+      "versionId": "UZ-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "NAPP regulates crypto exchange activities. Licensed crypto exchanges operate under AML framework."
+      },
+      "authorityUrl": "https://napp.uz/en/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

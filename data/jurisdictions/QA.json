@@ -1,0 +1,35 @@
+{
+  "countryCode": "QA",
+  "name": "Qatar",
+  "authority": "Qatar Financial Centre Regulatory Authority (QFCRA)",
+  "rules": [
+    {
+      "versionId": "QA-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-09-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 3650,
+        "notes": "QFC Digital Assets Framework. Qatar Central Bank prohibits crypto for banks but QFCRA permits licensed digital asset services."
+      },
+      "authorityUrl": "https://www.qfcra.com/",
+      "threshold": {
+        "amount": 3650,
+        "currency": "QAR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

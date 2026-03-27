@@ -1,0 +1,34 @@
+{
+  "countryCode": "NA",
+  "name": "Namibia",
+  "authority": "Bank of Namibia",
+  "rules": [
+    {
+      "versionId": "NA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Bank of Namibia developing virtual asset regulation. FIA (Financial Intelligence Centre) oversees AML."
+      },
+      "authorityUrl": "https://www.bon.com.na/",
+      "threshold": {
+        "amount": 20000,
+        "currency": "NAD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

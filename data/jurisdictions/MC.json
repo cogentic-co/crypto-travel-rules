@@ -1,0 +1,35 @@
+{
+  "countryCode": "MC",
+  "name": "Monaco",
+  "authority": "Commission de Contrôle des Activités Financières (CCAF)",
+  "rules": [
+    {
+      "versionId": "MC-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "CCAF regulates digital asset service providers. Framework aligned with French/EU standards."
+      },
+      "authorityUrl": "https://ccaf.mc/en/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

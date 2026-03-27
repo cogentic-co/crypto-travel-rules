@@ -1,0 +1,35 @@
+{
+  "countryCode": "IM",
+  "name": "Isle of Man",
+  "authority": "Isle of Man Financial Services Authority (IOMFSA)",
+  "rules": [
+    {
+      "versionId": "IM-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "IOMFSA Designated Businesses (Registration and Oversight) Act. Early adopter of crypto regulation."
+      },
+      "authorityUrl": "https://www.iomfsa.im/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "GBP",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

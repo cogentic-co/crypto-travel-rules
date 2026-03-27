@@ -1,0 +1,35 @@
+{
+  "countryCode": "SC",
+  "name": "Seychelles",
+  "authority": "Financial Services Authority (FSA) Seychelles",
+  "rules": [
+    {
+      "versionId": "SC-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "FSA oversees digital asset businesses. Seychelles hosts several major crypto exchanges. AML Act applies."
+      },
+      "authorityUrl": "https://www.fsaseychelles.sc/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

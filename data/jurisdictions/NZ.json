@@ -1,0 +1,34 @@
+{
+  "countryCode": "NZ",
+  "name": "New Zealand",
+  "authority": "Department of Internal Affairs (DIA)",
+  "rules": [
+    {
+      "versionId": "NZ-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "AML/CFT Act applies to virtual asset service providers registered with DIA. Travel rule for wire transfers (including crypto) applies at NZD 1,000 threshold."
+      },
+      "authorityUrl": "https://www.dia.govt.nz/AML-CFT-Virtual-Asset-Service-Providers",
+      "threshold": {
+        "amount": 1000,
+        "currency": "NZD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

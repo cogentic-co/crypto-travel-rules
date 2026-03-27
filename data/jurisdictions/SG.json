@@ -1,0 +1,36 @@
+{
+  "countryCode": "SG",
+  "name": "Singapore",
+  "authority": "Monetary Authority of Singapore (MAS)",
+  "rules": [
+    {
+      "versionId": "SG-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-28",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "notes": "MAS Notice PSN02 requires DPT service providers to obtain and verify originator/beneficiary information for all transfers regardless of amount. Transfers involving unhosted wallets require wallet ownership verification via cryptographic signature or equivalent."
+      },
+      "authorityUrl": "https://www.mas.gov.sg/regulation/notices/psn02-notice-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism",
+      "threshold": {
+        "amount": 0,
+        "currency": "SGD",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "idDocumentNumber",
+          "dateOfBirth"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

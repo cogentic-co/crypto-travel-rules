@@ -1,0 +1,35 @@
+{
+  "countryCode": "BR",
+  "name": "Brazil",
+  "authority": "Banco Central do Brasil (BCB) / Receita Federal",
+  "rules": [
+    {
+      "versionId": "BR-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 5000,
+        "notes": "BCB Normative Resolution requires VASPs to collect and transmit originator/beneficiary data. CPF/CNPJ (tax ID) required for Brazilian originators. Receita Federal mandates monthly reporting of all crypto transactions."
+      },
+      "authorityUrl": "https://www.bcb.gov.br/en/financialstability/virtualassets",
+      "threshold": {
+        "amount": 5000,
+        "currency": "BRL",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

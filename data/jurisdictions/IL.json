@@ -1,0 +1,36 @@
+{
+  "countryCode": "IL",
+  "name": "Israel",
+  "authority": "Capital Market, Insurance and Savings Authority (CMISA)",
+  "rules": [
+    {
+      "versionId": "IL-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-11-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 5000,
+        "notes": "Financial Asset Service Providers Law requires licensed VASPs to comply with AML/CFT travel rule. Israeli ID (Teudat Zehut) required for domestic originators."
+      },
+      "authorityUrl": "https://www.gov.il/en/departments/capital_market_insurance_and_saving",
+      "threshold": {
+        "amount": 5000,
+        "currency": "ILS",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

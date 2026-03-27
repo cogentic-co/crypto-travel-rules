@@ -1,0 +1,34 @@
+{
+  "countryCode": "LK",
+  "name": "Sri Lanka",
+  "authority": "Central Bank of Sri Lanka",
+  "rules": [
+    {
+      "versionId": "LK-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "CBSL has not authorized crypto but is developing blockchain regulation framework. AML Act applies."
+      },
+      "authorityUrl": "https://www.cbsl.gov.lk/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

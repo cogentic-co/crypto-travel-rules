@@ -1,0 +1,34 @@
+{
+  "countryCode": "MD",
+  "name": "Moldova",
+  "authority": "National Bank of Moldova",
+  "rules": [
+    {
+      "versionId": "MD-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "National Bank AML/CFT framework applies. Limited crypto-specific regulation. Threshold in USD equivalent."
+      },
+      "authorityUrl": "https://www.bnm.md/en/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

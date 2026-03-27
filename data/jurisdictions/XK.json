@@ -1,0 +1,34 @@
+{
+  "countryCode": "XK",
+  "name": "Kosovo",
+  "authority": "Central Bank of Kosovo",
+  "rules": [
+    {
+      "versionId": "XK-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Central Bank AML framework applies. Limited crypto-specific regulation."
+      },
+      "authorityUrl": "https://bqk-kos.org/?lang=en",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

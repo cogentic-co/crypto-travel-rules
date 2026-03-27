@@ -1,0 +1,66 @@
+{
+  "countryCode": "IE",
+  "name": "Ireland",
+  "authority": "Central Bank of Ireland (CBI)",
+  "rules": [
+    {
+      "versionId": "IE-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-12-30",
+      "effectiveTo": "2026-06-30",
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "CBI registers VASPs under Criminal Justice Act and EU TFR."
+      },
+      "authorityUrl": "https://www.centralbank.ie/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    },
+    {
+      "versionId": "IE-2026-001",
+      "status": "pending",
+      "effectiveFrom": "2026-07-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Full EU TFR enforcement. Zero threshold for CASP-to-CASP transfers."
+      },
+      "authorityUrl": "https://www.centralbank.ie/",
+      "threshold": {
+        "amount": 0,
+        "currency": "EUR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth",
+          "placeOfBirth",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

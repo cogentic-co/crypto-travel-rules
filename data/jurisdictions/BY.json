@@ -1,0 +1,34 @@
+{
+  "countryCode": "BY",
+  "name": "Belarus",
+  "authority": "National Bank of the Republic of Belarus",
+  "rules": [
+    {
+      "versionId": "BY-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Hi-Tech Park (HTP) decree provides crypto framework. National Bank oversees AML compliance. Threshold in USD equivalent."
+      },
+      "authorityUrl": "https://www.nbrb.by/en/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

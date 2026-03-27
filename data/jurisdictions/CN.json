@@ -1,0 +1,35 @@
+{
+  "countryCode": "CN",
+  "name": "China",
+  "authority": "People's Bank of China (PBoC)",
+  "rules": [
+    {
+      "versionId": "CN-2021-001",
+      "status": "active",
+      "effectiveFrom": "2021-09-24",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "notes": "China has banned crypto trading and mining (2021). PBoC prohibits financial institutions from facilitating crypto transactions. Only DCEP/e-CNY is permitted. Travel rule applies to any detected virtual asset transfer."
+      },
+      "authorityUrl": "http://www.pbc.gov.cn/en/",
+      "threshold": {
+        "amount": 0,
+        "currency": "CNY",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

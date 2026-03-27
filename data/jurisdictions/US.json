@@ -1,0 +1,36 @@
+{
+  "countryCode": "US",
+  "name": "United States",
+  "authority": "Financial Crimes Enforcement Network (FinCEN)",
+  "rules": [
+    {
+      "versionId": "US-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 3000,
+        "notes": "FinCEN requires CVC/LTDA recordkeeping and travel rule compliance for transactions at or above $3,000. Proposed rulemaking for unhosted wallets would lower threshold to $250 for certain counterparties."
+      },
+      "authorityUrl": "https://www.fincen.gov/resources/statutes-and-regulations/cvc-final-rule",
+      "threshold": {
+        "amount": 3000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ]
+      }
+    }
+  ]
+}

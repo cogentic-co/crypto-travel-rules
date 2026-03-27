@@ -1,0 +1,35 @@
+{
+  "countryCode": "SM",
+  "name": "San Marino",
+  "authority": "Central Bank of San Marino (BCSM)",
+  "rules": [
+    {
+      "versionId": "SM-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "BCSM blockchain entity framework. Aligned with EU TFR standards."
+      },
+      "authorityUrl": "https://www.bcsm.sm/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

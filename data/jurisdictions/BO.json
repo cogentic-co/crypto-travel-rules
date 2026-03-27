@@ -1,0 +1,34 @@
+{
+  "countryCode": "BO",
+  "name": "Bolivia",
+  "authority": "Autoridad de Supervisión del Sistema Financiero (ASFI)",
+  "rules": [
+    {
+      "versionId": "BO-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Bolivia lifted its crypto ban in June 2024. ASFI developing regulatory framework. AML/CFT law applies."
+      },
+      "authorityUrl": "https://www.asfi.gob.bo/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

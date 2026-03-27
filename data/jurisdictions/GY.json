@@ -1,0 +1,34 @@
+{
+  "countryCode": "GY",
+  "name": "Guyana",
+  "authority": "Bank of Guyana",
+  "rules": [
+    {
+      "versionId": "GY-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Bank of Guyana AML Act applies. Limited crypto regulation."
+      },
+      "authorityUrl": "https://www.bankofguyana.org.gy/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

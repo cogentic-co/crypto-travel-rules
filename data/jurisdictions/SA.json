@@ -1,0 +1,35 @@
+{
+  "countryCode": "SA",
+  "name": "Saudi Arabia",
+  "authority": "Saudi Central Bank (SAMA) / Capital Market Authority",
+  "rules": [
+    {
+      "versionId": "SA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 3750,
+        "notes": "SAMA has not authorized crypto trading. CMA developing virtual asset regulations. AML law applies. Threshold in SAR."
+      },
+      "authorityUrl": "https://www.sama.gov.sa/en-us/",
+      "threshold": {
+        "amount": 3750,
+        "currency": "SAR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

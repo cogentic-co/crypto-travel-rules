@@ -1,0 +1,34 @@
+{
+  "countryCode": "LB",
+  "name": "Lebanon",
+  "authority": "Banque du Liban",
+  "rules": [
+    {
+      "versionId": "LB-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Banque du Liban has not authorized crypto. AML/CFT framework applies. Crypto adoption driven by banking crisis."
+      },
+      "authorityUrl": "https://www.bdl.gov.lb/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

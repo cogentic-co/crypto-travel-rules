@@ -1,0 +1,36 @@
+{
+  "countryCode": "CA",
+  "name": "Canada",
+  "authority": "Financial Transactions and Reports Analysis Centre of Canada (FINTRAC)",
+  "rules": [
+    {
+      "versionId": "CA-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "FINTRAC requires MSBs dealing in virtual currency to comply with travel rule for transfers of CAD 1,000 or more. Beneficial ownership verification required for unhosted wallets."
+      },
+      "authorityUrl": "https://www.fintrac-canafe.gc.ca/guidance-directives/transaction-operation/travel-voyage/1-eng",
+      "threshold": {
+        "amount": 1000,
+        "currency": "CAD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "countryCode": "ZA",
+  "name": "South Africa",
+  "authority": "Financial Sector Conduct Authority (FSCA) / Financial Intelligence Centre (FIC)",
+  "rules": [
+    {
+      "versionId": "ZA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-04-30",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "notes": "FIC Directive 9 applies to all crypto asset transfers regardless of amount. Full originator data (name, ID, address) required for transfers over ZAR 5,000; reduced data (name, ledger address) for transfers below ZAR 5,000. South African ID number required for domestic originators."
+      },
+      "authorityUrl": "https://www.fic.gov.za/wp-content/uploads/2024/04/Consultation-paper-Draft-Directive-9-on-the-travel-rule-relating-to-crypto-asset-transfers.pdf",
+      "threshold": {
+        "amount": 0,
+        "currency": "ZAR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

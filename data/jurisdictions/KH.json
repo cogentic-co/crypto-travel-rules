@@ -1,0 +1,34 @@
+{
+  "countryCode": "KH",
+  "name": "Cambodia",
+  "authority": "National Bank of Cambodia (NBC)",
+  "rules": [
+    {
+      "versionId": "KH-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "NBC has warned against unauthorized crypto use. Bakong digital payment system is official. AML law applies."
+      },
+      "authorityUrl": "https://www.nbc.gov.kh/english/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

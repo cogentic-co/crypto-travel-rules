@@ -1,0 +1,35 @@
+{
+  "countryCode": "HK",
+  "name": "Hong Kong",
+  "authority": "Securities and Futures Commission (SFC)",
+  "rules": [
+    {
+      "versionId": "HK-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "notes": "Licensed VATPs must take reasonable measures to verify the identity of originators and beneficiaries for unhosted wallet transfers exceeding the threshold."
+      },
+      "authorityUrl": "https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines",
+      "threshold": {
+        "amount": 8000,
+        "currency": "HKD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

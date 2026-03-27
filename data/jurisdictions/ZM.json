@@ -1,0 +1,34 @@
+{
+  "countryCode": "ZM",
+  "name": "Zambia",
+  "authority": "Bank of Zambia / Securities and Exchange Commission",
+  "rules": [
+    {
+      "versionId": "ZM-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "SEC Zambia developing virtual asset framework. Bank of Zambia AML applies."
+      },
+      "authorityUrl": "https://www.boz.zm/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

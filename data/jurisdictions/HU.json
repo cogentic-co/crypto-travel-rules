@@ -1,0 +1,66 @@
+{
+  "countryCode": "HU",
+  "name": "Hungary",
+  "authority": "Magyar Nemzeti Bank (MNB)",
+  "rules": [
+    {
+      "versionId": "HU-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-12-30",
+      "effectiveTo": "2026-06-30",
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "MNB registers VASPs and enforces EU TFR. Threshold applied in EUR equivalent."
+      },
+      "authorityUrl": "https://www.mnb.hu/en/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    },
+    {
+      "versionId": "HU-2026-001",
+      "status": "pending",
+      "effectiveFrom": "2026-07-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Full EU TFR enforcement. Zero threshold for CASP-to-CASP transfers."
+      },
+      "authorityUrl": "https://www.mnb.hu/en/",
+      "threshold": {
+        "amount": 0,
+        "currency": "EUR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth",
+          "placeOfBirth",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "countryCode": "PS",
+  "name": "Palestine",
+  "authority": "Palestine Monetary Authority (PMA)",
+  "rules": [
+    {
+      "versionId": "PS-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "PMA has not regulated crypto. General AML framework applies."
+      },
+      "authorityUrl": "https://www.pma.ps/en",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

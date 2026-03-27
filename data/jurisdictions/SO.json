@@ -1,0 +1,34 @@
+{
+  "countryCode": "SO",
+  "name": "Somalia",
+  "authority": "Central Bank of Somalia",
+  "rules": [
+    {
+      "versionId": "SO-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Central Bank developing AML framework. Limited regulatory capacity."
+      },
+      "authorityUrl": "https://www.centralbank.gov.so/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

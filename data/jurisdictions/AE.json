@@ -1,0 +1,35 @@
+{
+  "countryCode": "AE",
+  "name": "United Arab Emirates",
+  "authority": "Virtual Assets Regulatory Authority (VARA) / Securities and Commodities Authority (SCA)",
+  "rules": [
+    {
+      "versionId": "AE-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 3500,
+        "notes": "VARA Dubai regulations and federal SCA framework require licensed VASPs to transmit originator/beneficiary information. Unhosted wallet transfers require risk assessment and verification above AED 3,500."
+      },
+      "authorityUrl": "https://www.vara.ae/en/regulations/",
+      "threshold": {
+        "amount": 3500,
+        "currency": "AED",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

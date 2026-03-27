@@ -1,0 +1,34 @@
+{
+  "countryCode": "MK",
+  "name": "North Macedonia",
+  "authority": "National Bank of North Macedonia",
+  "rules": [
+    {
+      "versionId": "MK-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "National Bank AML/CFT law applies to VASPs. EU accession candidate aligning with TFR."
+      },
+      "authorityUrl": "https://www.nbrm.mk/",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      }
+    }
+  ]
+}

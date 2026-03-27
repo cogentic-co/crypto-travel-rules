@@ -1,0 +1,28 @@
+{
+  "countryCode": "UK",
+  "name": "United Kingdom",
+  "authority": "Financial Conduct Authority (FCA)",
+  "rules": [
+    {
+      "versionId": "UK-2023-001",
+      "status": "active",
+      "effectiveFrom": "2023-09-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "GBP",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address", "dateOfBirth"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "FCA requires cryptoasset businesses to collect and verify originator/beneficiary information. Enhanced due diligence for unhosted wallet transfers above GBP 1,000."
+      },
+      "authorityUrl": "https://www.fca.org.uk/firms/financial-crime/cryptoassets-aml-ctf"
+    }
+  ]
+}

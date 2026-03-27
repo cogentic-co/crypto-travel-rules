@@ -1,0 +1,49 @@
+{
+  "countryCode": "EU",
+  "name": "European Union",
+  "authority": "European Banking Authority (EBA) / National Competent Authorities",
+  "rules": [
+    {
+      "versionId": "EU-2025-001",
+      "status": "active",
+      "effectiveFrom": "2024-12-30",
+      "effectiveTo": "2026-06-30",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "TFR transitional period: CASPs must verify unhosted wallet ownership above EUR 1,000."
+      },
+      "authorityUrl": "https://eur-lex.europa.eu/eli/reg/2023/1113"
+    },
+    {
+      "versionId": "EU-2026-001",
+      "status": "pending",
+      "effectiveFrom": "2026-07-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 0,
+        "currency": "EUR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address", "dateOfBirth", "placeOfBirth", "idDocumentNumber"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Full TFR enforcement. Zero threshold for CASP-to-CASP transfers. Unhosted wallet ownership verification required above EUR 1,000."
+      },
+      "authorityUrl": "https://eur-lex.europa.eu/eli/reg/2023/1113"
+    }
+  ]
+}

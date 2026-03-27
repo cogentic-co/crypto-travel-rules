@@ -1,0 +1,29 @@
+{
+  "name": "crypto-travel-rules",
+  "version": "0.1.0",
+  "description": "Machine-readable directory of global crypto Travel Rule requirements with a TypeScript SDK to handle the Sunrise Issue.",
+  "main": "dist/engine.js",
+  "types": "dist/engine.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "validate": "tsc --noEmit"
+  },
+  "keywords": [
+    "crypto",
+    "travel-rule",
+    "FATF",
+    "IVMS101",
+    "compliance",
+    "AML",
+    "CFT"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cogentic-co/crypto-travel-rules.git"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.5.0"
+  }
+}

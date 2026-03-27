@@ -1,6 +1,6 @@
 # Crypto Travel Rules
 
-A machine-readable JSON directory of global Travel Rule requirements with a TypeScript SDK to handle the **Sunrise Issue** — different jurisdictions enforcing rules at different times.
+A machine-readable JSON directory of global Travel Rule requirements with a TypeScript SDK to handle the **Sunrise Issue** — different jurisdictions enforcing rules at different times. [Contributions welcome](#contributing) — especially new jurisdictions and data accuracy improvements.
 
 ## Why This Exists
 

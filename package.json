@@ -6,7 +6,8 @@
   "types": "dist/engine.d.ts",
   "scripts": {
     "build": "tsc",
-    "validate": "tsc --noEmit"
+    "validate": "tsc --noEmit",
+    "example": "npx ts-node examples/evaluate-transfer.ts"
   },
   "keywords": [
     "crypto",

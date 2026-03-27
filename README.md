@@ -472,11 +472,14 @@ URL to the primary regulatory text, guidance, or authority page. Must link direc
 
 ### Rule Versioning
 
-Each jurisdiction can have multiple rules with non-overlapping date ranges. The `ComplianceEngine` selects the correct version based on the query date.
+A jurisdiction can have multiple rules. The `ComplianceEngine` automatically selects the correct one based on `effectiveFrom` dates — it picks the most recently effective rule for the query date. You don't need to manually flip statuses or maintain `effectiveTo` boundaries.
 
-- Use `effectiveTo: null` for the currently open-ended rule
-- When a new rule is announced, add it with `status: "pending"` and set `effectiveTo` on the current rule to the day before the new rule's `effectiveFrom`
-- When the new rule takes effect, update statuses: `active` → `deprecated`, `pending` → `active`
+**To add a future rule:** just append it to the `rules` array with its `effectiveFrom` date. The engine will start using it automatically when that date arrives.
+
+The `status` field is **informational** (for humans browsing the JSON):
+- `active` — currently in force
+- `pending` — announced, not yet effective
+- `deprecated` — superseded by a newer rule
 
 ## Contributing
 
@@ -504,8 +507,7 @@ We need help reaching 200+ jurisdictions. Here's how to contribute:
 If a country announces new rules or amends thresholds:
 
 1. Add a new entry to the `rules` array with `status: "pending"` and the future `effectiveFrom` date
-2. Set `effectiveTo` on the current active rule to the day before the new rule takes effect
-3. Update `status` from `"active"` to `"deprecated"` once the old rule expires
+2. That's it — the engine picks the correct rule by date automatically
 
 ### Quality Standards
 

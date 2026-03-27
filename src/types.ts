@@ -42,6 +42,13 @@ export interface TransferRequest {
   fiatEquivalent: number;
 }
 
+export interface WalletVerificationResult {
+  required: boolean;
+  threshold: number | null;
+  currency: string | null;
+  notes: string | null;
+}
+
 export interface EvaluationResult {
   triggered: boolean;
   from: {

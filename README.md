@@ -35,7 +35,17 @@ console.log(result.requiredFields);
 // }
 // Union of both jurisdictions' requirements (strictest of the two)
 
-// You can also check a single jurisdiction
+// Check unhosted wallet verification requirements
+const wallet = engine.walletVerification('DE', '2026-08-01');
+console.log(wallet);
+// {
+//   required: true,
+//   threshold: 1000,
+//   currency: "EUR",
+//   notes: "Full EU TFR enforcement..."
+// }
+
+// You can also check a single jurisdiction's rule directly
 const rule = engine.getApplicableRule('DE', '2026-08-01');
 console.log(rule?.threshold);
 // { amount: 0, currency: 'EUR', isZeroThreshold: true }
@@ -248,7 +258,7 @@ PII fields that must be collected and transmitted, split by party.
 
 **unhostedWallets** `object` **required**
 
-Policy for transfers involving self-hosted (non-custodial) wallets.
+Policy for transfers involving unhosted wallets (also called self-hosted or self-custodial wallets). "Unhosted" is the standard FATF/regulatory term used in official guidance and legislation.
 
 | Field | Type | Description |
 |-------|------|-------------|

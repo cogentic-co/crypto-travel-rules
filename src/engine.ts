@@ -6,6 +6,7 @@ import {
   PiiField,
   TransferRequest,
   TravelRuleVersion,
+  WalletVerificationResult,
 } from './types';
 
 function mergeFields(a: PiiField[], b: PiiField[]): PiiField[] {
@@ -77,6 +78,26 @@ export class TravelRuleEngine {
     if (!rule) return false;
     if (rule.threshold.isZeroThreshold) return true;
     return amount >= rule.threshold.amount;
+  }
+
+  /**
+   * Returns the unhosted (self-hosted / self-custodial) wallet verification
+   * requirements for a jurisdiction on a given date.
+   */
+  walletVerification(
+    countryCode: string,
+    date: string | Date = new Date(),
+  ): WalletVerificationResult {
+    const rule = this.getApplicableRule(countryCode, date);
+    if (!rule) {
+      return { required: false, threshold: null, currency: null, notes: null };
+    }
+    return {
+      required: rule.unhostedWallets.verificationRequired,
+      threshold: rule.unhostedWallets.verificationThreshold ?? null,
+      currency: rule.threshold.currency,
+      notes: rule.unhostedWallets.notes ?? null,
+    };
   }
 
   /**

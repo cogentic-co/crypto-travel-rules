@@ -1,0 +1,34 @@
+{
+  "countryCode": "RS",
+  "name": "Serbia",
+  "authority": "National Bank of Serbia (NBS)",
+  "rules": [
+    {
+      "versionId": "RS-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "NBS Digital Assets Law (2021) requires VASP licensing and travel rule compliance."
+      },
+      "authorityUrl": "https://www.nbs.rs/en/"
+    }
+  ]
+}

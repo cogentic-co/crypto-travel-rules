@@ -1,0 +1,34 @@
+{
+  "countryCode": "CM",
+  "name": "Cameroon",
+  "authority": "BEAC",
+  "rules": [
+    {
+      "versionId": "CM-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "XAF",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "CEMAC member. BEAC AML framework applies."
+      },
+      "authorityUrl": "https://www.beac.int/"
+    }
+  ]
+}

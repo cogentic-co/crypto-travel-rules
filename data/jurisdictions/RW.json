@@ -1,0 +1,35 @@
+{
+  "countryCode": "RW",
+  "name": "Rwanda",
+  "authority": "National Bank of Rwanda",
+  "rules": [
+    {
+      "versionId": "RW-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "NBR developing virtual asset regulatory framework. Rwanda aims to be an African fintech hub."
+      },
+      "authorityUrl": "https://www.bnr.rw/"
+    }
+  ]
+}

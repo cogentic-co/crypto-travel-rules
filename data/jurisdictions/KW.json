@@ -1,0 +1,35 @@
+{
+  "countryCode": "KW",
+  "name": "Kuwait",
+  "authority": "Capital Markets Authority of Kuwait",
+  "rules": [
+    {
+      "versionId": "KW-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "KWD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "CMA has not licensed crypto exchanges. Central Bank AML framework applies to any permitted activity."
+      },
+      "authorityUrl": "https://www.cma.gov.kw/en/"
+    }
+  ]
+}

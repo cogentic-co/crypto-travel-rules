@@ -1,0 +1,34 @@
+{
+  "countryCode": "ET",
+  "name": "Ethiopia",
+  "authority": "National Bank of Ethiopia",
+  "rules": [
+    {
+      "versionId": "ET-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "NBE has not authorized crypto. AML/CFT proclamation applies to any virtual asset activity."
+      },
+      "authorityUrl": "https://nbebank.com/"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "countryCode": "IQ",
+  "name": "Iraq",
+  "authority": "Central Bank of Iraq",
+  "rules": [
+    {
+      "versionId": "IQ-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Central Bank has banned crypto transactions. AML/CFT law applies to any detected activity."
+      },
+      "authorityUrl": "https://cbi.iq/"
+    }
+  ]
+}

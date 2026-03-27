@@ -1,0 +1,35 @@
+{
+  "countryCode": "VG",
+  "name": "British Virgin Islands",
+  "authority": "BVI Financial Services Commission (FSC)",
+  "rules": [
+    {
+      "versionId": "VG-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Virtual Assets Service Providers Act 2022. FSC registers VASPs. AML Regulations apply."
+      },
+      "authorityUrl": "https://www.bvifsc.vg/"
+    }
+  ]
+}

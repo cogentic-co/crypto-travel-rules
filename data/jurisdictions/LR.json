@@ -1,0 +1,34 @@
+{
+  "countryCode": "LR",
+  "name": "Liberia",
+  "authority": "Central Bank of Liberia",
+  "rules": [
+    {
+      "versionId": "LR-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Central Bank AML/CFT framework applies. Uses both LRD and USD."
+      },
+      "authorityUrl": "https://www.cbl.org.lr/"
+    }
+  ]
+}

@@ -49,41 +49,27 @@ src/
 
 ## Jurisdiction Coverage
 
-| Code | Jurisdiction       | Authority | Threshold              | Status  |
-|------|--------------------|-----------|------------------------|---------|
-| AE   | UAE                | VARA/SCA  | AED 3,500              | Active  |
-| AR   | Argentina          | CNV       | USD 1,000 equiv.       | Active  |
-| AU   | Australia          | AUSTRAC   | AUD 1,000 (Jul 2026)  | Pending |
-| BH   | Bahrain            | CBB       | BHD 0                  | Active  |
-| BM   | Bermuda            | BMA       | USD 1,000 equiv.       | Active  |
-| BR   | Brazil             | BCB       | BRL 5,000              | Active  |
-| CA   | Canada             | FINTRAC   | CAD 1,000              | Active  |
-| CH   | Switzerland        | FINMA     | CHF 1,000              | Active  |
-| DE   | Germany            | BaFin     | EUR 0 (Jul 2026)      | Pending |
-| EU   | European Union     | EBA       | EUR 0 (Jul 2026)      | Pending |
-| FR   | France             | AMF       | EUR 0 (Jul 2026)      | Pending |
-| HK   | Hong Kong          | SFC       | HKD 8,000              | Active  |
-| ID   | Indonesia          | OJK       | IDR 5,000,000          | Active  |
-| IL   | Israel             | CMISA     | ILS 5,000              | Active  |
-| IN   | India              | FIU-IND   | INR 50,000             | Active  |
-| JP   | Japan              | JFSA      | JPY 0                  | Active  |
-| KE   | Kenya              | CMA       | KES 100,000            | Active  |
-| KR   | South Korea        | FSC/KoFIU | KRW 1,000,000          | Active  |
-| KY   | Cayman Islands     | CIMA      | USD 1,000 equiv.       | Active  |
-| LI   | Liechtenstein      | FMA       | EUR 0 (Jul 2026)      | Pending |
-| MX   | Mexico             | CNBV      | MXN 8,000              | Active  |
-| MY   | Malaysia           | SC        | MYR 3,000              | Active  |
-| NG   | Nigeria            | SEC       | NGN 1,500,000          | Active  |
-| NZ   | New Zealand        | DIA       | NZD 1,000              | Active  |
-| PH   | Philippines        | BSP       | PHP 50,000             | Active  |
-| SG   | Singapore          | MAS       | SGD 0                  | Active  |
-| TH   | Thailand           | SEC       | THB 50,000             | Active  |
-| TR   | Turkey             | SPK       | TRY 15,000             | Active  |
-| UK   | United Kingdom     | FCA       | GBP 1,000              | Active  |
-| US   | United States      | FinCEN    | USD 3,000              | Active  |
-| ZA   | South Africa       | FSCA/FIC  | ZAR 5,000              | Active  |
+**209 jurisdictions** covered across all continents. Each file in `data/jurisdictions/` is named by [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code.
 
-**31 jurisdictions covered. Goal: 200+.** See [Contributing](#contributing) below.
+### Highlights
+
+| Region | Count | Notable |
+|--------|-------|---------|
+| Europe | 44 | All 27 EU member states + EEA + UK, CH, and microstates. EU states include pending 2026 TFR zero-threshold rules. |
+| Asia-Pacific | 32 | JP, KR, SG, HK, AU, TW, and more. Mix of zero-threshold (JP, SG) and developing frameworks. |
+| Americas | 36 | US, CA, BR, MX + Caribbean. Includes BTC legal tender jurisdictions (SV). |
+| Middle East | 13 | AE, SA, QA, BH, IL. Bahrain has zero-threshold. |
+| Africa | 42 | ZA, NG, KE, GH, MU + WAEMU/CEMAC regional frameworks. CAR has BTC legal tender status. |
+| Oceania | 8 | NZ, FJ + Pacific island nations. |
+| Territories | 10 | KY, BM, VG, GI, JE, GG, IM, CW + Crown Dependencies and OFCs. |
+
+### Zero-Threshold Jurisdictions (all transfers)
+
+`BH` · `BS` · `CF` · `CN` · `EU` (Jul 2026) · `GI` · `JP` · `SG` · `SV` · `VA` · `VE` + all EU/EEA states from Jul 2026
+
+Browse all files: [`data/jurisdictions/`](data/jurisdictions/)
+
+See [Contributing](#contributing) to help improve data accuracy.
 
 ## JSON Schema
 

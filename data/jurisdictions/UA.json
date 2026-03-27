@@ -1,0 +1,35 @@
+{
+  "countryCode": "UA",
+  "name": "Ukraine",
+  "authority": "National Securities and Stock Market Commission (NSSMC)",
+  "rules": [
+    {
+      "versionId": "UA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Virtual Assets Law signed 2022. NSSMC oversees VASP licensing. Threshold in USD equivalent."
+      },
+      "authorityUrl": "https://www.nssmc.gov.ua/en/"
+    }
+  ]
+}

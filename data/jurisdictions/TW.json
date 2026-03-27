@@ -1,0 +1,36 @@
+{
+  "countryCode": "TW",
+  "name": "Taiwan",
+  "authority": "Financial Supervisory Commission (FSC)",
+  "rules": [
+    {
+      "versionId": "TW-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-11-30",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000000,
+        "currency": "TWD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000000,
+        "notes": "FSC requires VASPs to register and comply with AML/CFT travel rule. Guidelines issued for virtual asset platforms."
+      },
+      "authorityUrl": "https://www.fsc.gov.tw/en/"
+    }
+  ]
+}

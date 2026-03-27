@@ -1,0 +1,35 @@
+{
+  "countryCode": "TT",
+  "name": "Trinidad and Tobago",
+  "authority": "Central Bank of Trinidad and Tobago / Trinidad and Tobago Securities and Exchange Commission",
+  "rules": [
+    {
+      "versionId": "TT-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "TTD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "TTSEC and CBTT developing virtual asset framework. AML/CFT Act applies."
+      },
+      "authorityUrl": "https://www.central-bank.org.tt/"
+    }
+  ]
+}

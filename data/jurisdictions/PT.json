@@ -1,0 +1,66 @@
+{
+  "countryCode": "PT",
+  "name": "Portugal",
+  "authority": "Banco de Portugal",
+  "rules": [
+    {
+      "versionId": "PT-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-12-30",
+      "effectiveTo": "2026-06-30",
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Banco de Portugal registers VASPs. EU TFR applies. Portugal previously had favorable crypto tax treatment."
+      },
+      "authorityUrl": "https://www.bportugal.pt/"
+    },
+    {
+      "versionId": "PT-2026-001",
+      "status": "pending",
+      "effectiveFrom": "2026-07-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 0,
+        "currency": "EUR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth",
+          "placeOfBirth",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Full EU TFR enforcement. Zero threshold for CASP-to-CASP transfers."
+      },
+      "authorityUrl": "https://www.bportugal.pt/"
+    }
+  ]
+}

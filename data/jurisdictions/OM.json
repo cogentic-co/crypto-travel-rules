@@ -1,0 +1,35 @@
+{
+  "countryCode": "OM",
+  "name": "Oman",
+  "authority": "Capital Market Authority of Oman (CMA)",
+  "rules": [
+    {
+      "versionId": "OM-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "OMR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "CMA developing virtual asset regulatory framework. AML/CFT law applies. Threshold in OMR."
+      },
+      "authorityUrl": "https://www.cma.gov.om/"
+    }
+  ]
+}

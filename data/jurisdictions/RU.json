@@ -1,0 +1,36 @@
+{
+  "countryCode": "RU",
+  "name": "Russia",
+  "authority": "Central Bank of Russia / Ministry of Finance",
+  "rules": [
+    {
+      "versionId": "RU-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Digital Financial Assets Law (2020). Mining legalized (2024). Exchange activities restricted for residents. Central Bank oversees AML compliance."
+      },
+      "authorityUrl": "https://www.cbr.ru/eng/"
+    }
+  ]
+}

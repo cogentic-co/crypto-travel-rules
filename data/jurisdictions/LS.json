@@ -1,0 +1,34 @@
+{
+  "countryCode": "LS",
+  "name": "Lesotho",
+  "authority": "Central Bank of Lesotho",
+  "rules": [
+    {
+      "versionId": "LS-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Central Bank AML framework applies. Part of Common Monetary Area with South Africa."
+      },
+      "authorityUrl": "https://www.centralbank.org.ls/"
+    }
+  ]
+}

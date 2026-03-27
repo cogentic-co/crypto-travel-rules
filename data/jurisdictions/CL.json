@@ -1,0 +1,35 @@
+{
+  "countryCode": "CL",
+  "name": "Chile",
+  "authority": "Comisión para el Mercado Financiero (CMF)",
+  "rules": [
+    {
+      "versionId": "CL-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Fintech Law (2023) requires VASP registration. CMF oversees compliance. RUT (tax ID) required for Chilean originators."
+      },
+      "authorityUrl": "https://www.cmfchile.cl/"
+    }
+  ]
+}

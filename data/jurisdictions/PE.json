@@ -1,0 +1,34 @@
+{
+  "countryCode": "PE",
+  "name": "Peru",
+  "authority": "Superintendencia de Banca, Seguros y AFP (SBS)",
+  "rules": [
+    {
+      "versionId": "PE-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "SBS AML/CFT framework applies. Developing specific virtual asset regulation."
+      },
+      "authorityUrl": "https://www.sbs.gob.pe/"
+    }
+  ]
+}

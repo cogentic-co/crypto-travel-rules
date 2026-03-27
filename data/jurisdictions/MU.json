@@ -1,0 +1,35 @@
+{
+  "countryCode": "MU",
+  "name": "Mauritius",
+  "authority": "Financial Services Commission (FSC) Mauritius",
+  "rules": [
+    {
+      "versionId": "MU-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "FSC Virtual Asset and Initial Token Offering Services Act. Mauritius positions itself as a fintech hub. AML/CFT Act applies."
+      },
+      "authorityUrl": "https://www.fscmauritius.org/"
+    }
+  ]
+}

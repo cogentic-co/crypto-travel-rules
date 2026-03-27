@@ -1,0 +1,34 @@
+{
+  "countryCode": "MW",
+  "name": "Malawi",
+  "authority": "Reserve Bank of Malawi",
+  "rules": [
+    {
+      "versionId": "MW-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Reserve Bank AML framework applies. Has cautioned against crypto."
+      },
+      "authorityUrl": "https://www.rbm.mw/"
+    }
+  ]
+}

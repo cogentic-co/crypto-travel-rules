@@ -1,0 +1,34 @@
+{
+  "countryCode": "PG",
+  "name": "Papua New Guinea",
+  "authority": "Bank of Papua New Guinea",
+  "rules": [
+    {
+      "versionId": "PG-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Bank of PNG general AML/CFT framework applies. No specific crypto regulation."
+      },
+      "authorityUrl": "https://www.bankpng.gov.pg/"
+    }
+  ]
+}

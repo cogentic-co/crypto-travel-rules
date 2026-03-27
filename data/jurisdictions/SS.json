@@ -1,0 +1,34 @@
+{
+  "countryCode": "SS",
+  "name": "South Sudan",
+  "authority": "Bank of South Sudan",
+  "rules": [
+    {
+      "versionId": "SS-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Bank of South Sudan basic AML framework. Very limited financial regulation."
+      },
+      "authorityUrl": "https://www.bankofsouthsudan.org/"
+    }
+  ]
+}

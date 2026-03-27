@@ -1,0 +1,35 @@
+{
+  "countryCode": "AD",
+  "name": "Andorra",
+  "authority": "Andorran Financial Authority (AFA)",
+  "rules": [
+    {
+      "versionId": "AD-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "AFA regulates digital asset service providers. Aligned with EU TFR principles."
+      },
+      "authorityUrl": "https://www.afa.ad/en/"
+    }
+  ]
+}

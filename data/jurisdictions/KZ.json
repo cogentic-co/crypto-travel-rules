@@ -1,0 +1,35 @@
+{
+  "countryCode": "KZ",
+  "name": "Kazakhstan",
+  "authority": "Agency for Regulation and Development of the Financial Market (ARDFM)",
+  "rules": [
+    {
+      "versionId": "KZ-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "AIFC Digital Asset Trading Facility framework. ARDFM oversees crypto exchanges in Astana International Financial Centre."
+      },
+      "authorityUrl": "https://www.gov.kz/memleket/entities/ardfm?lang=en"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "countryCode": "BA",
+  "name": "Bosnia and Herzegovina",
+  "authority": "Banking Agency of FBiH / Banking Agency of RS",
+  "rules": [
+    {
+      "versionId": "BA-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-06-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "notes": "Fragmented regulatory framework. Travel rule applies through entity-level banking agencies."
+      },
+      "authorityUrl": "https://www.fba.ba/"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "countryCode": "BB",
+  "name": "Barbados",
+  "authority": "Central Bank of Barbados / Financial Services Commission",
+  "rules": [
+    {
+      "versionId": "BB-2025-001",
+      "status": "active",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "threshold": {
+        "amount": 1000,
+        "currency": "BBD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "FSC regulates digital asset businesses. Central Bank AML/CFT framework applies."
+      },
+      "authorityUrl": "https://www.centralbank.org.bb/"
+    }
+  ]
+}

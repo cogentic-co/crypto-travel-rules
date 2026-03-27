@@ -18,18 +18,27 @@ npm run build
 ```
 
 ```typescript
-import { ComplianceEngine } from './src/engine';
+import { TravelRuleEngine } from './src/engine';
 
-const engine = new ComplianceEngine();
+const engine = new TravelRuleEngine();
 
-// Get the rule active in Germany on a specific date
+// Evaluate a cross-border transfer: US → AU, $1,000 equivalent
+const result = engine.evaluate({ from: 'US', to: 'AU', fiatEquivalent: 1000 }, '2026-08-01');
+
+console.log(result.triggered);
+// true — AU threshold is AUD 1,000 (triggered), US threshold is USD 3,000 (not triggered)
+
+console.log(result.requiredFields);
+// {
+//   originator: ["fullName", "dateOfBirth", "accountNumber", "address"],
+//   beneficiary: ["fullName", "accountNumber", "townAndCountry"]
+// }
+// Union of both jurisdictions' requirements (strictest of the two)
+
+// You can also check a single jurisdiction
 const rule = engine.getApplicableRule('DE', '2026-08-01');
 console.log(rule?.threshold);
-// { amount: 0, currency: 'EUR', isZeroThreshold: true }  (EU TFR zero-threshold)
-
-// Check if a transaction triggers the travel rule
-const triggered = engine.isRuleTriggered('AU', 1500, '2026-08-01');
-console.log(triggered); // true (threshold is AUD 1,000 after AUSTRAC reform)
+// { amount: 0, currency: 'EUR', isZeroThreshold: true }
 ```
 
 ## Project Structure

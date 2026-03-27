@@ -1,8 +1,18 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { JurisdictionData, TravelRuleVersion } from './types';
+import {
+  EvaluationResult,
+  JurisdictionData,
+  PiiField,
+  TransferRequest,
+  TravelRuleVersion,
+} from './types';
 
-export class ComplianceEngine {
+function mergeFields(a: PiiField[], b: PiiField[]): PiiField[] {
+  return [...new Set([...a, ...b])];
+}
+
+export class TravelRuleEngine {
   private jurisdictions: Map<string, JurisdictionData> = new Map();
 
   constructor(dataDir?: string) {
@@ -67,5 +77,42 @@ export class ComplianceEngine {
     if (!rule) return false;
     if (rule.threshold.isZeroThreshold) return true;
     return amount >= rule.threshold.amount;
+  }
+
+  /**
+   * Evaluates a cross-border transfer against both the originator and
+   * beneficiary jurisdictions. Returns the union of required fields
+   * (the stricter of the two) and whether the travel rule is triggered
+   * by either side.
+   */
+  evaluate(
+    transfer: TransferRequest,
+    date: string | Date = new Date(),
+  ): EvaluationResult {
+    const fromRule = this.getApplicableRule(transfer.from, date);
+    const toRule = this.getApplicableRule(transfer.to, date);
+
+    const fromTriggered = this.isRuleTriggered(transfer.from, transfer.fiatEquivalent, date);
+    const toTriggered = this.isRuleTriggered(transfer.to, transfer.fiatEquivalent, date);
+    const triggered = fromTriggered || toTriggered;
+
+    const originatorFields = mergeFields(
+      fromTriggered && fromRule ? fromRule.requiredFields.originator : [],
+      toTriggered && toRule ? toRule.requiredFields.originator : [],
+    );
+    const beneficiaryFields = mergeFields(
+      fromTriggered && fromRule ? fromRule.requiredFields.beneficiary : [],
+      toTriggered && toRule ? toRule.requiredFields.beneficiary : [],
+    );
+
+    return {
+      triggered,
+      from: { countryCode: transfer.from.toUpperCase(), rule: fromRule, triggered: fromTriggered },
+      to: { countryCode: transfer.to.toUpperCase(), rule: toRule, triggered: toTriggered },
+      requiredFields: {
+        originator: originatorFields,
+        beneficiary: beneficiaryFields,
+      },
+    };
   }
 }

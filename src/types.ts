@@ -35,3 +35,27 @@ export interface JurisdictionData {
   authority: string;
   rules: TravelRuleVersion[];
 }
+
+export interface TransferRequest {
+  from: string;
+  to: string;
+  fiatEquivalent: number;
+}
+
+export interface EvaluationResult {
+  triggered: boolean;
+  from: {
+    countryCode: string;
+    rule: TravelRuleVersion | null;
+    triggered: boolean;
+  };
+  to: {
+    countryCode: string;
+    rule: TravelRuleVersion | null;
+    triggered: boolean;
+  };
+  requiredFields: {
+    originator: PiiField[];
+    beneficiary: PiiField[];
+  };
+}

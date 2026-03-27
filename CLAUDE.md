@@ -61,14 +61,18 @@ npm run validate     # Type-check without emitting
 3. Verify the `countryCode` in the JSON matches the filename
 
 ### Updating a rule
-1. Add a new rule entry to the `rules` array with `status: "pending"`
-2. Set `effectiveTo` on the current active rule
-3. When the new rule takes effect, flip statuses accordingly
+1. Add a new rule entry to the `rules` array with `status: "pending"` and the future `effectiveFrom` date
+2. The engine picks the correct rule by date automatically — no need to maintain `effectiveTo` or flip statuses
 
 ### Testing the engine
 ```typescript
-import { ComplianceEngine } from './src/engine';
-const engine = new ComplianceEngine();
-engine.getApplicableRule('DE', '2026-08-01'); // Returns the zero-threshold TFR rule
-engine.isRuleTriggered('US', 5000);           // Returns true (above USD 3,000 FinCEN threshold)
+import { TravelRuleEngine } from './src/engine';
+const engine = new TravelRuleEngine();
+
+// Evaluate a cross-border transfer
+engine.evaluate({ from: 'US', to: 'AU', fiatEquivalent: 1000 }, '2026-08-01');
+
+// Single jurisdiction lookup
+engine.getApplicableRule('DE', '2026-08-01');
+engine.isRuleTriggered('US', 5000);
 ```

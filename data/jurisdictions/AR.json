@@ -1,7 +1,7 @@
 {
   "countryCode": "AR",
   "name": "Argentina",
-  "authority": "Comisión Nacional de Valores (CNV)",
+  "authority": "Unidad de Información Financiera (UIF) / Comisión Nacional de Valores (CNV)",
   "rules": [
     {
       "versionId": "AR-2025-001",
@@ -14,13 +14,20 @@
         "isZeroThreshold": false
       },
       "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "CNV Resolution 994/2025 requires registered VASPs to comply with UIF (FIU) travel rule obligations. CUIT/CUIL tax ID required for Argentine originators. Threshold denominated in USD equivalent."
+        "notes": "UIF (FIU) oversees AML/CFT compliance. CNV regulates crypto asset service providers. CUIT/CUIL tax ID required for Argentine originators. Threshold denominated in USD equivalent."
       },
       "authorityUrl": "https://www.argentina.gob.ar/cnv"
     }

@@ -14,8 +14,14 @@
         "isZeroThreshold": false
       },
       "requiredFields": {
-        "originator": ["fullName", "accountNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
+        "originator": [
+          "fullName",
+          "accountNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       },
       "unhostedWallets": {
         "verificationRequired": false,
@@ -34,8 +40,17 @@
         "isZeroThreshold": false
       },
       "requiredFields": {
-        "originator": ["fullName", "dateOfBirth", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber", "townAndCountry"]
+        "originator": [
+          "fullName",
+          "dateOfBirth",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber",
+          "townAndCountry"
+        ]
       },
       "unhostedWallets": {
         "verificationRequired": true,

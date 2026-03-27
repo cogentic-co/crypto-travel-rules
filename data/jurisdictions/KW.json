@@ -9,7 +9,7 @@
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
       "threshold": {
-        "amount": 1000,
+        "amount": 300,
         "currency": "KWD",
         "isZeroThreshold": false
       },
@@ -26,8 +26,8 @@
       },
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "CMA has not licensed crypto exchanges. Central Bank AML framework applies to any permitted activity."
+        "verificationThreshold": 300,
+        "notes": "CMA has not licensed crypto exchanges. Central Bank AML framework applies to any permitted activity. Threshold approximately USD 1,000 equivalent per FATF recommendation."
       },
       "authorityUrl": "https://www.cma.gov.kw/en/"
     }

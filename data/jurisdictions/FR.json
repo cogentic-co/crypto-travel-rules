@@ -1,7 +1,7 @@
 {
   "countryCode": "FR",
   "name": "France",
-  "authority": "Autorité des marchés financiers (AMF)",
+  "authority": "Autorité de contrôle prudentiel et de résolution (ACPR) / AMF",
   "rules": [
     {
       "versionId": "FR-2024-001",
@@ -14,13 +14,20 @@
         "isZeroThreshold": false
       },
       "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "AMF-registered DASPs (Digital Asset Service Providers) must comply with EU TFR. PSAN (Prestataire de Services sur Actifs Numériques) registration required."
+        "notes": "ACPR supervises AML/CFT compliance for DASPs. AMF handles DASP/CASP registration. EU TFR applies. PSAN registration transitioning to MiCA licensing."
       },
       "authorityUrl": "https://www.amf-france.org/en/professionals/fintech/my-relations-amf/digital-asset-service-providers"
     },
@@ -35,13 +42,23 @@
         "isZeroThreshold": true
       },
       "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address", "dateOfBirth", "placeOfBirth", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth",
+          "placeOfBirth",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "Full EU TFR enforcement. MiCA-licensed CASPs replace PSAN registration. Zero threshold for all CASP-to-CASP transfers."
+        "notes": "Full EU TFR enforcement. MiCA-licensed CASPs replace PSAN registration. Zero threshold for all CASP-to-CASP transfers. ACPR remains primary AML supervisor."
       },
       "authorityUrl": "https://www.amf-france.org/en/professionals/fintech/my-relations-amf/digital-asset-service-providers"
     }

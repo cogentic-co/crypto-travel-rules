@@ -9,18 +9,25 @@
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
       "threshold": {
-        "amount": 5000,
+        "amount": 18000,
         "currency": "ZAR",
         "isZeroThreshold": false
       },
       "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       },
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 5000,
-        "notes": "CASPs licensed under FSCA must comply with FIC Act travel rule requirements. South African ID number required for domestic originators."
+        "verificationThreshold": 18000,
+        "notes": "CASPs licensed under FSCA must comply with FIC Act travel rule requirements. South African ID number required for domestic originators. Threshold aligned with FATF recommendation (approximately USD/EUR 1,000 equivalent)."
       },
       "authorityUrl": "https://www.fsca.co.za/Regulatory%20Frameworks/Pages/Crypto-Assets.aspx"
     }

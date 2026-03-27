@@ -1,10 +1,10 @@
 {
-  "countryCode": "UK",
+  "countryCode": "GB",
   "name": "United Kingdom",
   "authority": "Financial Conduct Authority (FCA)",
   "rules": [
     {
-      "versionId": "UK-2023-001",
+      "versionId": "GB-2023-001",
       "status": "active",
       "effectiveFrom": "2023-09-01",
       "effectiveTo": null,

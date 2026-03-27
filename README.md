@@ -290,12 +290,51 @@ See [Contributing](#contributing) to help improve data accuracy.
 
 Each file in `data/jurisdictions/` contains a single `JurisdictionData` object. See `src/types.ts` for the TypeScript definitions.
 
-<table>
-<tr><td width="500">
+```json
+{
+  "countryCode": "DE",
+  "name": "Germany",
+  "authority": "Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)",
+  "rules": [
+    {
+      "versionId": "DE-2024-001",
+      "status": "active",
+      "effectiveFrom": "2024-12-30",
+      "effectiveTo": "2026-06-30",
+      "threshold": { "amount": 1000, "currency": "EUR", "isZeroThreshold": false },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "BaFin enforces EU TFR with KryptoWTransferV requirements."
+      },
+      "authorityUrl": "https://www.bafin.de/..."
+    },
+    {
+      "versionId": "DE-2026-001",
+      "status": "pending",
+      "effectiveFrom": "2026-07-01",
+      "effectiveTo": null,
+      "threshold": { "amount": 0, "currency": "EUR", "isZeroThreshold": true },
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address", "dateOfBirth", "placeOfBirth", "idDocumentNumber"],
+        "beneficiary": ["fullName", "accountNumber"]
+      },
+      "unhostedWallets": {
+        "verificationRequired": true,
+        "verificationThreshold": 1000,
+        "notes": "Full EU TFR enforcement. Zero threshold for CASP-to-CASP."
+      },
+      "authorityUrl": "https://www.bafin.de/..."
+    }
+  ]
+}
+```
 
 ### Attributes
-
----
 
 **countryCode** `string` **required**
 
@@ -317,106 +356,44 @@ Name of the primary regulatory authority responsible for travel rule enforcement
 
 **rules** `TravelRuleVersion[]` **required**
 
-Array of one or more travel rule versions for this jurisdiction. Each entry represents a distinct regulatory period. Rules should have non-overlapping date ranges. The `ComplianceEngine` selects the applicable rule based on `effectiveFrom` / `effectiveTo` dates.
+Array of one or more travel rule versions. Each entry represents a distinct regulatory period with its own thresholds, required fields, and effective dates. Rules should have non-overlapping date ranges — the `ComplianceEngine` selects the applicable rule based on the query date.
 
 ---
-
-</td><td width="450">
-
-**THE JURISDICTION OBJECT**
-
-```json
-{
-  "countryCode": "DE",
-  "name": "Germany",
-  "authority": "Bundesanstalt für Finanz­dienstleistungsaufsicht (BaFin)",
-  "rules": [
-    {
-      "versionId": "DE-2024-001",
-      "status": "active",
-      "effectiveFrom": "2024-12-30",
-      "effectiveTo": "2026-06-30",
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
-      "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "BaFin enforces EU TFR..."
-      },
-      "authorityUrl": "https://www.bafin.de/..."
-    },
-    {
-      "versionId": "DE-2026-001",
-      "status": "pending",
-      "effectiveFrom": "2026-07-01",
-      "effectiveTo": null,
-      "threshold": {
-        "amount": 0,
-        "currency": "EUR",
-        "isZeroThreshold": true
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address",
-          "dateOfBirth",
-          "placeOfBirth",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
-      "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "Full EU TFR enforcement..."
-      },
-      "authorityUrl": "https://www.bafin.de/..."
-    }
-  ]
-}
-```
-
-</td></tr>
-</table>
 
 ## The TravelRuleVersion Object
 
-Each entry in the `rules` array describes a specific regulatory version with its own effective dates, thresholds, and data requirements.
+Each entry in the `rules` array describes a specific regulatory version.
 
-<table>
-<tr><td width="500">
+```json
+{
+  "versionId": "SG-2024-001",
+  "status": "active",
+  "effectiveFrom": "2024-01-28",
+  "effectiveTo": null,
+  "threshold": { "amount": 0, "currency": "SGD", "isZeroThreshold": true },
+  "requiredFields": {
+    "originator": ["fullName", "accountNumber", "address", "idDocumentNumber", "dateOfBirth"],
+    "beneficiary": ["fullName", "accountNumber"]
+  },
+  "unhostedWallets": {
+    "verificationRequired": true,
+    "notes": "MAS Notice PSN02 requires wallet ownership verification via cryptographic signature or equivalent."
+  },
+  "authorityUrl": "https://www.mas.gov.sg/regulation/notices/psn02"
+}
+```
 
 ### Attributes
 
----
-
 **versionId** `string` **required**
 
-Unique identifier following the pattern `{CC}-{YYYY}-{NNN}`. The country code, year of enactment, and a sequential number (e.g., `DE-2024-001`).
+Unique identifier following the pattern `{CC}-{YYYY}-{NNN}` — country code, year of enactment, and a sequential number (e.g., `DE-2024-001`).
 
 ---
 
 **status** `enum` **required**
 
-Current status of this rule version.
+Current lifecycle status of this rule version.
 
 | Value | Description |
 |-------|-------------|
@@ -444,11 +421,11 @@ The monetary threshold at which the travel rule is triggered.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `amount` | `number` | Threshold amount in local currency. Set to `0` for zero-threshold jurisdictions. |
+| `amount` | `number` | Threshold in local currency. Set to `0` for zero-threshold jurisdictions. |
 | `currency` | `string` | ISO 4217 currency code (e.g., `EUR`, `USD`, `GBP`). |
-| `isZeroThreshold` | `boolean` | `true` if the rule applies to **all** transfers regardless of amount. Only set to `true` when `amount` is `0`. |
+| `isZeroThreshold` | `boolean` | `true` if the rule applies to **all** transfers regardless of amount. Only set `true` when `amount` is `0`. |
 
-Thresholds should approximate the FATF-recommended USD/EUR 1,000 equivalent in local currency. If a threshold deviates significantly (>3x or <0.3x), verify against the primary regulatory source.
+> Thresholds should approximate the FATF-recommended USD/EUR 1,000 equivalent in local currency. If a threshold deviates significantly (>3x or <0.3x), verify against the primary regulatory source.
 
 ---
 
@@ -458,10 +435,10 @@ PII fields that must be collected and transmitted, split by party.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `originator` | `PiiField[]` | Fields required for the sender of the transfer. |
-| `beneficiary` | `PiiField[]` | Fields required for the recipient of the transfer. |
+| `originator` | `PiiField[]` | Fields required for the sender of the transfer |
+| `beneficiary` | `PiiField[]` | Fields required for the recipient of the transfer |
 
-**Allowed PiiField values** (IVMS101-aligned):
+**Allowed `PiiField` values** (IVMS101-aligned):
 
 | Value | Description |
 |-------|-------------|
@@ -481,105 +458,25 @@ Policy for transfers involving self-hosted (non-custodial) wallets.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `verificationRequired` | `boolean` | Whether the VASP must verify wallet ownership. |
-| `verificationThreshold` | `number` *(optional)* | Amount above which verification is required. Omit if verification applies to all amounts or is not required. |
-| `notes` | `string` *(optional)* | Free-text description of specific verification methods (e.g., cryptographic signature, Satoshi test) or other regulatory details. |
+| `verificationRequired` | `boolean` | Whether the VASP must verify wallet ownership |
+| `verificationThreshold` | `number` *(optional)* | Amount above which verification kicks in. Omit if verification applies at all amounts or is not required. |
+| `notes` | `string` *(optional)* | Verification methods (e.g., cryptographic signature, Satoshi test) or other regulatory details |
 
 ---
 
 **authorityUrl** `string` **required**
 
-URL to the primary regulatory text, guidance, or authority page. Must be a direct link to the relevant regulator — not a news article or third-party summary.
+URL to the primary regulatory text, guidance, or authority page. Must link directly to the relevant regulator — not a news article or third-party summary.
 
 ---
-
-</td><td width="450">
-
-**EXAMPLE: SINGLE ACTIVE RULE**
-
-```json
-{
-  "versionId": "SG-2024-001",
-  "status": "active",
-  "effectiveFrom": "2024-01-28",
-  "effectiveTo": null,
-  "threshold": {
-    "amount": 0,
-    "currency": "SGD",
-    "isZeroThreshold": true
-  },
-  "requiredFields": {
-    "originator": [
-      "fullName",
-      "accountNumber",
-      "address",
-      "idDocumentNumber",
-      "dateOfBirth"
-    ],
-    "beneficiary": [
-      "fullName",
-      "accountNumber"
-    ]
-  },
-  "unhostedWallets": {
-    "verificationRequired": true,
-    "notes": "MAS Notice PSN02 requires
-      wallet ownership verification
-      via cryptographic signature
-      or equivalent."
-  },
-  "authorityUrl": "https://www.mas.gov.sg/..."
-}
-```
-
----
-
-**EXAMPLE: THRESHOLD-BASED RULE**
-
-```json
-{
-  "versionId": "US-2024-001",
-  "status": "active",
-  "effectiveFrom": "2024-01-01",
-  "effectiveTo": null,
-  "threshold": {
-    "amount": 3000,
-    "currency": "USD",
-    "isZeroThreshold": false
-  },
-  "requiredFields": {
-    "originator": [
-      "fullName",
-      "accountNumber",
-      "address"
-    ],
-    "beneficiary": [
-      "fullName",
-      "accountNumber",
-      "address"
-    ]
-  },
-  "unhostedWallets": {
-    "verificationRequired": true,
-    "verificationThreshold": 3000,
-    "notes": "FinCEN CVC/LTDA
-      recordkeeping and travel rule
-      for transactions >= $3,000."
-  },
-  "authorityUrl": "https://www.fincen.gov/..."
-}
-```
-
-</td></tr>
-</table>
 
 ### Rule Versioning
 
 Each jurisdiction can have multiple rules with non-overlapping date ranges. The `ComplianceEngine` selects the correct version based on the query date.
 
 - Use `effectiveTo: null` for the currently open-ended rule
-- When a new rule is announced, add it with `status: "pending"` and set `effectiveTo` on the current rule to the day before `effectiveFrom` of the new rule
-- When the new rule takes effect, update statuses accordingly (`active` → `deprecated`, `pending` → `active`)
+- When a new rule is announced, add it with `status: "pending"` and set `effectiveTo` on the current rule to the day before the new rule's `effectiveFrom`
+- When the new rule takes effect, update statuses: `active` → `deprecated`, `pending` → `active`
 
 ## Contributing
 

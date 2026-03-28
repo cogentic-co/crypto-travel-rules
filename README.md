@@ -25,6 +25,9 @@ const engine = new TravelRuleEngine();
 // Evaluate a cross-border transfer: US → AU, $1,000 equivalent
 const result = engine.evaluate({ from: 'US', to: 'AU', fiatEquivalent: 1000 }, '2026-08-01');
 
+console.log(result.triggered);
+// true — AU threshold is AUD 1,000 (triggered), US threshold is USD 3,000 (not triggered)
+
 console.log(result.verificationRequired);
 // true — at least one jurisdiction requires verification at this amount
 

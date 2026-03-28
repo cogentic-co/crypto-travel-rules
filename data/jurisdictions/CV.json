@@ -14,38 +14,20 @@
       },
       "authorityUrl": "https://www.bcv.cv/",
       "threshold": {
-        "transmission": {
-          "amount": 100000,
-          "currency": "CVE",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 100000,
-          "currency": "CVE",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 100000,
+        "currency": "CVE",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

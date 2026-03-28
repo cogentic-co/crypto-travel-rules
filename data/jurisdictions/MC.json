@@ -15,38 +15,20 @@
       },
       "authorityUrl": "https://ccaf.mc/en/",
       "threshold": {
-        "transmission": {
-          "amount": 1000,
-          "currency": "EUR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 1000,
-          "currency": "EUR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

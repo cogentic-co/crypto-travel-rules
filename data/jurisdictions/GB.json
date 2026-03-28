@@ -15,40 +15,21 @@
       },
       "authorityUrl": "https://www.fca.org.uk/firms/financial-crime/cryptoassets-aml-ctf",
       "threshold": {
-        "transmission": {
-          "amount": 1000,
-          "currency": "GBP",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address",
-              "dateOfBirth"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 1000,
-          "currency": "GBP",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address",
-              "dateOfBirth"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 1000,
+        "currency": "GBP",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

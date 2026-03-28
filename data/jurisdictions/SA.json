@@ -15,38 +15,20 @@
       },
       "authorityUrl": "https://www.sama.gov.sa/en-us/",
       "threshold": {
-        "transmission": {
-          "amount": 3750,
-          "currency": "SAR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 3750,
-          "currency": "SAR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 3750,
+        "currency": "SAR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

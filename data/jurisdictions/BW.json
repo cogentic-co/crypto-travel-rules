@@ -14,38 +14,20 @@
       },
       "authorityUrl": "https://www.bankofbotswana.bw/",
       "threshold": {
-        "transmission": {
-          "amount": 13500,
-          "currency": "BWP",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 13500,
-          "currency": "BWP",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 13500,
+        "currency": "BWP",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

@@ -28,20 +28,10 @@ for (const file of files) {
 
   // Format threshold
   let threshold: string;
-  const tx = activeRule.threshold.transmission;
-  const vx = activeRule.threshold.verification;
-  if (tx.amount === vx.amount && tx.isZeroThreshold === vx.isZeroThreshold) {
-    // Both tiers are the same — show a single value
-    if (tx.isZeroThreshold) {
-      threshold = `${tx.currency} 0 (all transfers)`;
-    } else {
-      threshold = `${tx.currency} ${tx.amount.toLocaleString('en-US')}`;
-    }
+  if (activeRule.threshold.isZeroThreshold) {
+    threshold = `${activeRule.threshold.currency} 0 (all transfers)`;
   } else {
-    // Tiers differ — show transmission / verification
-    const txAmt = tx.isZeroThreshold ? '0' : tx.amount.toLocaleString('en-US');
-    const vxAmt = vx.isZeroThreshold ? '0' : vx.amount.toLocaleString('en-US');
-    threshold = `${tx.currency} ${txAmt} / ${vxAmt}`;
+    threshold = `${activeRule.threshold.currency} ${activeRule.threshold.amount.toLocaleString('en-US')}`;
   }
 
   // Format status

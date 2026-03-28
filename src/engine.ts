@@ -6,7 +6,6 @@ import {
   PiiField,
   TransferRequest,
   TravelRuleVersion,
-  TriggerResult,
   WalletVerificationResult,
 } from './types';
 
@@ -65,23 +64,20 @@ export class TravelRuleEngine {
   }
 
   /**
-   * Checks whether a transaction amount triggers transmission and/or
-   * verification requirements for a given jurisdiction and date.
+   * Checks whether a transaction amount triggers the travel rule
+   * for a given jurisdiction and date. Returns true when the rule
+   * applies (amount meets or exceeds the threshold, or the threshold
+   * is zero).
    */
   isRuleTriggered(
     countryCode: string,
     amount: number,
     date: string | Date = new Date(),
-  ): TriggerResult {
+  ): boolean {
     const rule = this.getApplicableRule(countryCode, date);
-    if (!rule) return { transmissionRequired: false, verificationRequired: false };
-
-    const { transmission, verification } = rule.threshold;
-
-    const transmissionRequired = transmission.isZeroThreshold || amount >= transmission.amount;
-    const verificationRequired = verification.isZeroThreshold || amount >= verification.amount;
-
-    return { transmissionRequired, verificationRequired };
+    if (!rule) return false;
+    if (rule.threshold.isZeroThreshold) return true;
+    return amount >= rule.threshold.amount;
   }
 
   /**
@@ -99,7 +95,7 @@ export class TravelRuleEngine {
     return {
       required: rule.unhostedWallets.verificationRequired,
       threshold: rule.unhostedWallets.verificationThreshold ?? null,
-      currency: rule.threshold.transmission.currency,
+      currency: rule.threshold.currency,
       notes: rule.unhostedWallets.notes ?? null,
     };
   }
@@ -107,8 +103,8 @@ export class TravelRuleEngine {
   /**
    * Evaluates a cross-border transfer against both the originator and
    * beneficiary jurisdictions. Returns the union of required fields
-   * (the stricter of the two) for both transmission and verification
-   * tiers, and whether each tier is triggered by either side.
+   * (the stricter of the two) and whether the travel rule is triggered
+   * by either side.
    */
   evaluate(
     transfer: TransferRequest,
@@ -117,54 +113,26 @@ export class TravelRuleEngine {
     const fromRule = this.getApplicableRule(transfer.from, date);
     const toRule = this.getApplicableRule(transfer.to, date);
 
-    const fromTrigger = this.isRuleTriggered(transfer.from, transfer.fiatEquivalent, date);
-    const toTrigger = this.isRuleTriggered(transfer.to, transfer.fiatEquivalent, date);
+    const fromTriggered = this.isRuleTriggered(transfer.from, transfer.fiatEquivalent, date);
+    const toTriggered = this.isRuleTriggered(transfer.to, transfer.fiatEquivalent, date);
+    const triggered = fromTriggered || toTriggered;
 
-    const triggered = fromTrigger.transmissionRequired || toTrigger.transmissionRequired;
-    const verificationRequired = fromTrigger.verificationRequired || toTrigger.verificationRequired;
-
-    const transmissionOriginatorFields = mergeFields(
-      fromTrigger.transmissionRequired && fromRule ? fromRule.threshold.transmission.requiredFields.originator : [],
-      toTrigger.transmissionRequired && toRule ? toRule.threshold.transmission.requiredFields.originator : [],
+    const originatorFields = mergeFields(
+      fromTriggered && fromRule ? fromRule.requiredFields.originator : [],
+      toTriggered && toRule ? toRule.requiredFields.originator : [],
     );
-    const transmissionBeneficiaryFields = mergeFields(
-      fromTrigger.transmissionRequired && fromRule ? fromRule.threshold.transmission.requiredFields.beneficiary : [],
-      toTrigger.transmissionRequired && toRule ? toRule.threshold.transmission.requiredFields.beneficiary : [],
-    );
-
-    const verificationOriginatorFields = mergeFields(
-      fromTrigger.verificationRequired && fromRule ? fromRule.threshold.verification.requiredFields.originator : [],
-      toTrigger.verificationRequired && toRule ? toRule.threshold.verification.requiredFields.originator : [],
-    );
-    const verificationBeneficiaryFields = mergeFields(
-      fromTrigger.verificationRequired && fromRule ? fromRule.threshold.verification.requiredFields.beneficiary : [],
-      toTrigger.verificationRequired && toRule ? toRule.threshold.verification.requiredFields.beneficiary : [],
+    const beneficiaryFields = mergeFields(
+      fromTriggered && fromRule ? fromRule.requiredFields.beneficiary : [],
+      toTriggered && toRule ? toRule.requiredFields.beneficiary : [],
     );
 
     return {
       triggered,
-      verificationRequired,
-      from: {
-        countryCode: transfer.from.toUpperCase(),
-        rule: fromRule,
-        transmissionRequired: fromTrigger.transmissionRequired,
-        verificationRequired: fromTrigger.verificationRequired,
-      },
-      to: {
-        countryCode: transfer.to.toUpperCase(),
-        rule: toRule,
-        transmissionRequired: toTrigger.transmissionRequired,
-        verificationRequired: toTrigger.verificationRequired,
-      },
+      from: { countryCode: transfer.from.toUpperCase(), rule: fromRule, triggered: fromTriggered },
+      to: { countryCode: transfer.to.toUpperCase(), rule: toRule, triggered: toTriggered },
       requiredFields: {
-        transmission: {
-          originator: transmissionOriginatorFields,
-          beneficiary: transmissionBeneficiaryFields,
-        },
-        verification: {
-          originator: verificationOriginatorFields,
-          beneficiary: verificationBeneficiaryFields,
-        },
+        originator: originatorFields,
+        beneficiary: beneficiaryFields,
       },
     };
   }

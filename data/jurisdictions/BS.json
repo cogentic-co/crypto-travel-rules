@@ -14,38 +14,20 @@
       },
       "authorityUrl": "https://www.scb.gov.bs/",
       "threshold": {
-        "transmission": {
-          "amount": 0,
-          "currency": "BSD",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 0,
-          "currency": "BSD",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 0,
+        "currency": "BSD",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

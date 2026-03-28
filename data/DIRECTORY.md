@@ -209,6 +209,6 @@
 | [WS](jurisdictions/WS.json) | Samoa | Central Bank of Samoa | USD 1,000 | Active |
 | [XK](jurisdictions/XK.json) | Kosovo | Central Bank of Kosovo | EUR 1,000 | Active |
 | [YE](jurisdictions/YE.json) | Yemen | Central Bank of Yemen | USD 1,000 | Active |
-| [ZA](jurisdictions/ZA.json) | South Africa | Financial Sector Conduct Authority (F... | ZAR 0 / 5,000 | Active |
+| [ZA](jurisdictions/ZA.json) | South Africa | Financial Sector Conduct Authority (F... | ZAR 0 (all transfers) | Active |
 | [ZM](jurisdictions/ZM.json) | Zambia | Bank of Zambia / Securities and Excha... | USD 1,000 | Active |
 | [ZW](jurisdictions/ZW.json) | Zimbabwe | Reserve Bank of Zimbabwe | USD 1,000 | Active |

@@ -15,38 +15,20 @@
       },
       "authorityUrl": "https://www.bafin.de/EN/Aufsicht/BankenFinanzdienstleister/Kryptoverwahrgeschaeft/kryptoverwahrgeschaeft_node_en.html",
       "threshold": {
-        "transmission": {
-          "amount": 1000,
-          "currency": "EUR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 1000,
-          "currency": "EUR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 1000,
+        "currency": "EUR",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     },
     {
@@ -61,44 +43,23 @@
       },
       "authorityUrl": "https://www.bafin.de/EN/Aufsicht/BankenFinanzdienstleister/Kryptoverwahrgeschaeft/kryptoverwahrgeschaeft_node_en.html",
       "threshold": {
-        "transmission": {
-          "amount": 0,
-          "currency": "EUR",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address",
-              "dateOfBirth",
-              "placeOfBirth",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 0,
-          "currency": "EUR",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address",
-              "dateOfBirth",
-              "placeOfBirth",
-              "idDocumentNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 0,
+        "currency": "EUR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "dateOfBirth",
+          "placeOfBirth",
+          "idDocumentNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

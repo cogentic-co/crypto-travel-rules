@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import type { JurisdictionData, PiiField, ThresholdTier } from '../src/types';
+import type { JurisdictionData, PiiField } from '../src/types';
 
 const DATA_DIR = path.join(__dirname, '..', 'data', 'jurisdictions');
 const VALID_PII_FIELDS: PiiField[] = [
@@ -69,56 +69,6 @@ function thresholdToUsd(amount: number, currency: string): number | null {
   return amount * rate;
 }
 
-function validateTier(
-  code: string,
-  versionId: string,
-  tierName: 'transmission' | 'verification',
-  tier: ThresholdTier,
-): void {
-  // isZeroThreshold consistency
-  if (tier.isZeroThreshold && tier.amount !== 0) {
-    addIssue(code, 'error', `${tierName}: isZeroThreshold is true but amount is ${tier.amount} in ${versionId}`);
-  }
-  if (!tier.isZeroThreshold && tier.amount === 0) {
-    addIssue(code, 'warning', `${tierName}: amount is 0 but isZeroThreshold is false in ${versionId}`);
-  }
-
-  // PII fields are valid
-  for (const field of tier.requiredFields.originator) {
-    if (!VALID_PII_FIELDS.includes(field)) {
-      addIssue(code, 'error', `${tierName}: Invalid originator PII field "${field}" in ${versionId}`);
-    }
-  }
-  for (const field of tier.requiredFields.beneficiary) {
-    if (!VALID_PII_FIELDS.includes(field)) {
-      addIssue(code, 'error', `${tierName}: Invalid beneficiary PII field "${field}" in ${versionId}`);
-    }
-  }
-
-  // Must have fullName and accountNumber at minimum
-  if (!tier.requiredFields.originator.includes('fullName')) {
-    addIssue(code, 'warning', `${tierName}: Originator missing fullName in ${versionId}`);
-  }
-  if (!tier.requiredFields.originator.includes('accountNumber')) {
-    addIssue(code, 'warning', `${tierName}: Originator missing accountNumber in ${versionId}`);
-  }
-
-  // USD threshold sanity check (non-zero thresholds)
-  if (!tier.isZeroThreshold && tier.amount > 0) {
-    const usdEquiv = thresholdToUsd(tier.amount, tier.currency);
-    if (usdEquiv !== null) {
-      if (usdEquiv > 3000) {
-        addIssue(code, 'warning', `${tierName}: Threshold ~$${usdEquiv.toFixed(0)} USD seems high (>3x FATF $1,000) in ${versionId}`);
-      }
-      if (usdEquiv < 300) {
-        addIssue(code, 'warning', `${tierName}: Threshold ~$${usdEquiv.toFixed(0)} USD seems low (<0.3x FATF $1,000) in ${versionId}`);
-      }
-    } else {
-      addIssue(code, 'warning', `${tierName}: Unknown currency "${tier.currency}" — cannot validate threshold in ${versionId}`);
-    }
-  }
-}
-
 // Load all jurisdictions
 const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json'));
 const jurisdictions = new Map<string, JurisdictionData>();
@@ -171,23 +121,46 @@ for (const file of files) {
       addIssue(code, 'error', `Invalid effectiveTo date "${rule.effectiveTo}" in ${rule.versionId}`);
     }
 
-    // Validate each tier independently
-    validateTier(code, rule.versionId, 'transmission', rule.threshold.transmission);
-    validateTier(code, rule.versionId, 'verification', rule.threshold.verification);
-
-    // Cross-tier checks (only meaningful when both tiers are non-zero)
-    const tx = rule.threshold.transmission;
-    const vx = rule.threshold.verification;
-
-    // Currencies must match between tiers
-    if (!tx.isZeroThreshold && !vx.isZeroThreshold && tx.currency !== vx.currency) {
-      addIssue(code, 'error', `Threshold currency mismatch: transmission is ${tx.currency} but verification is ${vx.currency} in ${rule.versionId}`);
+    // isZeroThreshold consistency
+    if (rule.threshold.isZeroThreshold && rule.threshold.amount !== 0) {
+      addIssue(code, 'error', `isZeroThreshold is true but amount is ${rule.threshold.amount} in ${rule.versionId}`);
+    }
+    if (!rule.threshold.isZeroThreshold && rule.threshold.amount === 0) {
+      addIssue(code, 'warning', `amount is 0 but isZeroThreshold is false in ${rule.versionId}`);
     }
 
-    // Transmission amount must be <= verification amount (unless verification is zero-threshold)
-    if (!tx.isZeroThreshold && !vx.isZeroThreshold && tx.currency === vx.currency) {
-      if (tx.amount > vx.amount) {
-        addIssue(code, 'error', `Transmission threshold (${tx.amount}) must be <= verification threshold (${vx.amount}) in ${rule.versionId}`);
+    // PII fields are valid
+    for (const field of rule.requiredFields.originator) {
+      if (!VALID_PII_FIELDS.includes(field)) {
+        addIssue(code, 'error', `Invalid originator PII field "${field}" in ${rule.versionId}`);
+      }
+    }
+    for (const field of rule.requiredFields.beneficiary) {
+      if (!VALID_PII_FIELDS.includes(field)) {
+        addIssue(code, 'error', `Invalid beneficiary PII field "${field}" in ${rule.versionId}`);
+      }
+    }
+
+    // Must have fullName and accountNumber at minimum
+    if (!rule.requiredFields.originator.includes('fullName')) {
+      addIssue(code, 'warning', `Originator missing fullName in ${rule.versionId}`);
+    }
+    if (!rule.requiredFields.originator.includes('accountNumber')) {
+      addIssue(code, 'warning', `Originator missing accountNumber in ${rule.versionId}`);
+    }
+
+    // USD threshold sanity check (non-zero thresholds)
+    if (!rule.threshold.isZeroThreshold && rule.threshold.amount > 0) {
+      const usdEquiv = thresholdToUsd(rule.threshold.amount, rule.threshold.currency);
+      if (usdEquiv !== null) {
+        if (usdEquiv > 3000) {
+          addIssue(code, 'warning', `Threshold ~$${usdEquiv.toFixed(0)} USD seems high (>3x FATF $1,000) in ${rule.versionId}`);
+        }
+        if (usdEquiv < 300) {
+          addIssue(code, 'warning', `Threshold ~$${usdEquiv.toFixed(0)} USD seems low (<0.3x FATF $1,000) in ${rule.versionId}`);
+        }
+      } else {
+        addIssue(code, 'warning', `Unknown currency "${rule.threshold.currency}" — cannot validate threshold in ${rule.versionId}`);
       }
     }
 
@@ -209,7 +182,7 @@ for (const cc of EU_EEA) {
     continue;
   }
   const hasZeroThreshold = jur.rules.some(
-    r => r.threshold.transmission.isZeroThreshold && (r.status === 'pending' || r.status === 'active')
+    r => r.threshold.isZeroThreshold && (r.status === 'pending' || r.status === 'active')
   );
   if (!hasZeroThreshold) {
     addIssue(cc, 'warning', 'EU/EEA member state missing pending/active zero-threshold rule (EU TFR Jul 2026)');
@@ -231,7 +204,7 @@ const waemuThresholds = WAEMU.map(cc => {
   return {
     cc,
     threshold: active
-      ? `${active.threshold.transmission.amount} ${active.threshold.transmission.currency}`
+      ? `${active.threshold.amount} ${active.threshold.currency}`
       : 'NO_ACTIVE',
   };
 });
@@ -252,7 +225,7 @@ const cemacThresholds = CEMAC.map(cc => {
   return {
     cc,
     threshold: active
-      ? `${active.threshold.transmission.amount} ${active.threshold.transmission.currency}`
+      ? `${active.threshold.amount} ${active.threshold.currency}`
       : 'NO_ACTIVE',
   };
 });

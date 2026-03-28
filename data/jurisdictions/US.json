@@ -15,40 +15,21 @@
       },
       "authorityUrl": "https://www.fincen.gov/resources/statutes-and-regulations/cvc-final-rule",
       "threshold": {
-        "transmission": {
-          "amount": 3000,
-          "currency": "USD",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 3000,
-          "currency": "USD",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber",
-              "address"
-            ]
-          }
-        }
+        "amount": 3000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ]
       }
     }
   ]

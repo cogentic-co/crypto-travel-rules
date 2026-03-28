@@ -14,36 +14,19 @@
       },
       "authorityUrl": "https://www.austrac.gov.au/business/obligations/travel-rule",
       "threshold": {
-        "transmission": {
-          "amount": 10000,
-          "currency": "AUD",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 10000,
-          "currency": "AUD",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 10000,
+        "currency": "AUD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     },
     {
@@ -58,42 +41,22 @@
       },
       "authorityUrl": "https://www.austrac.gov.au/business/obligations/travel-rule",
       "threshold": {
-        "transmission": {
-          "amount": 1000,
-          "currency": "AUD",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "dateOfBirth",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber",
-              "townAndCountry"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 1000,
-          "currency": "AUD",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "dateOfBirth",
-              "accountNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber",
-              "townAndCountry"
-            ]
-          }
-        }
+        "amount": 1000,
+        "currency": "AUD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "dateOfBirth",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber",
+          "townAndCountry"
+        ]
       }
     }
   ]

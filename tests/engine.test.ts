@@ -45,30 +45,30 @@ describe('TravelRuleEngine', () => {
     it('returns the active rule for a single-rule jurisdiction', () => {
       const rule = engine.getApplicableRule('US', '2025-06-01');
       expect(rule).not.toBeNull();
-      expect(rule!.threshold.transmission.amount).toBe(3000);
-      expect(rule!.threshold.transmission.currency).toBe('USD');
+      expect(rule!.threshold.amount).toBe(3000);
+      expect(rule!.threshold.currency).toBe('USD');
     });
 
     it('returns the correct rule based on date for multi-rule jurisdictions', () => {
       const before = engine.getApplicableRule('AU', '2026-06-15');
-      expect(before!.threshold.transmission.amount).toBe(10000);
+      expect(before!.threshold.amount).toBe(10000);
 
       const after = engine.getApplicableRule('AU', '2026-07-15');
-      expect(after!.threshold.transmission.amount).toBe(1000);
+      expect(after!.threshold.amount).toBe(1000);
     });
 
     it('returns the pending EU zero-threshold rule after July 2026', () => {
       const rule = engine.getApplicableRule('DE', '2026-08-01');
       expect(rule).not.toBeNull();
-      expect(rule!.threshold.transmission.isZeroThreshold).toBe(true);
-      expect(rule!.threshold.transmission.amount).toBe(0);
+      expect(rule!.threshold.isZeroThreshold).toBe(true);
+      expect(rule!.threshold.amount).toBe(0);
     });
 
     it('returns the EUR 1,000 rule before July 2026 for EU states', () => {
       const rule = engine.getApplicableRule('DE', '2025-06-01');
       expect(rule).not.toBeNull();
-      expect(rule!.threshold.transmission.amount).toBe(1000);
-      expect(rule!.threshold.transmission.isZeroThreshold).toBe(false);
+      expect(rule!.threshold.amount).toBe(1000);
+      expect(rule!.threshold.isZeroThreshold).toBe(false);
     });
 
     it('returns null for unknown country codes', () => {
@@ -83,77 +83,42 @@ describe('TravelRuleEngine', () => {
       const rule = engine.getApplicableRule('US', new Date('2025-06-01'));
       expect(rule).not.toBeNull();
     });
-
-    it('exposes both transmission and verification tiers', () => {
-      const rule = engine.getApplicableRule('ZA', '2025-06-01');
-      expect(rule).not.toBeNull();
-      expect(rule!.threshold.transmission.amount).toBe(0);
-      expect(rule!.threshold.transmission.isZeroThreshold).toBe(true);
-      expect(rule!.threshold.verification.amount).toBe(5000);
-      expect(rule!.threshold.verification.isZeroThreshold).toBe(false);
-    });
-
-    it('has requiredFields inside each tier', () => {
-      const rule = engine.getApplicableRule('US', '2025-06-01');
-      expect(rule).not.toBeNull();
-      expect(rule!.threshold.transmission.requiredFields.originator).toContain('fullName');
-      expect(rule!.threshold.verification.requiredFields.originator).toContain('fullName');
-    });
   });
 
   describe('isRuleTriggered', () => {
-    it('returns TriggerResult with both fields', () => {
+    it('returns true when amount meets the threshold', () => {
       const result = engine.isRuleTriggered('US', 3000);
-      expect(result).toHaveProperty('transmissionRequired');
-      expect(result).toHaveProperty('verificationRequired');
+      expect(result).toBe(true);
     });
 
-    it('triggers both when amount meets threshold (same tiers)', () => {
-      const result = engine.isRuleTriggered('US', 3000);
-      expect(result.transmissionRequired).toBe(true);
-      expect(result.verificationRequired).toBe(true);
-    });
-
-    it('triggers neither below threshold', () => {
+    it('returns false when amount is below the threshold', () => {
       const result = engine.isRuleTriggered('US', 2999);
-      expect(result.transmissionRequired).toBe(false);
-      expect(result.verificationRequired).toBe(false);
+      expect(result).toBe(false);
     });
 
-    it('always triggers both for zero-threshold jurisdictions', () => {
+    it('always triggers for zero-threshold jurisdictions', () => {
       const result = engine.isRuleTriggered('SG', 1);
-      expect(result.transmissionRequired).toBe(true);
-      expect(result.verificationRequired).toBe(true);
+      expect(result).toBe(true);
     });
 
-    it('returns both false for unknown jurisdictions', () => {
+    it('returns false for unknown jurisdictions', () => {
       const result = engine.isRuleTriggered('ZZ', 99999);
-      expect(result.transmissionRequired).toBe(false);
-      expect(result.verificationRequired).toBe(false);
-    });
-
-    it('triggers transmission but not verification for split-tier jurisdictions', () => {
-      const result = engine.isRuleTriggered('ZA', 3000, '2025-06-01');
-      expect(result.transmissionRequired).toBe(true);
-      expect(result.verificationRequired).toBe(false);
-    });
-
-    it('triggers both tiers when amount exceeds verification threshold', () => {
-      const result = engine.isRuleTriggered('ZA', 6000, '2025-06-01');
-      expect(result.transmissionRequired).toBe(true);
-      expect(result.verificationRequired).toBe(true);
+      expect(result).toBe(false);
     });
   });
 
   describe('evaluate', () => {
-    it('triggers when either jurisdiction triggers transmission', () => {
+    it('triggers when either jurisdiction triggers', () => {
+      // AU threshold is AUD 10,000 until 2026-06-30; after 2026-07-01 it becomes AUD 1,000
+      // US threshold is USD 3,000 — 1,000 fiat equivalent is below US threshold
+      // but AU pending rule (AUD 1,000) is in effect from 2026-07-01, so to-side triggers
       const result = engine.evaluate(
         { from: 'US', to: 'AU', fiatEquivalent: 1000 },
         '2026-08-01',
       );
       expect(result.triggered).toBe(true);
-      expect(result.from.transmissionRequired).toBe(false);
-      expect(result.to.transmissionRequired).toBe(true);
+      expect(result.from.triggered).toBe(false);
+      expect(result.to.triggered).toBe(true);
     });
 
     it('triggers both sides when amount exceeds both thresholds', () => {
@@ -162,8 +127,8 @@ describe('TravelRuleEngine', () => {
         '2026-08-01',
       );
       expect(result.triggered).toBe(true);
-      expect(result.from.transmissionRequired).toBe(true);
-      expect(result.to.transmissionRequired).toBe(true);
+      expect(result.from.triggered).toBe(true);
+      expect(result.to.triggered).toBe(true);
     });
 
     it('does not trigger when below both thresholds', () => {
@@ -172,18 +137,18 @@ describe('TravelRuleEngine', () => {
         '2025-06-01',
       );
       expect(result.triggered).toBe(false);
-      expect(result.requiredFields.transmission.originator).toEqual([]);
-      expect(result.requiredFields.transmission.beneficiary).toEqual([]);
+      expect(result.requiredFields.originator).toEqual([]);
+      expect(result.requiredFields.beneficiary).toEqual([]);
     });
 
-    it('merges transmission fields from both jurisdictions', () => {
+    it('merges required fields from both jurisdictions', () => {
       const result = engine.evaluate(
         { from: 'US', to: 'AU', fiatEquivalent: 5000 },
         '2026-08-01',
       );
-      expect(result.requiredFields.transmission.beneficiary).toContain('accountNumber');
-      expect(result.requiredFields.transmission.beneficiary).toContain('fullName');
-      expect(result.requiredFields.transmission.originator.length).toBeGreaterThan(0);
+      expect(result.requiredFields.beneficiary).toContain('accountNumber');
+      expect(result.requiredFields.beneficiary).toContain('fullName');
+      expect(result.requiredFields.originator.length).toBeGreaterThan(0);
     });
 
     it('handles zero-threshold jurisdictions correctly', () => {
@@ -191,8 +156,8 @@ describe('TravelRuleEngine', () => {
         { from: 'GB', to: 'SG', fiatEquivalent: 1 },
       );
       expect(result.triggered).toBe(true);
-      expect(result.from.transmissionRequired).toBe(false);
-      expect(result.to.transmissionRequired).toBe(true);
+      expect(result.from.triggered).toBe(false);
+      expect(result.to.triggered).toBe(true);
     });
 
     it('includes correct country codes in result', () => {
@@ -215,41 +180,11 @@ describe('TravelRuleEngine', () => {
       expect(before.triggered).toBe(false);
       expect(after.triggered).toBe(true);
     });
-
-    it('exposes verificationRequired at top level', () => {
-      const result = engine.evaluate(
-        { from: 'US', to: 'AU', fiatEquivalent: 5000 },
-        '2026-08-01',
-      );
-      expect(result.verificationRequired).toBe(true);
-    });
-
-    it('splits requiredFields into transmission and verification', () => {
-      const result = engine.evaluate(
-        { from: 'US', to: 'AU', fiatEquivalent: 5000 },
-        '2026-08-01',
-      );
-      expect(result.requiredFields).toHaveProperty('transmission');
-      expect(result.requiredFields).toHaveProperty('verification');
-      expect(result.requiredFields.transmission).toHaveProperty('originator');
-      expect(result.requiredFields.verification).toHaveProperty('originator');
-    });
-
-    it('handles split-tier jurisdictions in cross-border evaluation', () => {
-      const result = engine.evaluate(
-        { from: 'US', to: 'ZA', fiatEquivalent: 3000 },
-        '2025-06-01',
-      );
-      expect(result.triggered).toBe(true);
-      expect(result.to.transmissionRequired).toBe(true);
-      expect(result.to.verificationRequired).toBe(false);
-      expect(result.requiredFields.transmission.originator.length).toBeGreaterThan(0);
-    });
   });
 
   describe('walletVerification', () => {
-    it('returns verification requirements for a jurisdiction', () => {
-      const result = engine.walletVerification('DE', '2026-08-01');
+    it('returns verification requirements for a jurisdiction with a threshold', () => {
+      const result = engine.walletVerification('DE', '2025-06-01');
       expect(result.required).toBe(true);
       expect(result.threshold).toBe(1000);
       expect(result.currency).toBe('EUR');

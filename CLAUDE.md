@@ -26,7 +26,6 @@ scripts/                    — One-time data generation/fix scripts (not part o
 - Every rule must have an `authorityUrl` pointing to a primary regulatory source
 - `effectiveTo: null` means the rule is currently open-ended
 - `isZeroThreshold: true` only when regulation applies to ALL transfers regardless of amount
-- Each rule has two threshold tiers: `transmission` (when to send data) and `verification` (when to verify data). Both are always populated, with `requiredFields` inside each tier.
 - PII fields must be from the allowed set: `fullName`, `dateOfBirth`, `placeOfBirth`, `idDocumentNumber`, `address`, `accountNumber`, `townAndCountry`
 
 ### Rule Versioning
@@ -36,7 +35,7 @@ scripts/                    — One-time data generation/fix scripts (not part o
 - Version IDs follow the pattern: `{CC}-{YYYY}-{NNN}` (e.g., `GB-2023-001`)
 
 ### Threshold Guidelines
-- Both transmission and verification thresholds should be in local currency
+- Thresholds should be in local currency
 - Aim for approximate alignment with FATF-recommended USD/EUR 1,000 equivalent
 - If a jurisdiction's threshold seems like a major outlier (>3x or <0.3x the FATF standard in USD terms), verify against primary source before committing
 - Document the reasoning in the `notes` field if the threshold genuinely deviates
@@ -75,7 +74,5 @@ engine.evaluate({ from: 'US', to: 'AU', fiatEquivalent: 1000 }, '2026-08-01');
 
 // Single jurisdiction lookup
 engine.getApplicableRule('DE', '2026-08-01');
-
-// Check trigger — returns { transmissionRequired, verificationRequired }
 engine.isRuleTriggered('US', 5000);
 ```

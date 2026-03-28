@@ -14,38 +14,21 @@
       },
       "authorityUrl": "https://www.fic.gov.za/wp-content/uploads/2024/04/Consultation-paper-Draft-Directive-9-on-the-travel-rule-relating-to-crypto-asset-transfers.pdf",
       "threshold": {
-        "transmission": {
-          "amount": 0,
-          "currency": "ZAR",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 5000,
-          "currency": "ZAR",
-          "isZeroThreshold": false,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "idDocumentNumber",
-              "address"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 0,
+        "currency": "ZAR",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "idDocumentNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

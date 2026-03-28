@@ -14,42 +14,22 @@
       },
       "authorityUrl": "https://www.mas.gov.sg/regulation/notices/psn02-notice-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism",
       "threshold": {
-        "transmission": {
-          "amount": 0,
-          "currency": "SGD",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address",
-              "idDocumentNumber",
-              "dateOfBirth"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        },
-        "verification": {
-          "amount": 0,
-          "currency": "SGD",
-          "isZeroThreshold": true,
-          "requiredFields": {
-            "originator": [
-              "fullName",
-              "accountNumber",
-              "address",
-              "idDocumentNumber",
-              "dateOfBirth"
-            ],
-            "beneficiary": [
-              "fullName",
-              "accountNumber"
-            ]
-          }
-        }
+        "amount": 0,
+        "currency": "SGD",
+        "isZeroThreshold": true
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address",
+          "idDocumentNumber",
+          "dateOfBirth"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber"
+        ]
       }
     }
   ]

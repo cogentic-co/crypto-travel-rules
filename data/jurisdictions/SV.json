@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2024-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 0,
-        "currency": "USD",
-        "isZeroThreshold": true
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "notes": "El Salvador adopted Bitcoin as legal tender (2021). Digital Assets Commission oversees the sector. Travel rule applies to all Bitcoin/digital asset transfers via licensed providers."
       },
-      "authorityUrl": "https://www.ssf.gob.sv/"
+      "authorityUrl": "https://www.ssf.gob.sv/",
+      "threshold": {
+        "transmission": {
+          "amount": 0,
+          "currency": "USD",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 0,
+          "currency": "USD",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

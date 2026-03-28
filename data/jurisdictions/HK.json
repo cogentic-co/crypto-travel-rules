@@ -8,20 +8,47 @@
       "status": "active",
       "effectiveFrom": "2024-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 8000,
-        "currency": "HKD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "notes": "Licensed VATPs must take reasonable measures to verify the identity of originators and beneficiaries for unhosted wallet transfers exceeding the threshold."
       },
-      "authorityUrl": "https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines"
+      "authorityUrl": "https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines",
+      "threshold": {
+        "transmission": {
+          "amount": 8000,
+          "currency": "HKD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 8000,
+          "currency": "HKD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

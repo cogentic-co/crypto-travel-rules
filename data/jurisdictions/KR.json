@@ -8,21 +8,46 @@
       "status": "active",
       "effectiveFrom": "2024-07-19",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000000,
-        "currency": "KRW",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000000,
         "notes": "Virtual Asset User Protection Act enforces travel rule for VASPs. Real-name bank account verification (실명계좌) required. Unhosted wallet transfers above KRW 1,000,000 require additional verification."
       },
-      "authorityUrl": "https://www.fsc.go.kr/eng/po040101"
+      "authorityUrl": "https://www.fsc.go.kr/eng/po040101",
+      "threshold": {
+        "transmission": {
+          "amount": 1000000,
+          "currency": "KRW",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000000,
+          "currency": "KRW",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

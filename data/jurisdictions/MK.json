@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "National Bank AML/CFT law applies to VASPs. EU accession candidate aligning with TFR."
       },
-      "authorityUrl": "https://www.nbrm.mk/"
+      "authorityUrl": "https://www.nbrm.mk/",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

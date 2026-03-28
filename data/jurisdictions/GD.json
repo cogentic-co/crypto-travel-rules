@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "XCD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "ECCB member. GARFIN AML framework applies."
       },
-      "authorityUrl": "https://www.eccb-centralbank.org/"
+      "authorityUrl": "https://www.eccb-centralbank.org/",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "XCD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "XCD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

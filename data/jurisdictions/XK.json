@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "Central Bank AML framework applies. Limited crypto-specific regulation."
       },
-      "authorityUrl": "https://bqk-kos.org/?lang=en"
+      "authorityUrl": "https://bqk-kos.org/?lang=en",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

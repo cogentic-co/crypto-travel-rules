@@ -8,59 +8,98 @@
       "status": "active",
       "effectiveFrom": "2024-12-30",
       "effectiveTo": "2026-06-30",
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
         "notes": "FIN-FSA registers and supervises virtual currency providers under EU TFR."
       },
-      "authorityUrl": "https://www.finanssivalvonta.fi/en/"
+      "authorityUrl": "https://www.finanssivalvonta.fi/en/",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     },
     {
       "versionId": "FI-2026-001",
       "status": "pending",
       "effectiveFrom": "2026-07-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 0,
-        "currency": "EUR",
-        "isZeroThreshold": true
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address",
-          "dateOfBirth",
-          "placeOfBirth",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
         "notes": "Full EU TFR enforcement. Zero threshold for CASP-to-CASP transfers."
       },
-      "authorityUrl": "https://www.finanssivalvonta.fi/en/"
+      "authorityUrl": "https://www.finanssivalvonta.fi/en/",
+      "threshold": {
+        "transmission": {
+          "amount": 0,
+          "currency": "EUR",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "dateOfBirth",
+              "placeOfBirth",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 0,
+          "currency": "EUR",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "dateOfBirth",
+              "placeOfBirth",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

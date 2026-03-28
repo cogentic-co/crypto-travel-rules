@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "XOF",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
-        "notes": "WAEMU member. BCEAO regional AML framework. Growing fintech sector."
+        "notes": "FATF-aligned threshold (~USD 1,000 equivalent). BCEAO regional AML framework applies."
       },
-      "authorityUrl": "https://www.bceao.int/"
+      "authorityUrl": "https://www.bceao.int/",
+      "threshold": {
+        "transmission": {
+          "amount": 625000,
+          "currency": "XOF",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 625000,
+          "currency": "XOF",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

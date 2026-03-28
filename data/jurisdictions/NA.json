@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "NAD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "Bank of Namibia developing virtual asset regulation. FIA (Financial Intelligence Centre) oversees AML."
       },
-      "authorityUrl": "https://www.bon.com.na/"
+      "authorityUrl": "https://www.bon.com.na/",
+      "threshold": {
+        "transmission": {
+          "amount": 20000,
+          "currency": "NAD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 20000,
+          "currency": "NAD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

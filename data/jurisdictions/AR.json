@@ -8,28 +8,46 @@
       "status": "active",
       "effectiveFrom": "2025-04-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "USD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
         "notes": "UIF (FIU) oversees AML/CFT compliance. CNV regulates crypto asset service providers. CUIT/CUIL tax ID required for Argentine originators. Threshold denominated in USD equivalent."
       },
-      "authorityUrl": "https://www.argentina.gob.ar/cnv"
+      "authorityUrl": "https://www.argentina.gob.ar/cnv",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "USD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "USD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

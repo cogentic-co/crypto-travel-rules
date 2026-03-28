@@ -8,20 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1500000,
-        "currency": "NGN",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "SEC Nigeria requires licensed VASPs to comply with travel rule obligations. BVN (Bank Verification Number) or NIN required for Nigerian originators. Unhosted wallet specific rules still under development."
       },
-      "authorityUrl": "https://sec.gov.ng/digital-assets/"
+      "authorityUrl": "https://sec.gov.ng/digital-assets/",
+      "threshold": {
+        "transmission": {
+          "amount": 1500000,
+          "currency": "NGN",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1500000,
+          "currency": "NGN",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

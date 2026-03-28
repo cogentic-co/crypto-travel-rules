@@ -25,15 +25,31 @@ const engine = new TravelRuleEngine();
 // Evaluate a cross-border transfer: US → AU, $1,000 equivalent
 const result = engine.evaluate({ from: 'US', to: 'AU', fiatEquivalent: 1000 }, '2026-08-01');
 
-console.log(result.triggered);
-// true — AU threshold is AUD 1,000 (triggered), US threshold is USD 3,000 (not triggered)
+console.log(result.verificationRequired);
+// true — at least one jurisdiction requires verification at this amount
 
-console.log(result.requiredFields);
+console.log(result.from.transmissionRequired);
+// false — US threshold is USD 3,000 (not triggered for transmission)
+
+console.log(result.requiredFields.transmission);
 // {
 //   originator: ["fullName", "dateOfBirth", "accountNumber", "address"],
 //   beneficiary: ["fullName", "accountNumber", "townAndCountry"]
 // }
-// Union of both jurisdictions' requirements (strictest of the two)
+// Union of both jurisdictions' transmission requirements (strictest of the two)
+
+console.log(result.requiredFields.verification);
+// {
+//   originator: ["fullName", "accountNumber"],
+//   beneficiary: ["fullName", "accountNumber"]
+// }
+// Union of both jurisdictions' verification requirements
+
+// South Africa example: split-tier behavior (transmission threshold differs from verification threshold)
+const zaResult = engine.evaluate({ from: 'ZA', to: 'GB', fiatEquivalent: 2000 }, '2026-08-01');
+console.log(zaResult.from.transmissionRequired); // true — above ZA transmission threshold
+console.log(zaResult.verificationRequired);       // true — above ZA verification threshold
+// requiredFields.transmission and requiredFields.verification reflect the distinct tiers
 
 // Check unhosted wallet verification requirements
 const wallet = engine.walletVerification('DE', '2026-08-01');
@@ -48,7 +64,11 @@ console.log(wallet);
 // You can also check a single jurisdiction's rule directly
 const rule = engine.getApplicableRule('DE', '2026-08-01');
 console.log(rule?.threshold);
-// { amount: 0, currency: 'EUR', isZeroThreshold: true }
+// { transmission: { amount: 0, currency: 'EUR', isZeroThreshold: true, requiredFields: {...} }, ... }
+
+// isRuleTriggered now returns an object with both tiers
+const triggered = engine.isRuleTriggered('US', 5000);
+// { transmissionRequired: false, verificationRequired: true }
 ```
 
 ## Project Structure
@@ -105,10 +125,21 @@ Each file in `data/jurisdictions/` contains a single `JurisdictionData` object. 
       "status": "active",
       "effectiveFrom": "2024-12-30",
       "effectiveTo": "2026-06-30",
-      "threshold": { "amount": 1000, "currency": "EUR", "isZeroThreshold": false },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
+      "threshold": {
+        "transmission": {
+          "amount": 1000, "currency": "EUR", "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": ["fullName", "accountNumber", "address"],
+            "beneficiary": ["fullName", "accountNumber"]
+          }
+        },
+        "verification": {
+          "amount": 1000, "currency": "EUR", "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": ["fullName", "accountNumber", "address"],
+            "beneficiary": ["fullName", "accountNumber"]
+          }
+        }
       },
       "unhostedWallets": {
         "verificationRequired": true,
@@ -122,10 +153,21 @@ Each file in `data/jurisdictions/` contains a single `JurisdictionData` object. 
       "status": "pending",
       "effectiveFrom": "2026-07-01",
       "effectiveTo": null,
-      "threshold": { "amount": 0, "currency": "EUR", "isZeroThreshold": true },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address", "dateOfBirth", "placeOfBirth", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
+      "threshold": {
+        "transmission": {
+          "amount": 0, "currency": "EUR", "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": ["fullName", "accountNumber", "address", "dateOfBirth", "placeOfBirth", "idDocumentNumber"],
+            "beneficiary": ["fullName", "accountNumber"]
+          }
+        },
+        "verification": {
+          "amount": 0, "currency": "EUR", "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": ["fullName", "accountNumber", "address", "dateOfBirth", "placeOfBirth", "idDocumentNumber"],
+            "beneficiary": ["fullName", "accountNumber"]
+          }
+        }
       },
       "unhostedWallets": {
         "verificationRequired": true,
@@ -174,10 +216,21 @@ Each entry in the `rules` array describes a specific regulatory version.
   "status": "active",
   "effectiveFrom": "2024-01-28",
   "effectiveTo": null,
-  "threshold": { "amount": 0, "currency": "SGD", "isZeroThreshold": true },
-  "requiredFields": {
-    "originator": ["fullName", "accountNumber", "address", "idDocumentNumber", "dateOfBirth"],
-    "beneficiary": ["fullName", "accountNumber"]
+  "threshold": {
+    "transmission": {
+      "amount": 0, "currency": "SGD", "isZeroThreshold": true,
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address", "idDocumentNumber", "dateOfBirth"],
+        "beneficiary": ["fullName", "accountNumber"]
+      }
+    },
+    "verification": {
+      "amount": 0, "currency": "SGD", "isZeroThreshold": true,
+      "requiredFields": {
+        "originator": ["fullName", "accountNumber", "address", "idDocumentNumber", "dateOfBirth"],
+        "beneficiary": ["fullName", "accountNumber"]
+      }
+    }
   },
   "unhostedWallets": {
     "verificationRequired": true,
@@ -221,21 +274,25 @@ Date the rule ceases to be enforceable. Set to `null` for the currently open-end
 
 **threshold** `object` **required**
 
-The monetary threshold at which the travel rule is triggered.
+A two-tier object describing when the travel rule is triggered and what data is required at each tier. The two tiers reflect a distinction that several jurisdictions (e.g., South Africa, some FATF-member states) draw between when data must be *sent* versus when it must be *verified*:
+
+- **`transmission`** — the threshold at which travel rule data must be transmitted to the receiving VASP
+- **`verification`** — the threshold at which the receiving VASP must verify the data received
+
+In many jurisdictions the two tiers share the same amount; in others they differ. Both tiers are always present.
+
+Each tier is a `ThresholdTier` object:
+
+#### ThresholdTier
 
 | Field | Type | Description |
 |-------|------|-------------|
 | `amount` | `number` | Threshold in local currency. Set to `0` for zero-threshold jurisdictions. |
 | `currency` | `string` | ISO 4217 currency code (e.g., `EUR`, `USD`, `GBP`). |
 | `isZeroThreshold` | `boolean` | `true` if the rule applies to **all** transfers regardless of amount. Only set `true` when `amount` is `0`. |
+| `requiredFields` | `object` | PII fields required at this tier, split by party (see below). |
 
-> Thresholds should approximate the FATF-recommended USD/EUR 1,000 equivalent in local currency. If a threshold deviates significantly (>3x or <0.3x), verify against the primary regulatory source.
-
----
-
-**requiredFields** `object` **required**
-
-PII fields that must be collected and transmitted, split by party.
+**`requiredFields`** within each `ThresholdTier`:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -253,6 +310,8 @@ PII fields that must be collected and transmitted, split by party.
 | `address` | Residential or registered address |
 | `accountNumber` | Wallet address, IBAN, or account identifier |
 | `townAndCountry` | Town/city and country (when full address is not required) |
+
+> Thresholds should approximate the FATF-recommended USD/EUR 1,000 equivalent in local currency. If a threshold deviates significantly (>3x or <0.3x), verify against the primary regulatory source.
 
 ---
 
@@ -319,6 +378,10 @@ If a country announces new rules or amends thresholds:
 - All currency codes must be ISO 4217
 - Every rule must include an `authorityUrl` pointing to the primary regulatory source
 - Use `isZeroThreshold: true` only when the regulation applies to all transfers regardless of amount
+
+## Disclaimer
+
+This project is provided for informational purposes only and does not constitute legal, regulatory, or compliance advice. While every effort is made to keep the data accurate and up to date, regulatory requirements change frequently. Always verify rules against the primary regulatory sources cited in each jurisdiction file before making compliance decisions.
 
 ## License
 

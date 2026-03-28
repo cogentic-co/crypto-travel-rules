@@ -20,7 +20,9 @@
     "validate": "tsc --noEmit",
     "test": "vitest run",
     "prepublishOnly": "npm run validate && npm run test && npm run build",
-    "example": "npx ts-node examples/evaluate-transfer.ts"
+    "example": "npx ts-node examples/evaluate-transfer.ts",
+    "generate:directory": "npx ts-node scripts/generate-directory.ts",
+    "validate:data": "npx ts-node scripts/validate-jurisdictions.ts"
   },
   "keywords": [
     "crypto",

@@ -8,21 +8,46 @@
       "status": "active",
       "effectiveFrom": "2024-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 50000,
-        "currency": "THB",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 50000,
         "notes": "Licensed digital asset operators must comply with AMLO travel rule requirements. Thai citizen ID required for domestic originators."
       },
-      "authorityUrl": "https://www.sec.or.th/EN/Pages/LawandRegulations/DigitalAssetBusiness.aspx"
+      "authorityUrl": "https://www.sec.or.th/EN/Pages/LawandRegulations/DigitalAssetBusiness.aspx",
+      "threshold": {
+        "transmission": {
+          "amount": 50000,
+          "currency": "THB",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 50000,
+          "currency": "THB",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

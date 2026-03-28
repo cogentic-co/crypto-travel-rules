@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "USD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "Crypto Law 129 (2024) provides VASP framework. SMV oversees registration. Uses USD."
       },
-      "authorityUrl": "https://www.supervalores.gob.pa/"
+      "authorityUrl": "https://www.supervalores.gob.pa/",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "USD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "USD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

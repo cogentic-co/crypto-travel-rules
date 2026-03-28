@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1500,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "Bank of Albania regulates VASPs under AML/CFT law aligned with EU standards."
       },
-      "authorityUrl": "https://www.bankofalbania.org/"
+      "authorityUrl": "https://www.bankofalbania.org/",
+      "threshold": {
+        "transmission": {
+          "amount": 1500,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1500,
+          "currency": "EUR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

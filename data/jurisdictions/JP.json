@@ -8,20 +8,45 @@
       "status": "active",
       "effectiveFrom": "2023-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 0,
-        "currency": "JPY",
-        "isZeroThreshold": true
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "notes": "Japan was among the first to enforce the travel rule for crypto. All VASP-to-VASP transfers require originator/beneficiary data regardless of amount. Transfers to unhosted wallets require additional risk-based verification."
       },
-      "authorityUrl": "https://www.fsa.go.jp/en/policy/virtual-currency/"
+      "authorityUrl": "https://www.fsa.go.jp/en/policy/virtual-currency/",
+      "threshold": {
+        "transmission": {
+          "amount": 0,
+          "currency": "JPY",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 0,
+          "currency": "JPY",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

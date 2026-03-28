@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2024-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 0,
-        "currency": "USD",
-        "isZeroThreshold": true
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "notes": "SUNACRIP regulates all crypto activity. Petro (PTR) state crypto. Travel rule applies to all VASP transfers. High crypto adoption."
       },
-      "authorityUrl": "https://sunacrip.gob.ve/"
+      "authorityUrl": "https://sunacrip.gob.ve/",
+      "threshold": {
+        "transmission": {
+          "amount": 0,
+          "currency": "USD",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 0,
+          "currency": "USD",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

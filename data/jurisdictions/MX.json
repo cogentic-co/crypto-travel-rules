@@ -8,20 +8,45 @@
       "status": "active",
       "effectiveFrom": "2024-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 8000,
-        "currency": "MXN",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "Ley Fintech requires ITFs (Instituciones de Tecnología Financiera) operating with virtual assets to comply with AML/CFT travel rule. CURP or RFC required for Mexican originators."
       },
-      "authorityUrl": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/FINTECH/Paginas/default.aspx"
+      "authorityUrl": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/FINTECH/Paginas/default.aspx",
+      "threshold": {
+        "transmission": {
+          "amount": 8000,
+          "currency": "MXN",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 8000,
+          "currency": "MXN",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

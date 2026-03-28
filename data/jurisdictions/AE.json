@@ -8,21 +8,46 @@
       "status": "active",
       "effectiveFrom": "2024-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 3500,
-        "currency": "AED",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 3500,
         "notes": "VARA Dubai regulations and federal SCA framework require licensed VASPs to transmit originator/beneficiary information. Unhosted wallet transfers require risk assessment and verification above AED 3,500."
       },
-      "authorityUrl": "https://www.vara.ae/en/regulations/"
+      "authorityUrl": "https://www.vara.ae/en/regulations/",
+      "threshold": {
+        "transmission": {
+          "amount": 3500,
+          "currency": "AED",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 3500,
+          "currency": "AED",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

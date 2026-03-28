@@ -8,28 +8,46 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "MAD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 1000,
+        "verificationThreshold": 10000,
         "notes": "Morocco developing crypto regulatory framework after prior ban. Bank Al-Maghrib overseeing AML/CFT. Draft law expected."
       },
-      "authorityUrl": "https://www.bkam.ma/"
+      "authorityUrl": "https://www.bkam.ma/",
+      "threshold": {
+        "transmission": {
+          "amount": 10000,
+          "currency": "MAD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 10000,
+          "currency": "MAD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

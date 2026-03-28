@@ -8,28 +8,46 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "GHS",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 1000,
+        "verificationThreshold": 15000,
         "notes": "SEC Ghana developing Digital Asset Industry Framework. Bank of Ghana AML/CFT applies. eCedi CBDC in development."
       },
-      "authorityUrl": "https://www.bog.gov.gh/"
+      "authorityUrl": "https://www.bog.gov.gh/",
+      "threshold": {
+        "transmission": {
+          "amount": 15000,
+          "currency": "GHS",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 15000,
+          "currency": "GHS",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

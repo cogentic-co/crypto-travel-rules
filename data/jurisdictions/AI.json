@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "XCD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "ECCB member. AFSC AML framework applies. Utility Token Offering Act passed."
       },
-      "authorityUrl": "https://www.eccb-centralbank.org/"
+      "authorityUrl": "https://www.eccb-centralbank.org/",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "XCD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "XCD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

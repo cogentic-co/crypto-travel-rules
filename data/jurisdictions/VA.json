@@ -8,30 +8,51 @@
       "status": "active",
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 0,
-        "currency": "EUR",
-        "isZeroThreshold": true
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address",
-          "dateOfBirth",
-          "placeOfBirth",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "notes": "AIF applies strict AML/CFT rules to all financial transfers including digital assets."
       },
-      "authorityUrl": "https://www.aif.va/"
+      "authorityUrl": "https://www.aif.va/",
+      "threshold": {
+        "transmission": {
+          "amount": 0,
+          "currency": "EUR",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "dateOfBirth",
+              "placeOfBirth",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 0,
+          "currency": "EUR",
+          "isZeroThreshold": true,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "dateOfBirth",
+              "placeOfBirth",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

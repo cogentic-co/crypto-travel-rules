@@ -8,28 +8,46 @@
       "status": "active",
       "effectiveFrom": "2024-09-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "QAR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 1000,
+        "verificationThreshold": 3650,
         "notes": "QFC Digital Assets Framework. Qatar Central Bank prohibits crypto for banks but QFCRA permits licensed digital asset services."
       },
-      "authorityUrl": "https://www.qfcra.com/"
+      "authorityUrl": "https://www.qfcra.com/",
+      "threshold": {
+        "transmission": {
+          "amount": 3650,
+          "currency": "QAR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 3650,
+          "currency": "QAR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

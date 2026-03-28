@@ -8,20 +8,45 @@
       "status": "active",
       "effectiveFrom": "2024-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "NZD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "AML/CFT Act applies to virtual asset service providers registered with DIA. Travel rule for wire transfers (including crypto) applies at NZD 1,000 threshold."
       },
-      "authorityUrl": "https://www.dia.govt.nz/AML-CFT-Virtual-Asset-Service-Providers"
+      "authorityUrl": "https://www.dia.govt.nz/AML-CFT-Virtual-Asset-Service-Providers",
+      "threshold": {
+        "transmission": {
+          "amount": 1000,
+          "currency": "NZD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 1000,
+          "currency": "NZD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

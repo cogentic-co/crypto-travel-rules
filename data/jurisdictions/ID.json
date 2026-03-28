@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 16000000,
-        "currency": "IDR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "OJK assumed crypto oversight from Bappebti in Jan 2025. Licensed crypto asset exchanges must comply with PPATK (FIU) travel rule requirements. NIK (national ID number) required for Indonesian originators. Threshold aligned with FATF recommendation (approximately USD/EUR 1,000 equivalent)."
       },
-      "authorityUrl": "https://www.ojk.go.id/"
+      "authorityUrl": "https://www.ojk.go.id/",
+      "threshold": {
+        "transmission": {
+          "amount": 16000000,
+          "currency": "IDR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 16000000,
+          "currency": "IDR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

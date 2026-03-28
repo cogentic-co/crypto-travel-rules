@@ -8,21 +8,48 @@
       "status": "active",
       "effectiveFrom": "2025-03-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 50000,
-        "currency": "INR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 50000,
         "notes": "FIU-IND requires registered VDA (Virtual Digital Asset) service providers to comply with PMLA travel rule obligations. PAN card or Aadhaar verification required for Indian originators."
       },
-      "authorityUrl": "https://fiuindia.gov.in/"
+      "authorityUrl": "https://fiuindia.gov.in/",
+      "threshold": {
+        "transmission": {
+          "amount": 50000,
+          "currency": "INR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 50000,
+          "currency": "INR",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

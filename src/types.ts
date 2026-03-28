@@ -7,19 +7,24 @@ export type PiiField =
   | 'accountNumber'
   | 'townAndCountry';
 
+export interface ThresholdTier {
+  amount: number;
+  currency: string;
+  isZeroThreshold: boolean;
+  requiredFields: {
+    originator: PiiField[];
+    beneficiary: PiiField[];
+  };
+}
+
 export interface TravelRuleVersion {
   versionId: string;
   status: 'active' | 'pending' | 'deprecated';
   effectiveFrom: string; // ISO YYYY-MM-DD
   effectiveTo: string | null;
   threshold: {
-    amount: number;
-    currency: string;
-    isZeroThreshold: boolean;
-  };
-  requiredFields: {
-    originator: PiiField[];
-    beneficiary: PiiField[];
+    transmission: ThresholdTier;
+    verification: ThresholdTier;
   };
   unhostedWallets: {
     verificationRequired: boolean;
@@ -42,6 +47,11 @@ export interface TransferRequest {
   fiatEquivalent: number;
 }
 
+export interface TriggerResult {
+  transmissionRequired: boolean;
+  verificationRequired: boolean;
+}
+
 export interface WalletVerificationResult {
   required: boolean;
   threshold: number | null;
@@ -51,18 +61,27 @@ export interface WalletVerificationResult {
 
 export interface EvaluationResult {
   triggered: boolean;
+  verificationRequired: boolean;
   from: {
     countryCode: string;
     rule: TravelRuleVersion | null;
-    triggered: boolean;
+    transmissionRequired: boolean;
+    verificationRequired: boolean;
   };
   to: {
     countryCode: string;
     rule: TravelRuleVersion | null;
-    triggered: boolean;
+    transmissionRequired: boolean;
+    verificationRequired: boolean;
   };
   requiredFields: {
-    originator: PiiField[];
-    beneficiary: PiiField[];
+    transmission: {
+      originator: PiiField[];
+      beneficiary: PiiField[];
+    };
+    verification: {
+      originator: PiiField[];
+      beneficiary: PiiField[];
+    };
   };
 }

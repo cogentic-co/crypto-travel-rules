@@ -8,27 +8,45 @@
       "status": "active",
       "effectiveFrom": "2024-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "XAF",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
-        "notes": "CAR adopted Bitcoin as legal tender (2022) but BEAC/CEMAC pushed back and implementation remains limited. BEAC regional AML framework applies uniformly across CEMAC zone. Threshold aligned with CEMAC peers."
+        "notes": "FATF-aligned threshold (~USD 1,000 equivalent). BEAC regional AML framework applies."
       },
-      "authorityUrl": "https://www.beac.int/"
+      "authorityUrl": "https://www.beac.int/",
+      "threshold": {
+        "transmission": {
+          "amount": 625000,
+          "currency": "XAF",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 625000,
+          "currency": "XAF",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

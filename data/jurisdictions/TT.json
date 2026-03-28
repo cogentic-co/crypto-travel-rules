@@ -8,28 +8,46 @@
       "status": "active",
       "effectiveFrom": "2025-06-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 1000,
-        "currency": "TTD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 1000,
+        "verificationThreshold": 6800,
         "notes": "TTSEC and CBTT developing virtual asset framework. AML/CFT Act applies."
       },
-      "authorityUrl": "https://www.central-bank.org.tt/"
+      "authorityUrl": "https://www.central-bank.org.tt/",
+      "threshold": {
+        "transmission": {
+          "amount": 6800,
+          "currency": "TTD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 6800,
+          "currency": "TTD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

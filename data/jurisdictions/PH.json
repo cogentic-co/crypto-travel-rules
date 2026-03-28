@@ -8,20 +8,45 @@
       "status": "active",
       "effectiveFrom": "2024-01-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 50000,
-        "currency": "PHP",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "address"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "BSP Circular 1108 requires VASPs to comply with AMLA travel rule for virtual asset transfers above PHP 50,000."
       },
-      "authorityUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf"
+      "authorityUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf",
+      "threshold": {
+        "transmission": {
+          "amount": 50000,
+          "currency": "PHP",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 50000,
+          "currency": "PHP",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

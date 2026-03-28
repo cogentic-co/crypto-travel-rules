@@ -8,21 +8,46 @@
       "status": "active",
       "effectiveFrom": "2025-02-25",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 15000,
-        "currency": "TRY",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 15000,
         "notes": "SPK crypto asset regulation framework requires licensed platforms to comply with MASAK (FIU) travel rule. TC Kimlik No (national ID) required for Turkish originators."
       },
-      "authorityUrl": "https://www.spk.gov.tr/"
+      "authorityUrl": "https://www.spk.gov.tr/",
+      "threshold": {
+        "transmission": {
+          "amount": 15000,
+          "currency": "TRY",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 15000,
+          "currency": "TRY",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

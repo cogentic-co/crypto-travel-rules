@@ -8,20 +8,45 @@
       "status": "active",
       "effectiveFrom": "2025-09-01",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 100000,
-        "currency": "KES",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": ["fullName", "accountNumber", "idDocumentNumber"],
-        "beneficiary": ["fullName", "accountNumber"]
-      },
       "unhostedWallets": {
         "verificationRequired": false,
         "notes": "CMA Capital Markets (Virtual Asset Service Providers) Regulations require travel rule compliance. National ID or passport required for Kenyan originators."
       },
-      "authorityUrl": "https://www.cma.or.ke/"
+      "authorityUrl": "https://www.cma.or.ke/",
+      "threshold": {
+        "transmission": {
+          "amount": 100000,
+          "currency": "KES",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 100000,
+          "currency": "KES",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

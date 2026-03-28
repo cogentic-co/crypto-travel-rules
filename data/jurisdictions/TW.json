@@ -8,29 +8,48 @@
       "status": "active",
       "effectiveFrom": "2024-11-30",
       "effectiveTo": null,
-      "threshold": {
-        "amount": 30000,
-        "currency": "TWD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "idDocumentNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 30000,
         "notes": "FSC requires VASPs to register and comply with AML/CFT travel rule. Threshold aligned with FATF recommendation (approximately USD/EUR 1,000 equivalent)."
       },
-      "authorityUrl": "https://www.fsc.gov.tw/en/"
+      "authorityUrl": "https://www.fsc.gov.tw/en/",
+      "threshold": {
+        "transmission": {
+          "amount": 30000,
+          "currency": "TWD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        },
+        "verification": {
+          "amount": 30000,
+          "currency": "TWD",
+          "isZeroThreshold": false,
+          "requiredFields": {
+            "originator": [
+              "fullName",
+              "accountNumber",
+              "idDocumentNumber",
+              "address"
+            ],
+            "beneficiary": [
+              "fullName",
+              "accountNumber"
+            ]
+          }
+        }
+      }
     }
   ]
 }

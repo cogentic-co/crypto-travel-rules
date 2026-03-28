@@ -47,8 +47,8 @@ console.log(result.requiredFields.verification);
 
 // South Africa example: split-tier behavior (transmission threshold differs from verification threshold)
 const zaResult = engine.evaluate({ from: 'ZA', to: 'GB', fiatEquivalent: 2000 }, '2026-08-01');
-console.log(zaResult.from.transmissionRequired); // true — above ZA transmission threshold
-console.log(zaResult.verificationRequired);       // true — above ZA verification threshold
+console.log(zaResult.from.transmissionRequired); // true — ZA transmits on all transfers (ZAR 0)
+console.log(zaResult.from.verificationRequired); // false — below ZA verification threshold (ZAR 5,000)
 // requiredFields.transmission and requiredFields.verification reflect the distinct tiers
 
 // Check unhosted wallet verification requirements
@@ -68,7 +68,7 @@ console.log(rule?.threshold);
 
 // isRuleTriggered now returns an object with both tiers
 const triggered = engine.isRuleTriggered('US', 5000);
-// { transmissionRequired: false, verificationRequired: true }
+// { transmissionRequired: true, verificationRequired: true }
 ```
 
 ## Project Structure

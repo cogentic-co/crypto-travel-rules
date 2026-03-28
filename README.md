@@ -10,6 +10,15 @@ The FATF Travel Rule requires Virtual Asset Service Providers (VASPs) to exchang
 - **A compliance engine** that resolves which rule applies for a given country and date
 - **IVMS101-aligned schemas** so the data maps cleanly to the interVASP messaging standard
 
+### Transmission vs Verification
+
+Each jurisdiction's rule has two thresholds that reflect a real regulatory distinction:
+
+- **Transmission threshold** — the amount at which you must **send** originator/beneficiary data to the counterparty VASP. The global trend is toward zero (send data on all transfers).
+- **Verification threshold** — the amount at which the receiving VASP must **verify** that the data is correct (e.g., checking ID documents). This is typically higher (~$1,000 USD equivalent).
+
+Most jurisdictions set both to the same amount today. But some, like South Africa, already split them: transmit data on every transfer (ZAR 0), but only verify identity above ZAR 5,000.
+
 ## Quick Start
 
 ```bash

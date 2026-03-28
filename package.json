@@ -4,10 +4,22 @@
   "description": "Machine-readable directory of global crypto Travel Rule requirements with a TypeScript SDK to handle the Sunrise Issue.",
   "main": "dist/engine.js",
   "types": "dist/engine.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/engine.d.ts",
+      "require": "./dist/engine.js",
+      "import": "./dist/engine.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "data/jurisdictions/"
+  ],
   "scripts": {
     "build": "tsc",
     "validate": "tsc --noEmit",
     "test": "vitest run",
+    "prepublishOnly": "npm run validate && npm run test && npm run build",
     "example": "npx ts-node examples/evaluate-transfer.ts"
   },
   "keywords": [
@@ -17,12 +29,18 @@
     "IVMS101",
     "compliance",
     "AML",
-    "CFT"
+    "CFT",
+    "VASP",
+    "unhosted-wallet"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/cogentic-co/crypto-travel-rules.git"
+  },
+  "homepage": "https://github.com/cogentic-co/crypto-travel-rules#readme",
+  "bugs": {
+    "url": "https://github.com/cogentic-co/crypto-travel-rules/issues"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",

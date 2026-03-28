@@ -60,17 +60,12 @@ engine.isRuleTriggered('US', 5000);
 
 ```
 data/
-  jurisdictions/    # One JSON file per country/jurisdiction
-    AU.json
-    DE.json
-    GB.json
-    HK.json
-    SG.json
-    US.json
-    ... (208 total)
+  jurisdictions/              # Travel rule thresholds & required fields (208 jurisdictions)
+  beneficiary-obligations/    # What receiving VASPs must do (6 jurisdictions)
+  reporting/                  # STR/SAR and CTR reporting thresholds (6 jurisdictions)
 src/
-  types.ts          # TypeScript interfaces (IVMS101-aligned)
-  engine.ts         # ComplianceEngine class
+  types.ts                    # TypeScript interfaces (IVMS101-aligned)
+  engine.ts                   # TravelRuleEngine class
 ```
 
 ## Jurisdiction Coverage
@@ -289,6 +284,82 @@ The `status` field is **informational** (for humans browsing the JSON):
 - `active` — currently in force
 - `pending` — announced, not yet effective
 - `deprecated` — superseded by a newer rule
+
+## Beneficiary Obligations
+
+Each file in `data/beneficiary-obligations/` describes what a **receiving** VASP must do when it gets an incoming transfer. Currently covers 6 jurisdictions (US, DE, GB, SG, AU, ZA).
+
+```json
+{
+  "countryCode": "DE",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://eur-lex.europa.eu/...",
+  "notes": "EU TFR Article 17 requires beneficiary CASPs to detect missing or incomplete originator/beneficiary information..."
+}
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `mustVerifyOriginatorData` | `boolean` | Must the beneficiary VASP verify the originator information it receives? |
+| `rejectIncompleteTransfers` | `boolean` | Must the VASP reject or hold transfers with missing data? |
+| `responseTimeHours` | `number \| null` | Hours to respond/flag issues. `null` if not specified (most jurisdictions use "without undue delay"). |
+| `recordKeepingYears` | `number` | How long records must be retained. |
+
+```typescript
+const obligations = engine.getBeneficiaryObligations('DE');
+console.log(obligations?.mustVerifyOriginatorData); // true
+console.log(obligations?.rejectIncompleteTransfers); // true
+```
+
+## Reporting Thresholds
+
+Each file in `data/reporting/` describes the STR (Suspicious Transaction Report) and CTR (Cash Transaction Report) requirements. Currently covers 6 jurisdictions.
+
+```json
+{
+  "countryCode": "US",
+  "str": {
+    "required": true,
+    "threshold": 2000,
+    "currency": "USD",
+    "timeframeDays": 30,
+    "authority": "FinCEN",
+    "notes": "SAR required for MSBs (including VASPs) for suspicious transactions of USD 2,000 or more."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 10000,
+    "currency": "USD",
+    "authority": "FinCEN",
+    "notes": "CTR required for physical cash transactions over USD 10,000."
+  },
+  "authorityUrl": "https://www.fincen.gov/..."
+}
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `str` | `ReportingThreshold` | Suspicious transaction reporting requirements. |
+| `ctr` | `ReportingThreshold \| null` | Cash transaction reporting. `null` if the jurisdiction has no automatic reporting (e.g., DE, GB, SG). |
+
+**ReportingThreshold:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `required` | `boolean` | Is reporting mandatory for VASPs? |
+| `threshold` | `number` | Amount that triggers reporting. `0` = all suspicious transactions. |
+| `currency` | `string` | ISO 4217 currency code. |
+| `timeframeDays` | `number` | Filing deadline in days. `0` = immediately. |
+| `authority` | `string` | Which authority receives the reports. |
+
+```typescript
+const reporting = engine.getReporting('US');
+console.log(reporting?.str.threshold);  // 2000
+console.log(reporting?.ctr?.threshold); // 10000
+```
 
 ## Contributing
 

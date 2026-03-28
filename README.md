@@ -54,6 +54,8 @@ engine.isRuleTriggered('US', 5000);
 // true
 ```
 
+> **Currency note:** `fiatEquivalent` and `isRuleTriggered` amounts are compared directly against each jurisdiction's threshold in local currency. The engine does not perform currency conversion — callers are responsible for converting to the destination jurisdiction's currency before checking. For `evaluate()`, pass the amount in the destination jurisdiction's currency, or call `isRuleTriggered()` separately per jurisdiction with the appropriate converted amount.
+
 ## Project Structure
 
 ```

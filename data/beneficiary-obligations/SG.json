@@ -1,0 +1,9 @@
+{
+  "countryCode": "SG",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.mas.gov.sg/regulation/notices/psn02-notice-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism",
+  "notes": "MAS Notice PSN02 requires beneficiary DPT service providers to detect transfers with missing data, verify beneficiaries, and determine whether to execute, suspend, or reject transfers. Transfers must be rejected if minimum data requirements cannot be fulfilled."
+}

@@ -1,9 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import {
+  BeneficiaryObligations,
   EvaluationResult,
   JurisdictionData,
   PiiField,
+  ReportingData,
   TransferRequest,
   TravelRuleVersion,
   WalletVerificationResult,
@@ -15,10 +17,14 @@ function mergeFields(a: PiiField[], b: PiiField[]): PiiField[] {
 
 export class TravelRuleEngine {
   private jurisdictions: Map<string, JurisdictionData> = new Map();
+  private beneficiaryObligations: Map<string, BeneficiaryObligations> = new Map();
+  private reporting: Map<string, ReportingData> = new Map();
 
   constructor(dataDir?: string) {
-    const dir = dataDir ?? path.resolve(__dirname, '..', 'data', 'jurisdictions');
-    this.loadJurisdictions(dir);
+    const baseDir = dataDir ?? path.resolve(__dirname, '..', 'data');
+    this.loadJurisdictions(path.join(baseDir, 'jurisdictions'));
+    this.loadJsonDir(path.join(baseDir, 'beneficiary-obligations'), this.beneficiaryObligations);
+    this.loadJsonDir(path.join(baseDir, 'reporting'), this.reporting);
   }
 
   private loadJurisdictions(dir: string): void {
@@ -30,8 +36,34 @@ export class TravelRuleEngine {
     }
   }
 
+  private loadJsonDir<T extends { countryCode: string }>(dir: string, map: Map<string, T>): void {
+    if (!fs.existsSync(dir)) return;
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
+    for (const file of files) {
+      const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
+      const data: T = JSON.parse(raw);
+      map.set(data.countryCode.toUpperCase(), data);
+    }
+  }
+
   getJurisdiction(countryCode: string): JurisdictionData | undefined {
     return this.jurisdictions.get(countryCode.toUpperCase());
+  }
+
+  /**
+   * Returns the beneficiary VASP obligations for a jurisdiction,
+   * or null if no data is available.
+   */
+  getBeneficiaryObligations(countryCode: string): BeneficiaryObligations | null {
+    return this.beneficiaryObligations.get(countryCode.toUpperCase()) ?? null;
+  }
+
+  /**
+   * Returns the reporting thresholds (STR/CTR) for a jurisdiction,
+   * or null if no data is available.
+   */
+  getReporting(countryCode: string): ReportingData | null {
+    return this.reporting.get(countryCode.toUpperCase()) ?? null;
   }
 
   listJurisdictions(): string[] {

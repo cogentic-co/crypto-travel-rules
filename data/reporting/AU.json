@@ -1,0 +1,19 @@
+{
+  "countryCode": "AU",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "AUD",
+    "timeframeDays": 3,
+    "authority": "AUSTRAC",
+    "notes": "Suspicious Matter Reports (SMR) must be filed within 3 business days of forming suspicion. Terrorism-financing related matters require filing within 24 hours."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 10000,
+    "currency": "AUD",
+    "authority": "AUSTRAC",
+    "notes": "Threshold Transaction Reports (TTR) required for physical cash transactions of AUD 10,000 or more. Must be filed within 10 business days."
+  },
+  "authorityUrl": "https://www.austrac.gov.au/business/core-guidance/reporting"
+}

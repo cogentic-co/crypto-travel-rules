@@ -1,0 +1,9 @@
+{
+  "countryCode": "AU",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 7,
+  "authorityUrl": "https://www.austrac.gov.au/amlctf-reform/reforms-guidance/other-guidance/travel-rule-reform/travel-rule-obligations-beneficiary-institutions-reform",
+  "notes": "Under the AML/CTF Act reform (effective July 2026), beneficiary institutions must monitor for missing originator information using a risk-based approach. No absolute obligation to reject — institutions have discretion based on risk assessment. Record retention: 7 years per AML/CTF Act."
+}

@@ -1,0 +1,9 @@
+{
+  "countryCode": "GB",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fca.org.uk/news/statements/fca-sets-out-expectations-uk-cryptoasset-businesses-complying-travel-rule",
+  "notes": "UK MLR 2017 (as amended 2022) requires beneficiary cryptoasset businesses to check for missing or contradictory originator/beneficiary information and conduct a risk-based assessment. FCA recommends suspending transactions if information cannot be reliably transmitted and verified."
+}

@@ -1,0 +1,9 @@
+{
+  "countryCode": "DE",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://eur-lex.europa.eu/eli/reg/2023/1113/oj/eng",
+  "notes": "EU TFR Article 17 requires beneficiary CASPs to detect missing or incomplete originator/beneficiary information using risk-based procedures. Must determine whether to execute, reject, return, or suspend transfers lacking required data. Must verify accuracy of beneficiary information. No specific response time mandated — regulation uses 'without undue delay'. BaFin enforces via KryptoWTransferV."
+}

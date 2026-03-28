@@ -49,6 +49,32 @@ export interface WalletVerificationResult {
   notes: string | null;
 }
 
+export interface BeneficiaryObligations {
+  countryCode: string;
+  mustVerifyOriginatorData: boolean;
+  rejectIncompleteTransfers: boolean;
+  responseTimeHours: number | null;
+  recordKeepingYears: number;
+  authorityUrl: string;
+  notes: string;
+}
+
+export interface ReportingThreshold {
+  required: boolean;
+  threshold: number;
+  currency: string;
+  timeframeDays: number;
+  authority: string;
+  notes: string;
+}
+
+export interface ReportingData {
+  countryCode: string;
+  str: ReportingThreshold;
+  ctr: ReportingThreshold | null;
+  authorityUrl: string;
+}
+
 export interface EvaluationResult {
   triggered: boolean;
   from: {

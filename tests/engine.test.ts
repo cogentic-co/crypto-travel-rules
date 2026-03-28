@@ -210,4 +210,57 @@ describe('TravelRuleEngine', () => {
       expect(result.threshold).toBeNull();
     });
   });
+
+  describe('getBeneficiaryObligations', () => {
+    it('returns obligations for a known jurisdiction', () => {
+      const result = engine.getBeneficiaryObligations('DE');
+      expect(result).not.toBeNull();
+      expect(result!.countryCode).toBe('DE');
+      expect(result!.mustVerifyOriginatorData).toBe(true);
+      expect(result!.rejectIncompleteTransfers).toBe(true);
+      expect(result!.recordKeepingYears).toBe(5);
+    });
+
+    it('returns null for jurisdictions without data', () => {
+      expect(engine.getBeneficiaryObligations('ZZ')).toBeNull();
+    });
+
+    it('reflects US outlier — no beneficiary verification required', () => {
+      const result = engine.getBeneficiaryObligations('US');
+      expect(result).not.toBeNull();
+      expect(result!.mustVerifyOriginatorData).toBe(false);
+      expect(result!.rejectIncompleteTransfers).toBe(false);
+    });
+
+    it('is case-insensitive', () => {
+      expect(engine.getBeneficiaryObligations('de')).toEqual(engine.getBeneficiaryObligations('DE'));
+    });
+  });
+
+  describe('getReporting', () => {
+    it('returns reporting data for a known jurisdiction', () => {
+      const result = engine.getReporting('US');
+      expect(result).not.toBeNull();
+      expect(result!.countryCode).toBe('US');
+      expect(result!.str.required).toBe(true);
+      expect(result!.str.threshold).toBe(2000);
+      expect(result!.ctr).not.toBeNull();
+      expect(result!.ctr!.threshold).toBe(10000);
+    });
+
+    it('returns null CTR for jurisdictions without automatic reporting', () => {
+      const result = engine.getReporting('DE');
+      expect(result).not.toBeNull();
+      expect(result!.str.required).toBe(true);
+      expect(result!.ctr).toBeNull();
+    });
+
+    it('returns null for jurisdictions without data', () => {
+      expect(engine.getReporting('ZZ')).toBeNull();
+    });
+
+    it('is case-insensitive', () => {
+      expect(engine.getReporting('us')).toEqual(engine.getReporting('US'));
+    });
+  });
 });

@@ -13,7 +13,9 @@
   },
   "files": [
     "dist/",
-    "data/jurisdictions/"
+    "data/jurisdictions/",
+    "data/beneficiary-obligations/",
+    "data/reporting/"
   ],
   "scripts": {
     "build": "tsc",

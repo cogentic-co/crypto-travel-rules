@@ -1,0 +1,13 @@
+{
+  "countryCode": "SG",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "SGD",
+    "timeframeDays": 15,
+    "authority": "Suspicious Transaction Reporting Office (STRO)",
+    "notes": "All suspicious transactions must be reported within 15 business days. Filed via SONAR platform. Applies under CDSA and TSOFA."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.police.gov.sg/Advisories/Commercial-Crimes/Suspicious-Transaction-Reporting-Office"
+}

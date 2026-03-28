@@ -1,0 +1,13 @@
+{
+  "countryCode": "GB",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "GBP",
+    "timeframeDays": 0,
+    "authority": "UK Financial Intelligence Unit (UKFIU) / National Crime Agency (NCA)",
+    "notes": "All suspicious activity must be reported as soon as practicable. No fixed statutory deadline. Defence Against Money Laundering (DAML) requests give NCA 7 working days to respond, with a further 31-day moratorium if consent is refused. Filed via NCA SAR Online."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.nationalcrimeagency.gov.uk/what-we-do/crime-threats/money-laundering-and-illicit-finance/suspicious-activity-reports"
+}

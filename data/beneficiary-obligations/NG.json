@@ -1,0 +1,9 @@
+{
+  "countryCode": "NG",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://sec.gov.ng/digital-assets/",
+  "notes": "SEC Nigeria requires licensed VASPs to verify originator data per travel rule obligations. Risk-based approach for incomplete transfers — no absolute rejection mandate. BVN (Bank Verification Number) or NIN required for Nigerian beneficiaries. Record retention: 5 years per Money Laundering (Prevention and Prohibition) Act."
+}

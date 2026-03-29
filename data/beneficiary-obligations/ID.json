@@ -1,0 +1,9 @@
+{
+  "countryCode": "ID",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.ojk.go.id/",
+  "notes": "OJK (which assumed crypto oversight from Bappebti in Jan 2025) requires licensed crypto asset exchanges to verify originator information per PPATK (FIU) travel rule requirements. Risk-based approach for incomplete transfers. NIK (national ID number) required for Indonesian beneficiaries. Record retention: 5 years per PPATK requirements."
+}

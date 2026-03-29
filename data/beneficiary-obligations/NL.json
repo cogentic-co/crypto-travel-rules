@@ -1,0 +1,9 @@
+{
+  "countryCode": "NL",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://eur-lex.europa.eu/eli/reg/2023/1113/oj/eng",
+  "notes": "EU TFR Article 17 requires beneficiary CASPs to detect missing or incomplete originator/beneficiary information using risk-based procedures. Must determine whether to execute, reject, return, or suspend transfers lacking required data. DNB (De Nederlandsche Bank) registers and supervises crypto service providers. Netherlands applies strict EU TFR interpretation. No specific response time — regulation uses 'without undue delay'."
+}

@@ -1,0 +1,19 @@
+{
+  "countryCode": "BR",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "BRL",
+    "timeframeDays": 1,
+    "authority": "Conselho de Controle de Atividades Financeiras (COAF)",
+    "notes": "Suspicious activity reports (comunicações de operações suspeitas) must be filed within 24 hours. VASPs are obliged entities under Law 9,613/1998. Receita Federal also requires monthly reporting of all crypto transactions via IN 1,888/2019. Filed via COAF's SISCOAF portal."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 50000,
+    "currency": "BRL",
+    "authority": "Conselho de Controle de Atividades Financeiras (COAF)",
+    "notes": "Automatic communication required for cash transactions of BRL 50,000 or more, or any transaction pattern suggesting structuring. Filed under COAF Resolution 40/2021."
+  },
+  "authorityUrl": "https://www.gov.br/coaf/pt-br"
+}

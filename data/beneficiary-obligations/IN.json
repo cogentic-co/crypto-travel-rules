@@ -1,0 +1,9 @@
+{
+  "countryCode": "IN",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://fiuindia.gov.in/",
+  "notes": "FIU-IND requires registered VDA (Virtual Digital Asset) service providers to verify originator data under PMLA travel rule obligations. Risk-based approach for handling incomplete transfers. PAN card or Aadhaar verification required for Indian beneficiaries. Record retention: 5 years per PMLA Section 12."
+}

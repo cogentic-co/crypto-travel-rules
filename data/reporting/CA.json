@@ -1,0 +1,19 @@
+{
+  "countryCode": "CA",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "CAD",
+    "timeframeDays": 3,
+    "authority": "Financial Transactions and Reports Analysis Centre of Canada (FINTRAC)",
+    "notes": "Suspicious Transaction Reports (STR) must be filed within 3 business days. Terrorist activity financing reports must be filed immediately. Filed via FINTRAC F2R system under PCMLTFA."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 10000,
+    "currency": "CAD",
+    "authority": "Financial Transactions and Reports Analysis Centre of Canada (FINTRAC)",
+    "notes": "Large Cash Transaction Reports (LCTR) required for physical cash transactions of CAD 10,000 or more. Must be filed within 15 calendar days."
+  },
+  "authorityUrl": "https://www.fintrac-canafe.gc.ca/reporting-declaration/rpt-eng"
+}

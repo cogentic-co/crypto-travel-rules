@@ -1,0 +1,9 @@
+{
+  "countryCode": "TW",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fsc.gov.tw/en/",
+  "notes": "FSC (Financial Supervisory Commission) requires registered VASPs to verify originator and beneficiary information per AML/CFT travel rule. Transfers with missing or incomplete data must be rejected or suspended. Record retention: 5 years per Money Laundering Control Act."
+}

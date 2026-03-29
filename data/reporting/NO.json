@@ -1,0 +1,13 @@
+{
+  "countryCode": "NO",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "NOK",
+    "timeframeDays": 0,
+    "authority": "Økokrim (Norwegian National Authority for Investigation and Prosecution of Economic and Environmental Crime)",
+    "notes": "Suspicious transaction reports must be filed immediately upon forming suspicion. VASPs registered with Finanstilsynet are reporting entities under the Money Laundering Act (Hvitvaskingsloven). Filed via Økokrim's electronic reporting system (Altinn)."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.okokrim.no/hvitvasking.424763.no.html"
+}

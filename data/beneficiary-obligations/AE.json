@@ -1,0 +1,9 @@
+{
+  "countryCode": "AE",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.vara.ae/en/regulations/",
+  "notes": "VARA Dubai regulations and federal SCA framework require licensed VASPs to verify originator and beneficiary information. Transfers with missing or incomplete data must be rejected or suspended pending resolution. Record retention: 5 years per Federal AML/CFT Law (Federal Decree-Law No. 20 of 2018)."
+}

@@ -1,0 +1,19 @@
+{
+  "countryCode": "MY",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "MYR",
+    "timeframeDays": 0,
+    "authority": "Financial Intelligence and Enforcement Department (FIED) / Bank Negara Malaysia",
+    "notes": "Suspicious Transaction Reports must be filed as soon as possible after forming suspicion. DAX operators registered with SC Malaysia are reporting institutions under the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 (AMLA). Filed via Bank Negara's STR Online Reporting System."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 25000,
+    "currency": "MYR",
+    "authority": "Financial Intelligence and Enforcement Department (FIED) / Bank Negara Malaysia",
+    "notes": "Cash Transaction Reports (CTR) required for cash transactions of MYR 25,000 or more. Filed within 10 business days."
+  },
+  "authorityUrl": "https://amlcft.bnm.gov.my/"
+}

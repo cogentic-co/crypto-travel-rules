@@ -1,0 +1,13 @@
+{
+  "countryCode": "CH",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "CHF",
+    "timeframeDays": 0,
+    "authority": "Money Laundering Reporting Office Switzerland (MROS)",
+    "notes": "Suspicious Activity Reports must be filed immediately upon forming suspicion. VASPs supervised by FINMA are financial intermediaries under AMLA (Anti-Money Laundering Act, SR 955.0). Right to report and obligation to report under Art. 9 and Art. 305ter CP respectively."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.fedpol.admin.ch/fedpol/en/home/kriminalitaet/geldwaescherei/mros.html"
+}

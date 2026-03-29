@@ -1,0 +1,19 @@
+{
+  "countryCode": "ID",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "IDR",
+    "timeframeDays": 3,
+    "authority": "Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK)",
+    "notes": "Suspicious Financial Transaction Reports (LTKM) must be filed within 3 business days of forming suspicion. Crypto asset exchanges supervised by OJK (formerly Bappebti) are reporting parties under AML Law No. 8/2010."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 500000000,
+    "currency": "IDR",
+    "authority": "Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK)",
+    "notes": "Cash Transaction Reports (LTKT) required for cash transactions of IDR 500,000,000 or more (approximately USD 31,000). Filed within 14 business days."
+  },
+  "authorityUrl": "https://www.ppatk.go.id/sipendar/en/"
+}

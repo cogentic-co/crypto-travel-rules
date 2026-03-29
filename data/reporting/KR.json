@@ -1,0 +1,19 @@
+{
+  "countryCode": "KR",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "KRW",
+    "timeframeDays": 3,
+    "authority": "Korea Financial Intelligence Unit (KoFIU)",
+    "notes": "Suspicious Transaction Reports must be filed within 3 business days of forming suspicion. VASPs registered under the Act on Reporting and Using Specified Financial Transaction Information are reporting entities. Filed via KoFIU electronic reporting system."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 10000000,
+    "currency": "KRW",
+    "authority": "Korea Financial Intelligence Unit (KoFIU)",
+    "notes": "Currency Transaction Reports required for transactions of KRW 10,000,000 or more (approximately USD 7,500). Must be filed within 30 days."
+  },
+  "authorityUrl": "https://www.kofiu.go.kr/eng/main.do"
+}

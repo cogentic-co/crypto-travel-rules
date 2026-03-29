@@ -1,0 +1,13 @@
+{
+  "countryCode": "CZ",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "CZK",
+    "timeframeDays": 5,
+    "authority": "Finanční analytický úřad (FAU)",
+    "notes": "Suspicious Transaction Reports must be filed without undue delay, typically within 5 business days. CASPs supervised by CNB are obliged persons under AML Act No. 253/2008 Coll. Filed via FAU's MoneyWeb system."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.financnianalytickyurad.cz/en/"
+}

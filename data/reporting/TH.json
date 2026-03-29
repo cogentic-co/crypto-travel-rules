@@ -1,0 +1,19 @@
+{
+  "countryCode": "TH",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "THB",
+    "timeframeDays": 3,
+    "authority": "Anti-Money Laundering Office (AMLO)",
+    "notes": "Suspicious Transaction Reports must be filed within 3 business days of forming suspicion. Licensed digital asset operators supervised by SEC Thailand are reporting entities under the Anti-Money Laundering Act B.E. 2542 (1999). Filed via AMLO's electronic reporting system."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 2000000,
+    "currency": "THB",
+    "authority": "Anti-Money Laundering Office (AMLO)",
+    "notes": "Transaction reports required for cash transactions of THB 2,000,000 or more, or property transfers of THB 5,000,000 or more. Must be filed within 30 days."
+  },
+  "authorityUrl": "https://www.amlo.go.th/index.php/en/"
+}

@@ -1,0 +1,9 @@
+{
+  "countryCode": "MY",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.sc.com.my/regulation/guidelines/recognizedmarkets/guidelines-on-digital-assets",
+  "notes": "Securities Commission Malaysia requires SC-registered DAX (Digital Asset Exchange) operators to verify originator data per AMLA (Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act) travel rule requirements. Risk-based approach for incomplete transfers. MyKad number required for Malaysian beneficiaries. Record retention: 5 years per AMLA."
+}

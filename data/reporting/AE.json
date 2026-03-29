@@ -1,0 +1,13 @@
+{
+  "countryCode": "AE",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "AED",
+    "timeframeDays": 0,
+    "authority": "Financial Intelligence Unit (FIU) / Central Bank of the UAE",
+    "notes": "Suspicious Transaction Reports must be filed immediately upon forming suspicion. VASPs licensed by VARA (Dubai) or regulated by SCA are reporting entities under Federal Decree-Law No. 20 of 2018. Filed via goAML platform."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.centralbank.ae/en/anti-money-laundering/"
+}

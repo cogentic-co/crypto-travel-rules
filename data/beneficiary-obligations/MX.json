@@ -1,0 +1,9 @@
+{
+  "countryCode": "MX",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/FINTECH/Paginas/default.aspx",
+  "notes": "Ley Fintech and CNBV secondary regulations require beneficiary ITFs (Instituciones de Tecnología Financiera) to verify originator information for virtual asset transfers. Risk-based approach for incomplete transfers — no absolute rejection mandate. CURP or RFC required for Mexican beneficiaries. Record retention: 5 years per Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita."
+}

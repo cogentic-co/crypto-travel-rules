@@ -1,0 +1,19 @@
+{
+  "countryCode": "MX",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "MXN",
+    "timeframeDays": 1,
+    "authority": "Unidad de Inteligencia Financiera (UIF)",
+    "notes": "Suspicious activity reports (reportes de operaciones inusuales) must be filed within 24 hours of detection. ITFs (Instituciones de Tecnología Financiera) operating with virtual assets are obliged entities under Ley Fintech and LFPIORPI."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 56819,
+    "currency": "MXN",
+    "authority": "Unidad de Inteligencia Financiera (UIF)",
+    "notes": "Relevant activity reports (reportes de operaciones relevantes) required for cash transactions exceeding approximately 645 UDIs (updated periodically, ~MXN 56,819). Filed monthly via UIF's SITI portal."
+  },
+  "authorityUrl": "https://www.gob.mx/uif"
+}

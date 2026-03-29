@@ -1,0 +1,13 @@
+{
+  "countryCode": "FI",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Financial Intelligence Unit (rahanpesun selvittelykeskus) / National Bureau of Investigation",
+    "notes": "Suspicious Transaction Reports must be filed without delay. Virtual currency providers registered with FIN-FSA are obliged entities under the Act on Preventing Money Laundering and Terrorist Financing (444/2017). Filed via FIU's electronic reporting system."
+  },
+  "ctr": null,
+  "authorityUrl": "https://poliisi.fi/en/money-laundering-clearing-house"
+}

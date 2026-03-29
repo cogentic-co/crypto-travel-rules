@@ -1,0 +1,13 @@
+{
+  "countryCode": "PT",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Unidade de Informação Financeira (UIF) / Polícia Judiciária",
+    "notes": "Suspicious transaction reports (comunicações de operações suspeitas) must be filed immediately upon forming suspicion. VASPs registered with Banco de Portugal are obliged entities under Lei 83/2017 (AML/CFT Law). Filed via UIF electronic reporting system."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.bportugal.pt/en/page/prevention-money-laundering-and-terrorist-financing"
+}

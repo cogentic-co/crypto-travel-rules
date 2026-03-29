@@ -1,0 +1,19 @@
+{
+  "countryCode": "IL",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "ILS",
+    "timeframeDays": 0,
+    "authority": "Israel Money Laundering and Terror Financing Prohibition Authority (IMPA)",
+    "notes": "Unusual Activity Reports must be filed immediately upon forming suspicion. Financial Asset Service Providers licensed by CMISA are reporting entities under the Prohibition on Money Laundering Law 5760-2000. Filed via IMPA's electronic system."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 50000,
+    "currency": "ILS",
+    "authority": "Israel Money Laundering and Terror Financing Prohibition Authority (IMPA)",
+    "notes": "Reports required for transactions of ILS 50,000 or more. Financial service providers must report above-threshold transactions under the Anti-Money Laundering Order."
+  },
+  "authorityUrl": "https://www.justice.gov.il/En/Units/IMPA/Pages/default.aspx"
+}

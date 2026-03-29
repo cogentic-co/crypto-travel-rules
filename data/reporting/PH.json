@@ -1,0 +1,19 @@
+{
+  "countryCode": "PH",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "PHP",
+    "timeframeDays": 5,
+    "authority": "Anti-Money Laundering Council (AMLC)",
+    "notes": "Suspicious Transaction Reports must be filed within 5 working days of forming suspicion. BSP-registered VASPs are covered persons under the Anti-Money Laundering Act (RA 9160, as amended by RA 11521). Filed via AMLC's electronic reporting system."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 500000,
+    "currency": "PHP",
+    "authority": "Anti-Money Laundering Council (AMLC)",
+    "notes": "Covered Transaction Reports (CTR) required for transactions exceeding PHP 500,000 within one business day. Must be filed within 5 working days."
+  },
+  "authorityUrl": "http://www.amlc.gov.ph/"
+}

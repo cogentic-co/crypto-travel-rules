@@ -1,0 +1,13 @@
+{
+  "countryCode": "FR",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Traitement du Renseignement et Action contre les Circuits Financiers Clandestins (TRACFIN)",
+    "notes": "Suspicious transaction declarations (déclarations de soupçon) must be filed as soon as possible. DASPs/CASPs are obliged entities under the Monetary and Financial Code (Code monétaire et financier). Filed via TRACFIN's ERMES platform."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.economie.gouv.fr/tracfin"
+}

@@ -1,0 +1,13 @@
+{
+  "countryCode": "HK",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "HKD",
+    "timeframeDays": 0,
+    "authority": "Joint Financial Intelligence Unit (JFIU)",
+    "notes": "Suspicious Transaction Reports must be filed as soon as reasonably practicable. Licensed VATPs under SFC are reporting entities under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance (AMLO, Cap. 615). Filed via JFIU's STR online submission system."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.jfiu.gov.hk/"
+}

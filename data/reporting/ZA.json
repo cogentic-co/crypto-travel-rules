@@ -1,0 +1,19 @@
+{
+  "countryCode": "ZA",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "ZAR",
+    "timeframeDays": 15,
+    "authority": "Financial Intelligence Centre (FIC)",
+    "notes": "All suspicious or unusual transactions must be reported within 15 business days. Filed via FIC goAML portal. CASPs must also file Terrorist Property Reports (TPRs) without delay."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 50000,
+    "currency": "ZAR",
+    "authority": "Financial Intelligence Centre (FIC)",
+    "notes": "Cash Threshold Reports required for physical cash transactions of ZAR 50,000 or more. Must be filed within 3 business days."
+  },
+  "authorityUrl": "https://www.fic.gov.za/"
+}

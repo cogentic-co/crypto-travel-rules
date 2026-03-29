@@ -1,0 +1,13 @@
+{
+  "countryCode": "DK",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "DKK",
+    "timeframeDays": 0,
+    "authority": "Hvidvasksekretariatet (Money Laundering Secretariat) / Danish State Prosecutor for Serious Economic and International Crime (SØIK)",
+    "notes": "Suspicious transaction reports must be filed immediately upon forming suspicion. VASPs registered with Finanstilsynet are reporting entities under the Anti-Money Laundering Act (Hvidvaskloven). Filed via SØIK's electronic reporting portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.anklagemyndigheden.dk/en/money-laundering-secretariat"
+}

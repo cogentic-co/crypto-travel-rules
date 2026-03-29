@@ -1,0 +1,13 @@
+{
+  "countryCode": "SE",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "SEK",
+    "timeframeDays": 0,
+    "authority": "Finanspolisen (Financial Police)",
+    "notes": "Suspicious activity reports must be filed immediately upon forming suspicion. VASPs registered with Finansinspektionen are reporting entities under the Money Laundering Act (Lag om åtgärder mot penningtvätt och finansiering av terrorism, 2017:630). Filed via goAML portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://polisen.se/en/services-and-permits/money-laundering/"
+}

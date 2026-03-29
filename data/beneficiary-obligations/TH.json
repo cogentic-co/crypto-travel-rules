@@ -1,0 +1,9 @@
+{
+  "countryCode": "TH",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.sec.or.th/EN/Pages/LawandRegulations/DigitalAssetBusiness.aspx",
+  "notes": "SEC Thailand requires licensed digital asset operators to verify originator data per AMLO (Anti-Money Laundering Office) travel rule requirements. Risk-based approach for handling incomplete transfers — no absolute rejection mandate. Thai citizen ID required for domestic beneficiaries. Record retention: 5 years per AMLA."
+}

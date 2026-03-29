@@ -1,0 +1,19 @@
+{
+  "countryCode": "KE",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "KES",
+    "timeframeDays": 7,
+    "authority": "Financial Reporting Centre (FRC)",
+    "notes": "Suspicious Transaction Reports must be filed within 7 working days of forming suspicion. VASPs supervised by CMA are reporting institutions under the Proceeds of Crime and Anti-Money Laundering Act (POCAMLA) 2009. Filed via FRC's goAML portal."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 1000000,
+    "currency": "KES",
+    "authority": "Financial Reporting Centre (FRC)",
+    "notes": "Cash Transaction Reports required for cash transactions of KES 1,000,000 or more (approximately USD 7,700). Filed within 7 working days under POCAMLA."
+  },
+  "authorityUrl": "https://www.frc.go.ke/"
+}

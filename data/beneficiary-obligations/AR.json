@@ -1,0 +1,9 @@
+{
+  "countryCode": "AR",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.argentina.gob.ar/cnv",
+  "notes": "UIF (FIU) oversees AML/CFT compliance and CNV regulates crypto asset service providers. Beneficiary VASPs must verify originator data using risk-based procedures. No absolute rejection mandate — risk-based approach. CUIT/CUIL tax ID required for Argentine beneficiaries. Record retention: 5 years per UIF Resolution."
+}

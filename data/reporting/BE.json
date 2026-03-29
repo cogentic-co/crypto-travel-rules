@@ -1,0 +1,13 @@
+{
+  "countryCode": "BE",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Cel voor Financiële Informatieverwerking (CFI-CTIF)",
+    "notes": "Suspicious transaction reports must be filed immediately upon forming suspicion. VASPs registered with FSMA are reporting entities under the Law of 18 September 2017 on AML/CFT. Filed via CFI-CTIF's online portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.ctif-cfi.be/en"
+}

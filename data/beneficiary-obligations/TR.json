@@ -1,0 +1,9 @@
+{
+  "countryCode": "TR",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.spk.gov.tr/",
+  "notes": "SPK crypto asset regulation framework requires licensed platforms to verify originator data and reject or suspend transfers with missing information per MASAK (FIU) travel rule requirements. TC Kimlik No (national ID) required for Turkish beneficiaries. Record retention: 5 years per Law No. 5549 on Prevention of Laundering Proceeds of Crime."
+}

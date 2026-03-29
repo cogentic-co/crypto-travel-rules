@@ -1,0 +1,9 @@
+{
+  "countryCode": "ZA",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fic.gov.za/wp-content/uploads/2024/11/Directive-9-Travel-rule-relating-to-crypto-asset-transfers.pdf",
+  "notes": "FIC Directive 9 (effective 30 April 2025) requires beneficiary CASPs to verify beneficiary identity, monitor for missing/incomplete originator data, and develop risk-based policies for determining when to execute, reject, or suspend transfers. Record retention: 5 years per FIC Act Section 23."
+}

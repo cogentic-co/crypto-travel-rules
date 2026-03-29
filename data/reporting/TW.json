@@ -1,0 +1,19 @@
+{
+  "countryCode": "TW",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "TWD",
+    "timeframeDays": 2,
+    "authority": "Anti-Money Laundering Division / Investigation Bureau, Ministry of Justice",
+    "notes": "Suspicious Transaction Reports must be filed within 2 business days of forming suspicion. VASPs registered with FSC are reporting entities under the Money Laundering Control Act. Terrorism financing reports must be filed immediately."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 500000,
+    "currency": "TWD",
+    "authority": "Anti-Money Laundering Division / Investigation Bureau, Ministry of Justice",
+    "notes": "Currency Transaction Reports required for cash transactions of TWD 500,000 or more (approximately USD 15,500). Must be filed within 5 business days."
+  },
+  "authorityUrl": "https://www.mjib.gov.tw/EditPage/?PageID=0753e01f-52ea-42cd-be4e-d4e63ef62063"
+}

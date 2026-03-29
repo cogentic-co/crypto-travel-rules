@@ -1,0 +1,13 @@
+{
+  "countryCode": "TR",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "TRY",
+    "timeframeDays": 10,
+    "authority": "Mali Suçları Araştırma Kurulu (MASAK)",
+    "notes": "Suspicious Transaction Reports must be filed within 10 business days of forming suspicion. Crypto asset service providers licensed by SPK are obliged parties under AML Law No. 5549. Filed via MASAK's electronic reporting system."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.masak.gov.tr/en/"
+}

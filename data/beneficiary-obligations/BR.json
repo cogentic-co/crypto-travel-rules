@@ -1,0 +1,9 @@
+{
+  "countryCode": "BR",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.bcb.gov.br/en/financialstability/virtualassets",
+  "notes": "BCB Normative Resolution requires beneficiary VASPs to monitor for missing originator data using risk-based procedures. No absolute obligation to reject — institutions must assess risk and determine appropriate action. CPF/CNPJ verification required for Brazilian beneficiaries. Receita Federal mandates monthly reporting. Record retention: 5 years per BCB requirements."
+}

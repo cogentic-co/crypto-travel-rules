@@ -1,0 +1,9 @@
+{
+  "countryCode": "CH",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.finma.ch/en/documentation/finma-guidance/guidance/finma-guidance-02-2019/",
+  "notes": "FINMA Guidance 02/2019 requires VASPs to verify originator and beneficiary information for all transfers. Beneficiary institutions must reject transfers with missing or incomplete data. Switzerland applies strict AMLA (Anti-Money Laundering Act) obligations aligned with FATF standards. Record retention: 10 years per AMLA, though 5 years is the minimum for travel rule data specifically."
+}

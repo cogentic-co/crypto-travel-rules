@@ -1,0 +1,13 @@
+{
+  "countryCode": "IT",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Unità di Informazione Finanziaria per l'Italia (UIF)",
+    "notes": "Suspicious transaction reports (segnalazioni di operazioni sospette) must be filed without delay. VASPs registered with OAM are obliged entities under Legislative Decree 231/2007 (Anti-Money Laundering Decree). Filed via UIF's INFOSTAT-UIF portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://uif.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1"
+}

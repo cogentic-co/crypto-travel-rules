@@ -1,0 +1,13 @@
+{
+  "countryCode": "IE",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Anti-Money Laundering Compliance Unit (AMLCU) / An Garda Síochána / Revenue Commissioners",
+    "notes": "Suspicious Transaction Reports must be filed as soon as practicable. VASPs registered with CBI are designated persons under the Criminal Justice (Money Laundering and Terrorist Financing) Acts 2010-2021. Filed via An Garda Síochána and Revenue goAML portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.centralbank.ie/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism"
+}

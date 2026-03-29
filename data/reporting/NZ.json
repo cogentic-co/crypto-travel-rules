@@ -1,0 +1,19 @@
+{
+  "countryCode": "NZ",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "NZD",
+    "timeframeDays": 3,
+    "authority": "New Zealand Police Financial Intelligence Unit (NZFIU)",
+    "notes": "Suspicious Activity Reports must be filed within 3 working days of forming suspicion. VASPs registered with DIA are reporting entities under the Anti-Money Laundering and Countering Financing of Terrorism Act 2009. Filed via NZFIU's goAML portal."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 10000,
+    "currency": "NZD",
+    "authority": "New Zealand Police Financial Intelligence Unit (NZFIU)",
+    "notes": "Prescribed Transaction Reports (PTR) required for physical cash transactions of NZD 10,000 or more. Must be filed within 10 working days."
+  },
+  "authorityUrl": "https://www.police.govt.nz/advice/businesses-and-organisations/fiu"
+}

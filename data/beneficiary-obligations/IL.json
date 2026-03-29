@@ -1,0 +1,9 @@
+{
+  "countryCode": "IL",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.gov.il/en/departments/capital_market_insurance_and_saving",
+  "notes": "Financial Asset Service Providers Law requires licensed VASPs to verify originator and beneficiary information. CMISA (Capital Market, Insurance and Savings Authority) enforces compliance. Transfers with missing or incomplete data must be rejected or suspended. Israeli ID (Teudat Zehut) required for domestic beneficiaries. Record retention: 5 years per Prohibition on Money Laundering Law."
+}

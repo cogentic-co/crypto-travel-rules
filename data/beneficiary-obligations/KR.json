@@ -1,0 +1,9 @@
+{
+  "countryCode": "KR",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fsc.go.kr/eng/po040101",
+  "notes": "Under the Virtual Asset User Protection Act and Specific Financial Information Act, beneficiary VASPs must verify originator data and real-name bank account matching (실명계좌). KoFIU enforces travel rule compliance. Transfers with incomplete information must be rejected or suspended pending resolution. Record retention: 5 years per Specific Financial Information Act."
+}

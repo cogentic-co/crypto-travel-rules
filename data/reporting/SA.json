@@ -1,0 +1,13 @@
+{
+  "countryCode": "SA",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "SAR",
+    "timeframeDays": 0,
+    "authority": "Saudi Arabia Financial Intelligence Unit (SAFIU)",
+    "notes": "Suspicious Transaction Reports must be filed immediately upon forming suspicion. SAMA-regulated entities must report under the Anti-Money Laundering Law (Royal Decree M/31) and its Implementing Regulations. Filed via goAML platform."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.sama.gov.sa/en-us/Laws/Pages/AntiMoneyLaundering.aspx"
+}

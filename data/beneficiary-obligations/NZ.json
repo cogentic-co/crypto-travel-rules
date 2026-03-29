@@ -1,0 +1,9 @@
+{
+  "countryCode": "NZ",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.dia.govt.nz/AML-CFT-Virtual-Asset-Service-Providers",
+  "notes": "AML/CFT Act requires beneficiary VASPs registered with DIA (Department of Internal Affairs) to monitor for missing originator information using risk-based procedures. No absolute obligation to reject — institutions have discretion based on risk assessment. Record retention: 5 years per AML/CFT Act."
+}

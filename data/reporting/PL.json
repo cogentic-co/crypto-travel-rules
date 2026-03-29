@@ -1,0 +1,19 @@
+{
+  "countryCode": "PL",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "PLN",
+    "timeframeDays": 0,
+    "authority": "Generalny Inspektor Informacji Finansowej (GIIF)",
+    "notes": "Suspicious Transaction Reports must be filed immediately upon forming suspicion. VASPs registered under the AML Act (Ustawa o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu) are obliged institutions. Filed via GIIF's electronic system."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 15000,
+    "currency": "EUR",
+    "authority": "Generalny Inspektor Informacji Finansowej (GIIF)",
+    "notes": "Registered transactions: transactions of EUR 15,000 or more (or equivalent) must be reported. Filed via GIIF within 14 days of end of quarter."
+  },
+  "authorityUrl": "https://www.gov.pl/web/finanse/generalny-inspektor-informacji-finansowej"
+}

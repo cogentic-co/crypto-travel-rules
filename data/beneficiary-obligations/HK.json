@@ -1,0 +1,9 @@
+{
+  "countryCode": "HK",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines",
+  "notes": "SFC requires licensed VATPs (Virtual Asset Trading Platforms) to verify originator and beneficiary identity and detect missing or incomplete information. Transfers lacking required data must be rejected or suspended. AMLO (Anti-Money Laundering and Counter-Terrorist Financing Ordinance) governs obligations. Record retention: 5 years per AMLO."
+}

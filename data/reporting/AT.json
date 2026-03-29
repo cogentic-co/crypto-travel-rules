@@ -1,0 +1,13 @@
+{
+  "countryCode": "AT",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Geldwäschemeldestelle (A-FIU) / Bundeskriminalamt",
+    "notes": "Suspicious transaction reports (Verdachtsmeldungen) must be filed immediately upon forming suspicion. CASPs supervised by FMA are obliged entities under the Financial Markets Anti-Money Laundering Act (FM-GwG). Filed via goAML portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.bundeskriminalamt.at/306/start.aspx"
+}

@@ -1,0 +1,19 @@
+{
+  "countryCode": "IN",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "INR",
+    "timeframeDays": 7,
+    "authority": "Financial Intelligence Unit - India (FIU-IND)",
+    "notes": "Suspicious Transaction Reports must be filed within 7 working days of forming suspicion. VDA (Virtual Digital Asset) service providers registered with FIU-IND are reporting entities under PMLA (Prevention of Money Laundering Act, 2002). Filed via FINnet 2.0 portal."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 1000000,
+    "currency": "INR",
+    "authority": "Financial Intelligence Unit - India (FIU-IND)",
+    "notes": "Cash Transaction Reports required for transactions of INR 10,00,000 (10 lakh) or more. Transactions aggregating INR 10,00,000 or more in a month also reportable. Filed within 15 days of close of month."
+  },
+  "authorityUrl": "https://fiuindia.gov.in/"
+}

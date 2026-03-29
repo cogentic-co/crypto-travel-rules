@@ -1,0 +1,19 @@
+{
+  "countryCode": "US",
+  "str": {
+    "required": true,
+    "threshold": 2000,
+    "currency": "USD",
+    "timeframeDays": 30,
+    "authority": "FinCEN",
+    "notes": "SAR required for MSBs (including VASPs) for suspicious transactions of USD 2,000 or more. 30 days from detection; 60 days if no suspect identified."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 10000,
+    "currency": "USD",
+    "authority": "FinCEN",
+    "notes": "CTR required for physical cash transactions over USD 10,000. Same-day transactions by the same person are aggregated. Applies to crypto ATMs handling cash."
+  },
+  "authorityUrl": "https://www.fincen.gov/resources/statutes-and-regulations"
+}

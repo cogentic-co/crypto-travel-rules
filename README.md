@@ -61,8 +61,8 @@ engine.isRuleTriggered('US', 5000);
 ```
 data/
   jurisdictions/              # Travel rule thresholds & required fields (208 jurisdictions)
-  beneficiary-obligations/    # What receiving VASPs must do (6 jurisdictions)
-  reporting/                  # STR/SAR and CTR reporting thresholds (6 jurisdictions)
+  beneficiary-obligations/    # What receiving VASPs must do (41 jurisdictions)
+  reporting/                  # STR/SAR and CTR reporting thresholds (41 jurisdictions)
 src/
   types.ts                    # TypeScript interfaces (IVMS101-aligned)
   engine.ts                   # TravelRuleEngine class
@@ -287,7 +287,7 @@ The `status` field is **informational** (for humans browsing the JSON):
 
 ## Beneficiary Obligations
 
-Each file in `data/beneficiary-obligations/` describes what a **receiving** VASP must do when it gets an incoming transfer. Currently covers 6 jurisdictions (US, DE, GB, SG, AU, ZA).
+Each file in `data/beneficiary-obligations/` describes what a **receiving** VASP must do when it gets an incoming transfer. Currently covers 41 jurisdictions (US, DE, GB, SG, AU, ZA).
 
 ```json
 {
@@ -316,7 +316,7 @@ console.log(obligations?.rejectIncompleteTransfers); // true
 
 ## Reporting Thresholds
 
-Each file in `data/reporting/` describes the STR (Suspicious Transaction Report) and CTR (Cash Transaction Report) requirements. Currently covers 6 jurisdictions.
+Each file in `data/reporting/` describes the STR (Suspicious Transaction Report) and CTR (Cash Transaction Report) requirements. Currently covers 41 jurisdictions.
 
 ```json
 {
@@ -363,24 +363,34 @@ console.log(reporting?.ctr?.threshold); // 10000
 
 ## Contributing
 
-We need help reaching 200+ jurisdictions. Here's how to contribute:
+Contributions welcome — especially new jurisdictions and data accuracy improvements. There are three types of data you can contribute:
+
+| Data | Directory | Coverage |
+|------|-----------|----------|
+| Travel rule thresholds | `data/jurisdictions/` | 208 jurisdictions |
+| Beneficiary VASP obligations | `data/beneficiary-obligations/` | 41 jurisdictions |
+| Reporting thresholds (STR/CTR) | `data/reporting/` | 41 jurisdictions |
 
 ### Adding a New Jurisdiction
 
 1. **Fork** this repo and create a branch: `git checkout -b add/XX-country-name`
-2. **Create** `data/jurisdictions/XX.json` using the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code
-3. **Follow the schema** exactly as shown above — use the TypeScript types in `src/types.ts` as the source of truth
+2. **Create** the relevant JSON file(s) using the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code:
+   - `data/jurisdictions/XX.json` — travel rule thresholds and required fields
+   - `data/beneficiary-obligations/XX.json` — what the receiving VASP must do
+   - `data/reporting/XX.json` — STR/SAR and CTR reporting requirements
+3. **Follow the schema** — use the TypeScript types in `src/types.ts` as the source of truth
 4. **Include**:
    - The correct regulatory authority name
    - Accurate thresholds and currencies
-   - The PII fields actually required by the regulation
    - A link to the official regulatory text (`authorityUrl`)
-   - Proper `effectiveFrom` / `effectiveTo` dates
-5. **Validate** your JSON parses and the project builds: `npm run validate`
+   - For jurisdictions: the PII fields actually required and proper `effectiveFrom` / `effectiveTo` dates
+5. **Validate**: `npm run validate && npm run validate:data`
 6. **Open a PR** with:
-   - The jurisdiction JSON file
+   - The data file(s)
    - A brief note on which regulatory text you referenced
    - Any pending rules that have been announced but not yet effective
+
+You don't need to add all three file types at once — any single contribution is valuable.
 
 ### Updating an Existing Jurisdiction
 
@@ -395,6 +405,7 @@ If a country announces new rules or amends thresholds:
 - All currency codes must be ISO 4217
 - Every rule must include an `authorityUrl` pointing to the primary regulatory source
 - Use `isZeroThreshold: true` only when the regulation applies to all transfers regardless of amount
+- Filename must match the `countryCode` field inside the JSON
 
 ## Disclaimer
 

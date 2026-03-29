@@ -1,0 +1,9 @@
+{
+  "countryCode": "JP",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": true,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fsa.go.jp/en/policy/virtual-currency/",
+  "notes": "JFSA requires crypto asset exchange service providers (CAESPs) to verify originator and beneficiary information for all VASP-to-VASP transfers regardless of amount (zero threshold). Transfers lacking required data must be rejected or suspended. Japan was among the first jurisdictions to enforce the travel rule for crypto. Record retention: 5 years per Act on Prevention of Transfer of Criminal Proceeds."
+}

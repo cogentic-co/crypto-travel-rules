@@ -1,0 +1,19 @@
+{
+  "countryCode": "AR",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "USD",
+    "timeframeDays": 1,
+    "authority": "Unidad de Información Financiera (UIF)",
+    "notes": "Suspicious Transaction Reports (ROS - Reporte de Operación Sospechosa) must be filed within 24 hours, or 48 hours for terrorism financing. VASPs registered with CNV are obliged subjects under AML Law 25,246. Filed via UIF's electronic system."
+  },
+  "ctr": {
+    "required": true,
+    "threshold": 65000,
+    "currency": "USD",
+    "authority": "Unidad de Información Financiera (UIF)",
+    "notes": "Systematic reporting required for transactions exceeding the threshold set by UIF Resolution (approximately USD 65,000 equivalent). Monthly reports filed via UIF. Threshold periodically adjusted."
+  },
+  "authorityUrl": "https://www.argentina.gob.ar/uif"
+}

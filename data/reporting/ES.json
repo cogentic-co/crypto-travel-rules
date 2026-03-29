@@ -1,0 +1,13 @@
+{
+  "countryCode": "ES",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "Servicio Ejecutivo de la Comisión de Prevención del Blanqueo de Capitales e Infracciones Monetarias (SEPBLAC)",
+    "notes": "Suspicious transaction reports must be filed immediately upon detection. VASPs are obliged entities under Ley 10/2010 (AML Law). Filed via SEPBLAC's electronic reporting system."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.sepblac.es/en/"
+}

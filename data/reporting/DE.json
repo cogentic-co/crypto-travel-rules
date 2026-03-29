@@ -1,0 +1,13 @@
+{
+  "countryCode": "DE",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 0,
+    "authority": "FIU Germany (Zentralstelle für Finanztransaktionsuntersuchungen)",
+    "notes": "All suspicious transactions must be reported immediately (unverzüglich) regardless of amount. Filed via goAML portal. Transaction may proceed after 3 business days if FIU does not intervene."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.bafin.de/EN/Aufsicht/Geldwaeschepraevention/Verdachtsmeldewesen/Verdachtsmeldewesen_node_en.html"
+}

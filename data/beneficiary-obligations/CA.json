@@ -1,0 +1,9 @@
+{
+  "countryCode": "CA",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fintrac-canafe.gc.ca/guidance-directives/transaction-operation/travel-voyage/1-eng",
+  "notes": "FINTRAC requires MSBs dealing in virtual currency to apply risk-based procedures when receiving transfers with missing or incomplete originator data. No absolute obligation to reject — beneficiary institutions must use risk-based approach to determine appropriate action. Record retention: 5 years per PCMLTFA."
+}

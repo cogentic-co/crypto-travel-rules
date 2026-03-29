@@ -1,0 +1,9 @@
+{
+  "countryCode": "PH",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf",
+  "notes": "BSP Circular 1108 requires beneficiary VASPs to monitor for missing originator information using risk-based procedures per AMLA (Anti-Money Laundering Act) travel rule requirements. No absolute rejection mandate — risk-based approach. Record retention: 5 years per AMLA."
+}

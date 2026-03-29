@@ -1,0 +1,9 @@
+{
+  "countryCode": "KE",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.cma.or.ke/",
+  "notes": "CMA Capital Markets (Virtual Asset Service Providers) Regulations require beneficiary VASPs to verify originator data per travel rule obligations. Risk-based approach for incomplete transfers — no absolute rejection mandate. National ID or passport required for Kenyan beneficiaries. Record retention: 5 years per Proceeds of Crime and Anti-Money Laundering Act."
+}

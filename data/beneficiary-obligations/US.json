@@ -1,0 +1,9 @@
+{
+  "countryCode": "US",
+  "mustVerifyOriginatorData": false,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.fincen.gov/resources/statutes-and-regulations/cvc-final-rule",
+  "notes": "FinCEN Travel Rule obligations fall primarily on the originating institution. Beneficiary institutions have no explicit duty to verify originator data or reject incomplete transfers, but must cooperate in retrieving missing information when requested. Record retention: 5 years per 31 CFR 1010.430."
+}

@@ -1,0 +1,13 @@
+{
+  "countryCode": "NL",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "EUR",
+    "timeframeDays": 14,
+    "authority": "Financial Intelligence Unit - Nederland (FIU-Nederland)",
+    "notes": "Unusual Transaction Reports (ongebruikelijke transacties) must be filed within 14 days. Crypto service providers registered with DNB are obliged institutions under the Wwft (Wet ter voorkoming van witwassen en financieren van terrorisme). Filed via goAML portal."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.fiu-nederland.nl/en/"
+}

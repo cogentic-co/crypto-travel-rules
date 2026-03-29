@@ -1,0 +1,9 @@
+{
+  "countryCode": "SA",
+  "mustVerifyOriginatorData": true,
+  "rejectIncompleteTransfers": false,
+  "responseTimeHours": null,
+  "recordKeepingYears": 5,
+  "authorityUrl": "https://www.sama.gov.sa/en-us/",
+  "notes": "SAMA AML law requires beneficiary institutions to verify originator information using risk-based procedures. CMA developing virtual asset regulations. No absolute rejection mandate for incomplete transfers. Record retention: 5 years per Saudi Anti-Money Laundering Law."
+}

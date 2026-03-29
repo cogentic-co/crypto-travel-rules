@@ -1,0 +1,13 @@
+{
+  "countryCode": "JP",
+  "str": {
+    "required": true,
+    "threshold": 0,
+    "currency": "JPY",
+    "timeframeDays": 0,
+    "authority": "Japan Financial Intelligence Center (JAFIC) / National Police Agency",
+    "notes": "Suspicious Transaction Reports must be filed promptly upon forming suspicion regardless of amount. Filed under Act on Prevention of Transfer of Criminal Proceeds. VASPs (crypto-asset exchange operators) are reporting entities under JFSA supervision."
+  },
+  "ctr": null,
+  "authorityUrl": "https://www.npa.go.jp/sosikihanzai/jafic/en/index.html"
+}

@@ -1,8 +1,10 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import type { JurisdictionData, PiiField } from '../src/types';
+import type { BeneficiaryObligations, JurisdictionData, PiiField, ReportingData } from '../src/types';
 
 const DATA_DIR = path.join(__dirname, '..', 'data', 'jurisdictions');
+const REPORTING_DIR = path.join(__dirname, '..', 'data', 'reporting');
+const OBLIGATIONS_DIR = path.join(__dirname, '..', 'data', 'beneficiary-obligations');
 const VALID_PII_FIELDS: PiiField[] = [
   'fullName', 'dateOfBirth', 'placeOfBirth', 'idDocumentNumber',
   'address', 'accountNumber', 'townAndCountry',
@@ -235,6 +237,128 @@ if (cemacUnique.size === 1) {
 } else {
   console.log('CEMAC states have inconsistent thresholds:');
   for (const t of cemacThresholds) console.log(`  ${t.cc}: ${t.threshold}`);
+}
+
+// 7. Cross-directory coverage: reporting & beneficiary obligations
+const PRIORITY_JURISDICTIONS = new Set([
+  // G20
+  'AR', 'AU', 'BR', 'CA', 'CN', 'DE', 'FR', 'GB', 'ID', 'IN', 'IT', 'JP',
+  'KR', 'MX', 'RU', 'SA', 'TR', 'US', 'ZA',
+  // Major crypto markets
+  'AE', 'CH', 'HK', 'SG', 'NL', 'SE', 'NO', 'DK', 'AT', 'BE', 'IE', 'PT',
+  'PL', 'CZ', 'FI', 'NZ', 'IL', 'TH', 'MY', 'PH', 'NG', 'KE', 'TW', 'ES',
+]);
+
+function loadAndValidateDir<T extends { countryCode: string }>(
+  dir: string,
+  label: string,
+  validateFn: (code: string, data: T) => void,
+): Set<string> {
+  const loaded = new Set<string>();
+  if (!fs.existsSync(dir)) return loaded;
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+  for (const file of files) {
+    const code = file.replace('.json', '');
+    const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
+    let data: T;
+    try {
+      data = JSON.parse(raw);
+    } catch {
+      addIssue(code, 'error', `Invalid JSON in ${label}/${file}`);
+      continue;
+    }
+    loaded.add(code);
+
+    // Filename matches countryCode
+    if (data.countryCode !== code) {
+      addIssue(code, 'error', `${label} filename ${file} does not match countryCode "${data.countryCode}"`);
+    }
+
+    // Must have a matching jurisdiction
+    if (!jurisdictions.has(code)) {
+      addIssue(code, 'error', `${label}/${file} has no matching jurisdiction file`);
+    }
+
+    validateFn(code, data);
+  }
+  return loaded;
+}
+
+// Validate reporting files
+const reportingCodes = loadAndValidateDir<ReportingData>(REPORTING_DIR, 'reporting', (code, data) => {
+  // STR must exist and be required
+  if (!data.str) {
+    addIssue(code, 'error', 'Reporting data missing STR section');
+    return;
+  }
+  if (!data.str.required) {
+    addIssue(code, 'warning', 'STR marked as not required — unusual');
+  }
+  if (data.str.timeframeDays < 0) {
+    addIssue(code, 'error', `STR timeframeDays is negative: ${data.str.timeframeDays}`);
+  }
+  if (!data.str.authority) {
+    addIssue(code, 'error', 'STR missing authority name');
+  }
+
+  // CTR validation (if present)
+  if (data.ctr) {
+    if (data.ctr.threshold <= 0) {
+      addIssue(code, 'warning', `CTR threshold is ${data.ctr.threshold} — expected a positive amount`);
+    }
+    if (!data.ctr.authority) {
+      addIssue(code, 'error', 'CTR missing authority name');
+    }
+  }
+
+  // authorityUrl
+  if (!data.authorityUrl || !data.authorityUrl.startsWith('http')) {
+    addIssue(code, 'error', 'Reporting data missing or invalid authorityUrl');
+  }
+});
+
+// Validate beneficiary obligations files
+const obligationsCodes = loadAndValidateDir<BeneficiaryObligations>(OBLIGATIONS_DIR, 'beneficiary-obligations', (code, data) => {
+  if (typeof data.mustVerifyOriginatorData !== 'boolean') {
+    addIssue(code, 'error', 'mustVerifyOriginatorData must be a boolean');
+  }
+  if (typeof data.rejectIncompleteTransfers !== 'boolean') {
+    addIssue(code, 'error', 'rejectIncompleteTransfers must be a boolean');
+  }
+  if (data.recordKeepingYears <= 0) {
+    addIssue(code, 'error', `recordKeepingYears is ${data.recordKeepingYears} — expected positive`);
+  }
+  if (!data.authorityUrl || !data.authorityUrl.startsWith('http')) {
+    addIssue(code, 'error', 'Beneficiary obligations missing or invalid authorityUrl');
+  }
+  if (!data.notes || data.notes.trim().length === 0) {
+    addIssue(code, 'warning', 'Beneficiary obligations missing notes');
+  }
+});
+
+// Coverage report
+const allCodes = Array.from(jurisdictions.keys()).sort();
+const missingReporting = allCodes.filter(c => !reportingCodes.has(c));
+const missingObligations = allCodes.filter(c => !obligationsCodes.has(c));
+const priorityMissingReporting = missingReporting.filter(c => PRIORITY_JURISDICTIONS.has(c));
+const priorityMissingObligations = missingObligations.filter(c => PRIORITY_JURISDICTIONS.has(c));
+
+console.log('\n=== Data Coverage Report ===');
+console.log(`Jurisdictions:              ${jurisdictions.size}`);
+console.log(`Reporting data:             ${reportingCodes.size}/${jurisdictions.size} (${(reportingCodes.size / jurisdictions.size * 100).toFixed(1)}%)`);
+console.log(`Beneficiary obligations:    ${obligationsCodes.size}/${jurisdictions.size} (${(obligationsCodes.size / jurisdictions.size * 100).toFixed(1)}%)`);
+
+if (priorityMissingReporting.length > 0) {
+  console.log(`\nPriority jurisdictions missing reporting data: ${priorityMissingReporting.join(', ')}`);
+}
+if (priorityMissingObligations.length > 0) {
+  console.log(`Priority jurisdictions missing beneficiary obligations: ${priorityMissingObligations.join(', ')}`);
+}
+if (missingReporting.length > 0) {
+  console.log(`\nAll jurisdictions missing reporting data (${missingReporting.length}): ${missingReporting.join(', ')}`);
+}
+if (missingObligations.length > 0) {
+  console.log(`All jurisdictions missing beneficiary obligations (${missingObligations.length}): ${missingObligations.join(', ')}`);
 }
 
 // Print summary

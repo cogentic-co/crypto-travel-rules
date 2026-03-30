@@ -4,46 +4,19 @@
   "authority": "AUSTRAC",
   "rules": [
     {
-      "versionId": "AU-2024-001",
-      "status": "active",
-      "effectiveFrom": "2024-03-31",
-      "effectiveTo": "2026-06-30",
-      "unhostedWallets": {
-        "verificationRequired": false,
-        "notes": "No specific unhosted wallet requirements under current framework."
-      },
-      "authorityUrl": "https://www.austrac.gov.au/business/obligations/travel-rule",
-      "threshold": {
-        "amount": 10000,
-        "currency": "AUD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      }
-    },
-    {
       "versionId": "AU-2026-001",
       "status": "pending",
       "effectiveFrom": "2026-07-01",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "AUSTRAC Reform 2026 requires identity verification for transfers to/from unhosted wallets above AUD 1,000."
+        "notes": "AUSTRAC Reform 2026 requires due diligence on transfers involving self-hosted wallets."
       },
       "authorityUrl": "https://www.austrac.gov.au/business/obligations/travel-rule",
       "threshold": {
-        "amount": 1000,
+        "amount": 0,
         "currency": "AUD",
-        "isZeroThreshold": false
+        "isZeroThreshold": true
       },
       "requiredFields": {
         "originator": [
@@ -57,7 +30,8 @@
           "accountNumber",
           "townAndCountry"
         ]
-      }
+      },
+      "notes": "AML/CTF Amendment Bill passed late 2024. General obligations effective March 31, 2026; travel rule for virtual asset transfers effective July 1, 2026. Zero threshold — applies to all virtual asset transfers regardless of value. No crypto-specific travel rule existed prior to this reform."
     }
   ]
 }

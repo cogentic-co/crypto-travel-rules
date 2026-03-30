@@ -4,20 +4,20 @@
   "authority": "Swiss Financial Market Supervisory Authority (FINMA)",
   "rules": [
     {
-      "versionId": "CH-2023-001",
+      "versionId": "CH-2020-001",
       "status": "active",
-      "effectiveFrom": "2023-01-01",
+      "effectiveFrom": "2020-01-01",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "FINMA requires VASPs to comply with AMLA travel rule obligations. Transfers to/from unhosted wallets above CHF 1,000 require identity verification of the wallet holder."
+        "notes": "FINMA requires proof of wallet ownership (e.g., Satoshi Test, signed message/AOPP) for transfers to/from unhosted wallets. For customer's own wallets: ownership verification required. For third-party wallets: full identity verification of the third party plus proof of wallet control."
       },
       "authorityUrl": "https://www.finma.ch/en/documentation/finma-guidance/guidance/finma-guidance-02-2019/",
       "threshold": {
-        "amount": 1000,
+        "amount": 0,
         "currency": "CHF",
-        "isZeroThreshold": false
+        "isZeroThreshold": true
       },
       "requiredFields": {
         "originator": [
@@ -30,7 +30,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "FINMA Guidance 02/2019 requires travel rule compliance for ALL VASP-to-VASP transactions with no de minimis threshold. One of the strictest regimes globally. AMLO-FINMA amendment (February 2020) lowered customer identification threshold from CHF 5,000 to CHF 1,000. The CHF 1,000 threshold applies to unhosted wallet verification, not the travel rule trigger."
     }
   ]
 }

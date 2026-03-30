@@ -7,39 +7,11 @@
       "versionId": "FR-2024-001",
       "status": "active",
       "effectiveFrom": "2024-12-30",
-      "effectiveTo": "2026-06-30",
-      "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "ACPR supervises AML/CFT compliance for DASPs. AMF handles DASP/CASP registration. EU TFR applies. PSAN registration transitioning to MiCA licensing."
-      },
-      "authorityUrl": "https://www.amf-france.org/en/professionals/fintech/my-relations-amf/digital-asset-service-providers",
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      }
-    },
-    {
-      "versionId": "FR-2026-001",
-      "status": "pending",
-      "effectiveFrom": "2026-07-01",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "Full EU TFR enforcement. MiCA-licensed CASPs replace PSAN registration. Zero threshold for all CASP-to-CASP transfers. ACPR remains primary AML supervisor."
+        "notes": "Under EU TFR, CASPs must verify self-hosted wallet ownership for transfers exceeding EUR 1,000. ACPR supervises AML/CFT compliance. PSAN registration transitioning to MiCA licensing."
       },
       "authorityUrl": "https://www.amf-france.org/en/professionals/fintech/my-relations-amf/digital-asset-service-providers",
       "threshold": {
@@ -60,7 +32,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "EU TFR (Regulation 2023/1113) applies zero threshold to all CASP-to-CASP crypto transfers from December 30, 2024. Originator must provide name, account number, and one of: address, ID document number, or date/place of birth (alternatives, not all mandatory simultaneously)."
     }
   ]
 }

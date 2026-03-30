@@ -4,15 +4,15 @@
   "authority": "Monetary Authority of Singapore (MAS)",
   "rules": [
     {
-      "versionId": "SG-2024-001",
+      "versionId": "SG-2020-001",
       "status": "active",
-      "effectiveFrom": "2024-01-28",
+      "effectiveFrom": "2020-01-28",
       "effectiveTo": null,
       "unhostedWallets": {
-        "verificationRequired": true,
-        "notes": "MAS Notice PSN02 requires DPT service providers to obtain and verify originator/beneficiary information for all transfers regardless of amount. Transfers involving unhosted wallets require wallet ownership verification via cryptographic signature or equivalent."
+        "verificationRequired": false,
+        "notes": "Travel rule transmission obligation does not apply to transfers to/from unhosted wallets (no counterparty VASP). However, DPT service providers must collect and retain counterparty information and verify wallet ownership as part of CDD/risk management. Revised April 2024 under PSN02 amendment."
       },
-      "authorityUrl": "https://www.mas.gov.sg/regulation/notices/psn02-notice-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism",
+      "authorityUrl": "https://www.mas.gov.sg/regulation/notices/psn02-aml-cft-notice---digital-payment-token-service",
       "threshold": {
         "amount": 0,
         "currency": "SGD",
@@ -21,16 +21,14 @@
       "requiredFields": {
         "originator": [
           "fullName",
-          "accountNumber",
-          "address",
-          "idDocumentNumber",
-          "dateOfBirth"
+          "accountNumber"
         ],
         "beneficiary": [
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "MAS Notice PSN02 applies to all DPT transfers regardless of amount. Basic info (name, account number) required for all transfers. For transfers >= SGD 1,500: enhanced originator info required — one of address, national ID, or date/place of birth (alternatives, not all mandatory). Originally effective January 28, 2020; revised April 2024."
     }
   ]
 }

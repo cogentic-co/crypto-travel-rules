@@ -45,6 +45,19 @@ scripts/                    — One-time data generation/fix scripts (not part o
 - CEMAC/BEAC countries (CF, CG, CM, GA, GQ, TD) — same principle
 - EU/EEA member states follow EU TFR — if updating one, consider whether the change applies to all
 
+### Data Accuracy — Known Pitfalls
+- **Do NOT confuse unhosted wallet verification thresholds with the general travel rule trigger threshold.** Many jurisdictions (EU/EEA, GB, CH, SG, HK, AU) have zero-threshold travel rules where ALL CASP-to-CASP transfers require data, but unhosted wallet verification only kicks in above a separate threshold (e.g., EUR 1,000).
+- **Effective dates must reflect when the travel rule actually took effect**, not related but distinct regulations (e.g., KR's VAUPA vs the Specific Financial Information Act).
+- **Unhosted wallet `verificationRequired`** should be `false` when the travel rule transmission obligation doesn't apply (no counterparty VASP). Record-keeping obligations are separate and should be documented in `notes`, not flagged as verification requirements.
+- **Required fields that are alternatives** (e.g., address OR date of birth OR ID document number) should all be listed but documented as alternatives in `notes`, not presented as all simultaneously mandatory.
+- **Always verify against primary regulatory sources** (eCFR, EUR-Lex, official gazette) before committing data changes. Secondary sources (compliance vendors, news articles) frequently contain inaccuracies.
+
+### Publishing
+- Package is published to GitHub Packages npm registry as `@cogentic-co/crypto-travel-rules`
+- Publishing is automated via `.github/workflows/publish.yml` — triggered by creating a GitHub release
+- To publish a new version: bump version in `package.json`, commit, push, then create a GitHub release (e.g., `gh release create v0.2.0 --title "v0.2.0" --notes "..."`)
+- Do NOT run `npm publish` locally — use the GitHub Actions workflow
+
 ## Build & Validate
 
 ```bash

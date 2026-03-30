@@ -1,6 +1,6 @@
 {
   "name": "@cogentic-co/crypto-travel-rules",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Machine-readable directory of global crypto Travel Rule requirements with a TypeScript SDK to handle the Sunrise Issue.",
   "main": "dist/engine.js",
   "types": "dist/engine.d.ts",

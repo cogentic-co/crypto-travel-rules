@@ -9,8 +9,8 @@
       "effectiveFrom": "2023-06-01",
       "effectiveTo": null,
       "unhostedWallets": {
-        "verificationRequired": true,
-        "notes": "Japan was among the first to enforce the travel rule for crypto. All VASP-to-VASP transfers require originator/beneficiary data regardless of amount. Transfers to unhosted wallets require additional risk-based verification."
+        "verificationRequired": false,
+        "notes": "Travel rule transmission obligation does not apply to transfers to/from unhosted wallets (no counterparty VASP to transmit to). However, VASPs must collect and retain counterparty information (name, blockchain address) for record-keeping even when no transmission is required."
       },
       "authorityUrl": "https://www.fsa.go.jp/en/policy/virtual-currency/",
       "threshold": {
@@ -28,7 +28,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "Full enforcement since June 1, 2023 under APTCP amendment. All VASP-to-VASP transfers require originator/beneficiary data regardless of amount. Transitional period (April 2022 - May 2023) had JPY 100,000 threshold and was limited to BTC/ETH. Address is one option; customer identification number is an alternative."
     }
   ]
 }

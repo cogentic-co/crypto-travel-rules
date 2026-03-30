@@ -1,17 +1,17 @@
 {
   "countryCode": "AE",
   "name": "United Arab Emirates",
-  "authority": "Virtual Assets Regulatory Authority (VARA) / Securities and Commodities Authority (SCA)",
+  "authority": "Virtual Assets Regulatory Authority (VARA) / Central Bank of the UAE (CBUAE)",
   "rules": [
     {
-      "versionId": "AE-2024-001",
+      "versionId": "AE-2023-001",
       "status": "active",
-      "effectiveFrom": "2024-06-01",
+      "effectiveFrom": "2023-02-07",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 3500,
-        "notes": "VARA Dubai regulations and federal SCA framework require licensed VASPs to transmit originator/beneficiary information. Unhosted wallet transfers require risk assessment and verification above AED 3,500."
+        "notes": "VARA and CBUAE require risk assessment for unhosted wallet transfers. Enhanced due diligence and verification required above AED 3,500."
       },
       "authorityUrl": "https://www.vara.ae/en/regulations/",
       "threshold": {
@@ -29,7 +29,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "VARA Virtual Assets and Related Activities Regulations effective February 7, 2023. CBUAE issued complementary travel rule guidance. ADGM (Abu Dhabi) effectively applies no threshold. This file captures the VARA/federal perspective."
     }
   ]
 }

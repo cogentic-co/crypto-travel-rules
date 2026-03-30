@@ -7,39 +7,11 @@
       "versionId": "NL-2024-001",
       "status": "active",
       "effectiveFrom": "2024-12-30",
-      "effectiveTo": "2026-06-30",
-      "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "DNB registers crypto service providers. Netherlands applies strict EU TFR interpretation."
-      },
-      "authorityUrl": "https://www.dnb.nl/en/",
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      }
-    },
-    {
-      "versionId": "NL-2026-001",
-      "status": "pending",
-      "effectiveFrom": "2026-07-01",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "Full EU TFR enforcement. Zero threshold for CASP-to-CASP transfers."
+        "notes": "Under EU TFR, CASPs must verify self-hosted wallet ownership for transfers exceeding EUR 1,000. DNB registers crypto service providers under Wwft."
       },
       "authorityUrl": "https://www.dnb.nl/en/",
       "threshold": {
@@ -60,7 +32,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "EU TFR (Regulation 2023/1113) applies zero threshold to all CASP-to-CASP crypto transfers from December 30, 2024. Originator must provide name, account number, and one of: address, ID document number, or date/place of birth (alternatives, not all mandatory simultaneously)."
     }
   ]
 }

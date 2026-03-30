@@ -1,35 +1,34 @@
 {
   "countryCode": "HK",
   "name": "Hong Kong",
-  "authority": "Securities and Futures Commission (SFC)",
+  "authority": "Securities and Futures Commission (SFC) / Hong Kong Monetary Authority (HKMA)",
   "rules": [
     {
-      "versionId": "HK-2024-001",
+      "versionId": "HK-2023-001",
       "status": "active",
-      "effectiveFrom": "2024-06-01",
+      "effectiveFrom": "2023-06-01",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
-        "notes": "Licensed VATPs must take reasonable measures to verify the identity of originators and beneficiaries for unhosted wallet transfers exceeding the threshold."
+        "notes": "Licensed VATPs must take reasonable measures to verify the identity of originators and beneficiaries for unhosted wallet transfers. Risk-based approach for transfers above the enhanced-info threshold."
       },
       "authorityUrl": "https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines",
       "threshold": {
-        "amount": 8000,
+        "amount": 0,
         "currency": "HKD",
-        "isZeroThreshold": false
+        "isZeroThreshold": true
       },
       "requiredFields": {
         "originator": [
           "fullName",
-          "accountNumber",
-          "address",
-          "idDocumentNumber"
+          "accountNumber"
         ],
         "beneficiary": [
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "AMLO Chapter 12 amendments effective June 1, 2023. Travel rule applies to ALL virtual asset transfers regardless of amount. Basic info (name, account number) required for all transfers. For transfers >= HKD 8,000: expanded originator info required (address, ID document number). Both SFC (for VATPs) and HKMA (for authorized institutions) enforce AMLO travel rule requirements."
     }
   ]
 }

@@ -4,16 +4,16 @@
   "authority": "Financial Crimes Enforcement Network (FinCEN)",
   "rules": [
     {
-      "versionId": "US-2024-001",
+      "versionId": "US-1996-001",
       "status": "active",
-      "effectiveFrom": "2024-01-01",
+      "effectiveFrom": "1996-01-01",
       "effectiveTo": null,
       "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 3000,
-        "notes": "FinCEN requires CVC/LTDA recordkeeping and travel rule compliance for transactions at or above $3,000. Proposed rulemaking for unhosted wallets would lower threshold to $250 for certain counterparties."
+        "verificationRequired": false,
+        "verificationThreshold": null,
+        "notes": "The 2020 FinCEN proposed rulemaking on unhosted wallets (requiring identity verification above $3,000) was never finalized and remains a proposal only. No enacted requirement exists for unhosted wallet verification."
       },
-      "authorityUrl": "https://www.fincen.gov/resources/statutes-and-regulations/cvc-final-rule",
+      "authorityUrl": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-E/section-1010.410",
       "threshold": {
         "amount": 3000,
         "currency": "USD",
@@ -30,7 +30,38 @@
           "accountNumber",
           "address"
         ]
-      }
+      },
+      "notes": "BSA Travel Rule under 31 CFR 1010.410, in effect since 1996 for all funds transfers at or above $3,000."
+    },
+    {
+      "versionId": "US-2028-001",
+      "status": "pending",
+      "effectiveFrom": "2028-01-01",
+      "effectiveTo": null,
+      "unhostedWallets": {
+        "verificationRequired": false,
+        "verificationThreshold": null,
+        "notes": "The 2020 FinCEN proposed rulemaking on unhosted wallets was never finalized."
+      },
+      "authorityUrl": "https://www.federalregister.gov/documents/2024/09/04/2024-19504",
+      "threshold": {
+        "amount": 3000,
+        "currency": "USD",
+        "isZeroThreshold": false
+      },
+      "requiredFields": {
+        "originator": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ],
+        "beneficiary": [
+          "fullName",
+          "accountNumber",
+          "address"
+        ]
+      },
+      "notes": "Amendment published September 2024 (89 FR 72274) explicitly extending the Travel Rule to CVC/LTDA. Effective date delayed to 2028-01-01 per 91 FR 36 (January 2, 2026)."
     }
   ]
 }

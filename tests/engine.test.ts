@@ -50,25 +50,25 @@ describe('TravelRuleEngine', () => {
     });
 
     it('returns the correct rule based on date for multi-rule jurisdictions', () => {
+      // AU only has a pending rule from 2026-07-01; no rule before that
       const before = engine.getApplicableRule('AU', '2026-06-15');
-      expect(before!.threshold.amount).toBe(10000);
+      expect(before).toBeNull();
 
       const after = engine.getApplicableRule('AU', '2026-07-15');
-      expect(after!.threshold.amount).toBe(1000);
+      expect(after!.threshold.amount).toBe(0);
+      expect(after!.threshold.isZeroThreshold).toBe(true);
     });
 
-    it('returns the pending EU zero-threshold rule after July 2026', () => {
-      const rule = engine.getApplicableRule('DE', '2026-08-01');
+    it('returns zero-threshold EU TFR rule for EU states', () => {
+      const rule = engine.getApplicableRule('DE', '2025-06-01');
       expect(rule).not.toBeNull();
       expect(rule!.threshold.isZeroThreshold).toBe(true);
       expect(rule!.threshold.amount).toBe(0);
     });
 
-    it('returns the EUR 1,000 rule before July 2026 for EU states', () => {
-      const rule = engine.getApplicableRule('DE', '2025-06-01');
-      expect(rule).not.toBeNull();
-      expect(rule!.threshold.amount).toBe(1000);
-      expect(rule!.threshold.isZeroThreshold).toBe(false);
+    it('returns null for EU states before TFR application date', () => {
+      const rule = engine.getApplicableRule('DE', '2024-12-29');
+      expect(rule).toBeNull();
     });
 
     it('returns null for unknown country codes', () => {
@@ -109,9 +109,8 @@ describe('TravelRuleEngine', () => {
 
   describe('evaluate', () => {
     it('triggers when either jurisdiction triggers', () => {
-      // AU threshold is AUD 10,000 until 2026-06-30; after 2026-07-01 it becomes AUD 1,000
-      // US threshold is USD 3,000 — 1,000 fiat equivalent is below US threshold
-      // but AU pending rule (AUD 1,000) is in effect from 2026-07-01, so to-side triggers
+      // AU zero-threshold from 2026-07-01; US threshold is USD 3,000
+      // 1,000 fiat equivalent is below US threshold but AU is zero-threshold
       const result = engine.evaluate(
         { from: 'US', to: 'AU', fiatEquivalent: 1000 },
         '2026-08-01',
@@ -131,7 +130,8 @@ describe('TravelRuleEngine', () => {
       expect(result.to.triggered).toBe(true);
     });
 
-    it('does not trigger when below both thresholds', () => {
+    it('does not trigger when no rule exists yet', () => {
+      // Before AU travel rule takes effect and below US threshold
       const result = engine.evaluate(
         { from: 'US', to: 'AU', fiatEquivalent: 500 },
         '2025-06-01',
@@ -152,11 +152,12 @@ describe('TravelRuleEngine', () => {
     });
 
     it('handles zero-threshold jurisdictions correctly', () => {
+      // Both GB and SG are now zero-threshold, so both sides trigger
       const result = engine.evaluate(
         { from: 'GB', to: 'SG', fiatEquivalent: 1 },
       );
       expect(result.triggered).toBe(true);
-      expect(result.from.triggered).toBe(false);
+      expect(result.from.triggered).toBe(true);
       expect(result.to.triggered).toBe(true);
     });
 
@@ -169,12 +170,15 @@ describe('TravelRuleEngine', () => {
     });
 
     it('demonstrates the Sunrise Issue — same transfer, different dates', () => {
+      // AU has no travel rule before 2026-07-01; US has $3,000 threshold
+      // Before AU rule: only US side evaluated, $50 is below $3,000
+      // After AU rule: AU zero-threshold triggers
       const before = engine.evaluate(
-        { from: 'DE', to: 'FR', fiatEquivalent: 50 },
-        '2025-06-01',
+        { from: 'US', to: 'AU', fiatEquivalent: 50 },
+        '2026-06-01',
       );
       const after = engine.evaluate(
-        { from: 'DE', to: 'FR', fiatEquivalent: 50 },
+        { from: 'US', to: 'AU', fiatEquivalent: 50 },
         '2026-08-01',
       );
       expect(before.triggered).toBe(false);
@@ -204,10 +208,10 @@ describe('TravelRuleEngine', () => {
       expect(result.notes).toBeNull();
     });
 
-    it('returns null threshold when verification applies at all amounts', () => {
+    it('returns required=false when unhosted wallet verification is not required', () => {
+      // SG no longer has verificationRequired: true (travel rule doesn't apply to unhosted wallets)
       const result = engine.walletVerification('SG');
-      expect(result.required).toBe(true);
-      expect(result.threshold).toBeNull();
+      expect(result.required).toBe(false);
     });
   });
 

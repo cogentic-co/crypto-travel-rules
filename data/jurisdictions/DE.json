@@ -7,39 +7,11 @@
       "versionId": "DE-2024-001",
       "status": "active",
       "effectiveFrom": "2024-12-30",
-      "effectiveTo": "2026-06-30",
-      "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "BaFin enforces EU TFR with additional Kryptowertetransferverordnung (KryptoWTransferV) requirements. German CASPs must verify unhosted wallet ownership above EUR 1,000."
-      },
-      "authorityUrl": "https://www.bafin.de/EN/Aufsicht/BankenFinanzdienstleister/Kryptoverwahrgeschaeft/kryptoverwahrgeschaeft_node_en.html",
-      "threshold": {
-        "amount": 1000,
-        "currency": "EUR",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      }
-    },
-    {
-      "versionId": "DE-2026-001",
-      "status": "pending",
-      "effectiveFrom": "2026-07-01",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000,
-        "notes": "Full EU TFR enforcement via BaFin. Zero threshold for CASP-to-CASP. Germany expected to maintain strict interpretation of unhosted wallet requirements."
+        "notes": "Under EU TFR, CASPs must verify self-hosted wallet ownership for transfers exceeding EUR 1,000 before making assets available."
       },
       "authorityUrl": "https://www.bafin.de/EN/Aufsicht/BankenFinanzdienstleister/Kryptoverwahrgeschaeft/kryptoverwahrgeschaeft_node_en.html",
       "threshold": {
@@ -60,7 +32,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "EU TFR (Regulation 2023/1113) applies zero threshold to all CASP-to-CASP crypto transfers from December 30, 2024. Originator must provide name, account number, and one of: address, ID document number, or date/place of birth (alternatives, not all mandatory simultaneously). Previously governed by KryptoWTransferV (since October 2021)."
     }
   ]
 }

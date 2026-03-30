@@ -4,14 +4,14 @@
   "authority": "Financial Services Commission (FSC) / Korea Financial Intelligence Unit (KoFIU)",
   "rules": [
     {
-      "versionId": "KR-2024-001",
+      "versionId": "KR-2022-001",
       "status": "active",
-      "effectiveFrom": "2024-07-19",
+      "effectiveFrom": "2022-03-25",
       "effectiveTo": null,
       "unhostedWallets": {
         "verificationRequired": true,
         "verificationThreshold": 1000000,
-        "notes": "Virtual Asset User Protection Act enforces travel rule for VASPs. Real-name bank account verification (실명계좌) required. Unhosted wallet transfers above KRW 1,000,000 require additional verification."
+        "notes": "Transfers above KRW 1,000,000 to unhosted wallets are restricted. Real-name bank account verification (실명계좌) required."
       },
       "authorityUrl": "https://www.fsc.go.kr/eng/po040101",
       "threshold": {
@@ -29,7 +29,8 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "Travel rule under the Specific Financial Information Act, effective March 25, 2022. The Virtual Asset User Protection Act (VAUPA, July 19, 2024) addresses user protection and VASP supervision but is a separate instrument from the travel rule."
     }
   ]
 }

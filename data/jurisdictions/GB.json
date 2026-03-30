@@ -9,28 +9,27 @@
       "effectiveFrom": "2023-09-01",
       "effectiveTo": null,
       "unhostedWallets": {
-        "verificationRequired": true,
+        "verificationRequired": false,
         "verificationThreshold": 1000,
-        "notes": "FCA requires cryptoasset businesses to collect and verify originator/beneficiary information. Enhanced due diligence for unhosted wallet transfers above GBP 1,000."
+        "notes": "Travel rule transmission does not apply to unhosted wallet transfers (no counterparty VASP). Risk-based approach: for transfers >= EUR 1,000 involving unhosted wallets with higher risk indicators, firms must verify wallet ownership. Not a blanket requirement."
       },
       "authorityUrl": "https://www.fca.org.uk/firms/financial-crime/cryptoassets-aml-ctf",
       "threshold": {
-        "amount": 1000,
-        "currency": "GBP",
-        "isZeroThreshold": false
+        "amount": 0,
+        "currency": "EUR",
+        "isZeroThreshold": true
       },
       "requiredFields": {
         "originator": [
           "fullName",
-          "accountNumber",
-          "address",
-          "dateOfBirth"
+          "accountNumber"
         ],
         "beneficiary": [
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "notes": "UK Travel Rule (Part 7A, MLR 2017) applies to ALL cryptoasset transfers regardless of amount. Basic info (name, account number) required for all transfers. Above EUR 1,000: one additional identifier required for originator (address OR date of birth OR ID document number — alternatives, not all mandatory). Threshold defined in EUR per statute (Regulation 64C)."
     }
   ]
 }

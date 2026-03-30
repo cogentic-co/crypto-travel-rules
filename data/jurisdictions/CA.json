@@ -4,14 +4,13 @@
   "authority": "Financial Transactions and Reports Analysis Centre of Canada (FINTRAC)",
   "rules": [
     {
-      "versionId": "CA-2024-001",
+      "versionId": "CA-2021-001",
       "status": "active",
-      "effectiveFrom": "2024-06-01",
+      "effectiveFrom": "2021-06-01",
       "effectiveTo": null,
       "unhostedWallets": {
-        "verificationRequired": true,
-        "verificationThreshold": 1000,
-        "notes": "FINTRAC requires MSBs dealing in virtual currency to comply with travel rule for transfers of CAD 1,000 or more. Beneficial ownership verification required for unhosted wallets."
+        "verificationRequired": false,
+        "notes": "Self-hosted/unhosted wallets are currently outside the scope of Canada's travel rule. No specific verification requirements for unhosted wallet transfers."
       },
       "authorityUrl": "https://www.fintrac-canafe.gc.ca/guidance-directives/transaction-operation/travel-voyage/1-eng",
       "threshold": {
@@ -28,9 +27,11 @@
         ],
         "beneficiary": [
           "fullName",
-          "accountNumber"
+          "accountNumber",
+          "address"
         ]
-      }
+      },
+      "notes": "FINTRAC travel rule for virtual currency transfers of CAD 1,000 or more. Legally effective June 1, 2021, with grace period for full compliance until March 31, 2022. FINTRAC requires beneficiary address in addition to name and account number."
     }
   ]
 }

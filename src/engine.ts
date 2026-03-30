@@ -1,6 +1,18 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {
+export type {
+  BeneficiaryObligations,
+  EvaluationResult,
+  JurisdictionData,
+  PiiField,
+  ReportingData,
+  ReportingThreshold,
+  TransferRequest,
+  TravelRuleVersion,
+  WalletVerificationResult,
+} from './types';
+
+import type {
   BeneficiaryObligations,
   EvaluationResult,
   JurisdictionData,

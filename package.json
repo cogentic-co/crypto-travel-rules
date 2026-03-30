@@ -1,5 +1,5 @@
 {
-  "name": "crypto-travel-rules",
+  "name": "@cogentic-co/crypto-travel-rules",
   "version": "0.1.0",
   "description": "Machine-readable directory of global crypto Travel Rule requirements with a TypeScript SDK to handle the Sunrise Issue.",
   "main": "dist/engine.js",
@@ -38,6 +38,9 @@
     "unhosted-wallet"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cogentic-co/crypto-travel-rules.git"

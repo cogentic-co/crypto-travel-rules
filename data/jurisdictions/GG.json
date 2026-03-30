@@ -14,6 +14,11 @@
         "notes": "GFSC registers virtual asset service providers. AML/CFT Handbook applies."
       },
       "authorityUrl": "https://www.gfsc.gg/",
+      "sources": [
+        { "label": "GFSC AML/CFT/CPF Handbook", "url": "https://www.gfsc.gg/commission/policy-and-legislation/amlcftcpf-handbook" },
+        { "label": "Regulation of Virtual Asset Service Providers (Bailiwick of Guernsey)", "url": "https://www.gfsc.gg/industry-sectors/virtual-assets" },
+        { "label": "MONEYVAL – Guernsey Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/guernsey" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "GBP",

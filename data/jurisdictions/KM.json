@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque Centrale des Comores — AML/CFT Framework", "url": "https://www.banque-comores.km/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Comoros", "url": "https://www.esaamlg.org/reports/Comoros.php" }
+      ]
     }
   ]
 }

@@ -13,6 +13,11 @@
         "notes": "BCC Resolution 215 (2021) allows licensed VASPs. International sanctions limit interoperability."
       },
       "authorityUrl": "https://www.bc.gob.cu/",
+      "sources": [
+        { "label": "Banco Central de Cuba", "url": "https://www.bc.gob.cu/" },
+        { "label": "BCC Resolution 215/2021 - Virtual Asset Service Providers", "url": "https://www.bc.gob.cu/" },
+        { "label": "CFATF - Cuba", "url": "https://www.cfatf-gafic.org/member-countries/cuba" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

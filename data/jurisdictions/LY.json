@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Libya — AML/CFT Framework", "url": "https://cbl.gov.ly/en/" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Libya", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Libya" }
+      ]
     }
   ]
 }

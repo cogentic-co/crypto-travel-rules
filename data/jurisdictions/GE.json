@@ -13,6 +13,10 @@
         "notes": "National Bank oversees VASP AML obligations. Georgia has a growing crypto mining sector."
       },
       "authorityUrl": "https://nbg.gov.ge/en/",
+      "sources": [
+        { "label": "Georgia Law on Facilitating the Prevention of Illicit Income Legalisation", "url": "https://nbg.gov.ge/en/page/anti-money-laundering" },
+        { "label": "MONEYVAL – Georgia Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/georgia" }
+      ],
       "threshold": {
         "amount": 3000,
         "currency": "GEL",

@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque Centrale de Tunisie — AML/CFT Framework", "url": "https://www.bct.gov.tn/bct/siteprod/index.jsp" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Tunisia", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Tunisia" }
+      ]
     }
   ]
 }

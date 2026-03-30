@@ -13,6 +13,10 @@
         "notes": "CBB Crypto-Asset Module requires licensed crypto-asset service providers to transmit originator/beneficiary information for all transfers. Bahrain was among the first MENA jurisdictions to implement comprehensive crypto regulation."
       },
       "authorityUrl": "https://www.cbb.gov.bh/",
+      "sources": [
+        { "label": "CBB Rulebook Volume 6 - Crypto-Asset Module", "url": "https://www.cbb.gov.bh/crypto-assets/" },
+        { "label": "FATF - Bahrain (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Bahrain.html" }
+      ],
       "threshold": {
         "amount": 0,
         "currency": "BHD",

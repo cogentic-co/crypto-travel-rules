@@ -13,6 +13,10 @@
         "notes": "NBS Digital Assets Law (2021) requires VASP licensing and travel rule compliance."
       },
       "authorityUrl": "https://www.nbs.rs/en/",
+      "sources": [
+        { "label": "Serbia Law on Digital Assets (2021)", "url": "https://www.nbs.rs/en/ciljevi-i-funkcije/nadzor-nad-fin-inst/digital_assets/" },
+        { "label": "MONEYVAL – Serbia Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/serbia" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

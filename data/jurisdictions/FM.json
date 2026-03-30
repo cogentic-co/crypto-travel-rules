@@ -13,6 +13,10 @@
         "notes": "Uses USD. Basic AML framework. No specific crypto regulation."
       },
       "authorityUrl": "https://www.fsmgov.org/",
+      "sources": [
+        { "label": "FSM Financial Institutions Act / AML Framework", "url": "https://www.fsmgov.org/" },
+        { "label": "APG – Federated States of Micronesia Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=a8efb8ce-ee9c-4671-ad3c-7c5a1cd3cf43" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

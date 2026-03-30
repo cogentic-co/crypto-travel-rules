@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banco Central de São Tomé e Príncipe — AML/CFT Framework", "url": "https://www.bcstp.st/" },
+        { "label": "GIABA Mutual Evaluation Report — São Tomé and Príncipe", "url": "https://www.giaba.org/reports/mutual-evaluation/SaoTome.html" }
+      ]
     }
   ]
 }

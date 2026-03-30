@@ -13,6 +13,10 @@
         "notes": "MMA AML/CFT framework applies. No specific crypto regulation yet. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.mma.gov.mv/",
+      "sources": [
+        { "label": "Prevention of Money Laundering and Financing of Terrorism Act (Maldives)", "url": "https://www.mma.gov.mv/" },
+        { "label": "FATF - Maldives (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Maldives.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -13,6 +13,10 @@
         "notes": "Central Bank has warned against crypto but developing regulatory framework. AML law applies."
       },
       "authorityUrl": "https://www.cbj.gov.jo/",
+      "sources": [
+        { "label": "Anti-Money Laundering and Counter-Terrorism Financing Law No. 46 of 2007 (Jordan)", "url": "https://www.cbj.gov.jo/" },
+        { "label": "FATF - Jordan (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Jordan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

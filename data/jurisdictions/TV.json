@@ -13,6 +13,10 @@
         "notes": "Basic AML framework. No specific crypto regulation."
       },
       "authorityUrl": "https://www.tuvalugovernment.tv/",
+      "sources": [
+        { "label": "Tuvalu Proceeds of Crime Act / AML Framework", "url": "https://www.tuvalugovernment.tv/" },
+        { "label": "APG – Tuvalu Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=7c2a7c0b-9a8d-4f37-a456-8cf4d7a7e8c9" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

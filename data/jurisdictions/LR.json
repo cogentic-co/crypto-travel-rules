@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Liberia — AML/CFT Framework", "url": "https://www.cbl.org.lr/" },
+        { "label": "GIABA Mutual Evaluation Report — Liberia", "url": "https://www.giaba.org/reports/mutual-evaluation/Liberia.html" }
+      ]
     }
   ]
 }

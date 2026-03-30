@@ -13,6 +13,11 @@
         "notes": "SUGEF AML framework applies. Central Bank has not specifically regulated crypto."
       },
       "authorityUrl": "https://www.sugef.fi.cr/",
+      "sources": [
+        { "label": "Superintendencia General de Entidades Financieras (SUGEF)", "url": "https://www.sugef.fi.cr/" },
+        { "label": "Ley 8204 - Legitimación de Capitales y Financiamiento al Terrorismo", "url": "https://www.sugef.fi.cr/normativa/normativa_vigente.aspx" },
+        { "label": "GAFILAT - Costa Rica", "url": "https://www.gafilat.org/index.php/es/miembros/costa-rica" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

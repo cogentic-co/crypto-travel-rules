@@ -14,6 +14,11 @@
         "notes": "IOMFSA Designated Businesses (Registration and Oversight) Act. Early adopter of crypto regulation."
       },
       "authorityUrl": "https://www.iomfsa.im/",
+      "sources": [
+        { "label": "Designated Businesses (Registration and Oversight) Act 2015", "url": "https://www.iomfsa.im/designated-businesses/" },
+        { "label": "IOMFSA AML/CFT Requirements and Guidance", "url": "https://www.iomfsa.im/amlcft/" },
+        { "label": "MONEYVAL – Isle of Man Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/isle-of-man" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "GBP",

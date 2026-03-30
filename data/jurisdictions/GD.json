@@ -13,6 +13,11 @@
         "notes": "ECCB member. GARFIN AML framework applies."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Eastern Caribbean Central Bank (ECCB)", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "Proceeds of Crime Act - Grenada (AML/CFT)", "url": "https://www.garfin.gd/" },
+        { "label": "CFATF - Grenada", "url": "https://www.cfatf-gafic.org/member-countries/grenada" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

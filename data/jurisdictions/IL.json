@@ -14,6 +14,11 @@
         "notes": "Financial Asset Service Providers Law requires licensed VASPs to comply with AML/CFT travel rule. Israeli ID (Teudat Zehut) required for domestic originators."
       },
       "authorityUrl": "https://www.gov.il/en/departments/capital_market_insurance_and_saving",
+      "sources": [
+        { "label": "Financial Asset Service Providers Law 5776-2016 (Israel)", "url": "https://www.gov.il/en/departments/capital_market_insurance_and_saving" },
+        { "label": "Prohibition of Money Laundering Law 5760-2000 (Israel)", "url": "https://www.impa.org.il/" },
+        { "label": "FATF - Israel Mutual Evaluation", "url": "https://www.fatf-gafi.org/en/countries/detail/Israel.html" }
+      ],
       "threshold": {
         "amount": 5000,
         "currency": "ILS",

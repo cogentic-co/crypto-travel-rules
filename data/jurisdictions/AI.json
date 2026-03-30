@@ -13,6 +13,10 @@
         "notes": "ECCB member. AFSC AML framework applies. Utility Token Offering Act passed."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Anguilla Proceeds of Crime Act / AML-CFT Framework", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "CFATF – Anguilla Mutual Evaluation", "url": "https://www.cfatf-gafic.org/member-assessments/anguilla" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

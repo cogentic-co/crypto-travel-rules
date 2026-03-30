@@ -14,6 +14,11 @@
         "notes": "BCB Normative Resolution requires VASPs to collect and transmit originator/beneficiary data. CPF/CNPJ (tax ID) required for Brazilian originators. Receita Federal mandates monthly reporting of all crypto transactions."
       },
       "authorityUrl": "https://www.bcb.gov.br/en/financialstability/virtualassets",
+      "sources": [
+        { "label": "Banco Central do Brasil - Virtual Assets", "url": "https://www.bcb.gov.br/en/financialstability/virtualassets" },
+        { "label": "Law No. 14,478/2022 - Virtual Asset Service Providers", "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm" },
+        { "label": "FATF - Brazil", "url": "https://www.fatf-gafi.org/en/countries/detail/Brazil.html" }
+      ],
       "threshold": {
         "amount": 5000,
         "currency": "BRL",

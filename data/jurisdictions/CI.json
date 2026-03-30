@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "BCEAO — Uniform AML/CFT Law for WAEMU Member States", "url": "https://www.bceao.int/" },
+        { "label": "GIABA Mutual Evaluation Report — Cote d'Ivoire", "url": "https://www.giaba.org/reports/mutual-evaluation/Cote-dIvoire.html" }
+      ]
     }
   ]
 }

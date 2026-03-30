@@ -13,6 +13,10 @@
         "notes": "Bhutan has state-backed crypto mining operations. RMA AML framework applies."
       },
       "authorityUrl": "https://www.rma.org.bt/",
+      "sources": [
+        { "label": "Bhutan Anti-Money Laundering and Countering Financing of Terrorism Act 2018", "url": "https://www.rma.org.bt/" },
+        { "label": "APG – Bhutan Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=cc2ce949-89bd-4fbb-a1c4-fb7e1ee574fd" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

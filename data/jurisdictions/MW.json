@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Reserve Bank of Malawi — AML/CFT Framework", "url": "https://www.rbm.mw/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Malawi", "url": "https://www.esaamlg.org/reports/Malawi.php" }
+      ]
     }
   ]
 }

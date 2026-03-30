@@ -13,6 +13,10 @@
         "notes": "National Bank AML/CFT framework applies. Limited crypto-specific regulation. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.bnm.md/en/",
+      "sources": [
+        { "label": "Moldova Law on Prevention and Combating Money Laundering and Terrorism Financing", "url": "https://www.bnm.md/en/" },
+        { "label": "MONEYVAL – Moldova Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/republic-of-moldova" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

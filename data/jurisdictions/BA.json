@@ -13,6 +13,10 @@
         "notes": "Fragmented regulatory framework. Travel rule applies through entity-level banking agencies."
       },
       "authorityUrl": "https://www.fba.ba/",
+      "sources": [
+        { "label": "Bosnia and Herzegovina AML/CFT Law", "url": "https://www.fba.ba/" },
+        { "label": "MONEYVAL – Bosnia and Herzegovina Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/bosnia-and-herzegovina" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

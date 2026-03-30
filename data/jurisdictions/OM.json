@@ -14,6 +14,10 @@
         "notes": "CMA developing virtual asset regulatory framework. AML/CFT law applies. Threshold in OMR."
       },
       "authorityUrl": "https://www.cma.gov.om/",
+      "sources": [
+        { "label": "Anti-Money Laundering and Combating the Financing of Terrorism Law (Royal Decree 30/2016, Oman)", "url": "https://www.cma.gov.om/" },
+        { "label": "FATF - Oman (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Oman.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "OMR",

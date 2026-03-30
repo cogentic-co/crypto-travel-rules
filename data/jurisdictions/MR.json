@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Mauritania — AML/CFT Framework", "url": "https://www.bcm.mr/" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Mauritania", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Mauritania" }
+      ]
     }
   ]
 }

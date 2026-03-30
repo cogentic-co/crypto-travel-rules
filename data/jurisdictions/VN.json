@@ -13,6 +13,10 @@
         "notes": "SBV has not recognized crypto as currency or payment method. Government developing regulatory framework. AML law applies."
       },
       "authorityUrl": "https://www.sbv.gov.vn/webcenter/portal/en/",
+      "sources": [
+        { "label": "Law on Anti-Money Laundering No. 14/2022/QH15 (Vietnam)", "url": "https://www.sbv.gov.vn/webcenter/portal/en/" },
+        { "label": "FATF - Vietnam (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Vietnam.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

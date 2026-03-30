@@ -29,7 +29,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "National Bank of Rwanda — AML/CFT Framework", "url": "https://www.bnr.rw/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Rwanda", "url": "https://www.esaamlg.org/reports/Rwanda.php" }
+      ]
     }
   ]
 }

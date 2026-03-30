@@ -14,6 +14,11 @@
         "notes": "JFSC registers virtual currency exchanges. Proceeds of Crime (Jersey) Law applies."
       },
       "authorityUrl": "https://www.jerseyfsc.org/",
+      "sources": [
+        { "label": "Proceeds of Crime (Jersey) Law 1999 (as amended)", "url": "https://www.jerseyfsc.org/industry/financial-crime/" },
+        { "label": "JFSC Virtual Currency Exchange Registration", "url": "https://www.jerseyfsc.org/industry/sectors/virtual-currency-exchange/" },
+        { "label": "MONEYVAL – Jersey Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/jersey" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "GBP",

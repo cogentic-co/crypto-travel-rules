@@ -13,6 +13,11 @@
         "notes": "Bank of Guyana AML Act applies. Limited crypto regulation."
       },
       "authorityUrl": "https://www.bankofguyana.org.gy/",
+      "sources": [
+        { "label": "Bank of Guyana", "url": "https://www.bankofguyana.org.gy/" },
+        { "label": "Anti-Money Laundering and Countering the Financing of Terrorism Act 2009", "url": "https://www.bankofguyana.org.gy/bog/anti-money-laundering" },
+        { "label": "CFATF - Guyana", "url": "https://www.cfatf-gafic.org/member-countries/guyana" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

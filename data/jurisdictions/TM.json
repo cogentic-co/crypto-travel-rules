@@ -13,6 +13,10 @@
         "notes": "Highly restricted financial system. Central Bank has not authorized crypto. AML law applies."
       },
       "authorityUrl": "https://www.cbt.tm/",
+      "sources": [
+        { "label": "Law on Combating Legalization of Proceeds from Crime and Financing of Terrorism (Turkmenistan)", "url": "https://www.cbt.tm/" },
+        { "label": "FATF - Turkmenistan (EAG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Turkmenistan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

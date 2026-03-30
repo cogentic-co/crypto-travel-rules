@@ -13,6 +13,10 @@
         "notes": "AIF applies strict AML/CFT rules to all financial transfers including digital assets."
       },
       "authorityUrl": "https://www.aif.va/",
+      "sources": [
+        { "label": "Vatican Law No. XVIII on Transparency and AML/CFT (2013, as amended)", "url": "https://www.aif.va/" },
+        { "label": "MONEYVAL – Holy See Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/holy-see" }
+      ],
       "threshold": {
         "amount": 0,
         "currency": "EUR",

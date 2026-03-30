@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Sudan — AML/CFT Framework", "url": "https://cbos.gov.sd/en/" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Sudan", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Sudan" }
+      ]
     }
   ]
 }

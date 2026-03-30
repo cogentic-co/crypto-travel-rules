@@ -13,6 +13,11 @@
         "notes": "Central Bank AML framework applies. Limited crypto regulation."
       },
       "authorityUrl": "https://www.centralbank.org.bz/",
+      "sources": [
+        { "label": "Central Bank of Belize", "url": "https://www.centralbank.org.bz/" },
+        { "label": "Money Laundering and Terrorism (Prevention) Act", "url": "https://www.centralbank.org.bz/regulations/anti-money-laundering" },
+        { "label": "CFATF - Belize", "url": "https://www.cfatf-gafic.org/member-countries/belize" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

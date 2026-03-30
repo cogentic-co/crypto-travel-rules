@@ -13,6 +13,11 @@
         "notes": "Crypto Law 129 (2024) provides VASP framework. SMV oversees registration. Uses USD."
       },
       "authorityUrl": "https://www.supervalores.gob.pa/",
+      "sources": [
+        { "label": "Superintendencia del Mercado de Valores (SMV)", "url": "https://www.supervalores.gob.pa/" },
+        { "label": "Ley 129 de 2024 - Regulación de Activos Virtuales", "url": "https://www.gacetaoficial.gob.pa/" },
+        { "label": "GAFILAT - Panama", "url": "https://www.gafilat.org/index.php/es/miembros/panama" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

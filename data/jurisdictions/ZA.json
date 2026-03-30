@@ -29,7 +29,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Financial Intelligence Centre — Directive 9: Travel Rule for Crypto Asset Transfers", "url": "https://www.fic.gov.za/wp-content/uploads/2024/04/Consultation-paper-Draft-Directive-9-on-the-travel-rule-relating-to-crypto-asset-transfers.pdf" },
+        { "label": "FATF Mutual Evaluation Report — South Africa", "url": "https://www.fatf-gafi.org/en/countries/detail/South-Africa.html" }
+      ]
     }
   ]
 }

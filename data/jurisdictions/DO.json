@@ -13,6 +13,11 @@
         "notes": "SB AML/CFT framework applies. Central Bank developing crypto stance."
       },
       "authorityUrl": "https://www.sb.gob.do/",
+      "sources": [
+        { "label": "Superintendencia de Bancos de la República Dominicana", "url": "https://www.sb.gob.do/" },
+        { "label": "Ley 155-17 contra el Lavado de Activos y el Financiamiento del Terrorismo", "url": "https://www.sb.gob.do/marco-legal/" },
+        { "label": "CFATF - Dominican Republic", "url": "https://www.cfatf-gafic.org/member-countries/dominican-republic" }
+      ],
       "threshold": {
         "amount": 60000,
         "currency": "DOP",

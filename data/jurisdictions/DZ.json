@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque d'Algérie — AML/CFT Regulatory Framework", "url": "https://www.bank-of-algeria.dz/" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Algeria", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Algeria" }
+      ]
     }
   ]
 }

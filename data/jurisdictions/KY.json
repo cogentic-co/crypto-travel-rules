@@ -14,6 +14,11 @@
         "notes": "VASP Act 2020 and CIMA rules require registered VASPs to comply with AML Regulations travel rule. Threshold denominated in USD equivalent."
       },
       "authorityUrl": "https://www.cima.ky/virtual-asset-service-providers",
+      "sources": [
+        { "label": "Cayman Islands Monetary Authority - Virtual Asset Service Providers", "url": "https://www.cima.ky/virtual-asset-service-providers" },
+        { "label": "Virtual Asset (Service Providers) Act 2020", "url": "https://www.cima.ky/upimages/commonfiles/VirtualAssetServiceProvidersAct2020_1604512498.pdf" },
+        { "label": "CFATF - Cayman Islands", "url": "https://www.cfatf-gafic.org/member-countries/cayman-islands" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

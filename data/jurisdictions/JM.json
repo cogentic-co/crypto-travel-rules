@@ -13,6 +13,11 @@
         "notes": "BOJ developing virtual asset framework. JAM-DEX (CBDC) launched. AML/CFT Act applies."
       },
       "authorityUrl": "https://boj.org.jm/",
+      "sources": [
+        { "label": "Bank of Jamaica", "url": "https://boj.org.jm/" },
+        { "label": "Proceeds of Crime Act (POCA) - AML/CFT Framework", "url": "https://boj.org.jm/core-functions/financial-system-stability/aml-cft/" },
+        { "label": "CFATF - Jamaica", "url": "https://www.cfatf-gafic.org/member-countries/jamaica" }
+      ],
       "threshold": {
         "amount": 160000,
         "currency": "JMD",

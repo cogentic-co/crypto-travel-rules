@@ -13,6 +13,10 @@
         "notes": "PMA has not regulated crypto. General AML framework applies."
       },
       "authorityUrl": "https://www.pma.ps/en",
+      "sources": [
+        { "label": "Anti-Money Laundering Law (Palestine)", "url": "https://www.pma.ps/en" },
+        { "label": "MENAFATF - Palestine Mutual Evaluation", "url": "https://www.menafatf.org/" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

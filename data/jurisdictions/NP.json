@@ -13,6 +13,10 @@
         "notes": "Nepal Rastra Bank has banned crypto trading. AML framework applies to any detected virtual asset activity."
       },
       "authorityUrl": "https://www.nrb.org.np/",
+      "sources": [
+        { "label": "Asset (Money) Laundering Prevention Act 2008 (Nepal)", "url": "https://www.nrb.org.np/" },
+        { "label": "FATF - Nepal (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Nepal.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

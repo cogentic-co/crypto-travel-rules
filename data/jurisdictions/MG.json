@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque Centrale de Madagascar — AML/CFT Framework", "url": "https://www.banque-centrale.mg/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Madagascar", "url": "https://www.esaamlg.org/reports/Madagascar.php" }
+      ]
     }
   ]
 }

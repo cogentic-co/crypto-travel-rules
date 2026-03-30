@@ -13,6 +13,10 @@
         "notes": "Central Bank AML framework applies. No specific crypto regulation."
       },
       "authorityUrl": "https://www.cbsi.com.sb/",
+      "sources": [
+        { "label": "Solomon Islands Anti-Money Laundering and Proceeds of Crime Act", "url": "https://www.cbsi.com.sb/" },
+        { "label": "APG – Solomon Islands Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=73e21fb7-3ef7-44c5-ada2-e11cf8c12f25" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

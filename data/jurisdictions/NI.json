@@ -13,6 +13,11 @@
         "notes": "SIBOIF AML framework applies. No specific crypto regulation."
       },
       "authorityUrl": "https://www.siboif.gob.ni/",
+      "sources": [
+        { "label": "Superintendencia de Bancos y de Otras Instituciones Financieras (SIBOIF)", "url": "https://www.siboif.gob.ni/" },
+        { "label": "Ley 793 - Ley Creadora de la Unidad de Análisis Financiero (UAF)", "url": "https://www.uaf.gob.ni/" },
+        { "label": "GAFILAT - Nicaragua", "url": "https://www.gafilat.org/index.php/es/miembros/nicaragua" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Zambia — AML/CFT Regulatory Framework", "url": "https://www.boz.zm/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Zambia", "url": "https://www.esaamlg.org/reports/Zambia.php" }
+      ]
     }
   ]
 }

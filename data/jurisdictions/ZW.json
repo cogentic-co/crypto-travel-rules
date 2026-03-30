@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Reserve Bank of Zimbabwe — AML/CFT Framework", "url": "https://www.rbz.co.zw/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Zimbabwe", "url": "https://www.esaamlg.org/reports/Zimbabwe.php" }
+      ]
     }
   ]
 }

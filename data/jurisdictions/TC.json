@@ -13,6 +13,10 @@
         "notes": "FSC AML framework applies. Uses USD. Limited crypto-specific regulation."
       },
       "authorityUrl": "https://www.tcifsc.tc/",
+      "sources": [
+        { "label": "Turks and Caicos Islands Proceeds of Crime Ordinance / AML Regulations", "url": "https://www.tcifsc.tc/" },
+        { "label": "CFATF – Turks and Caicos Islands Mutual Evaluation", "url": "https://www.cfatf-gafic.org/member-assessments/turks-and-caicos-islands" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

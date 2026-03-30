@@ -13,6 +13,10 @@
         "notes": "Iran permits licensed crypto mining but restricts trading. Central Bank AML framework applies. International sanctions limit VASP interoperability."
       },
       "authorityUrl": "https://www.cbi.ir/",
+      "sources": [
+        { "label": "Anti-Money Laundering Law (2008, amended) - Iran", "url": "https://www.cbi.ir/" },
+        { "label": "FATF Statement on Iran (High-Risk Jurisdictions)", "url": "https://www.fatf-gafi.org/en/countries/detail/Iran.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

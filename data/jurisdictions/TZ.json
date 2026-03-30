@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Tanzania — Anti-Money Laundering Act", "url": "https://www.bot.go.tz/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Tanzania", "url": "https://www.esaamlg.org/reports/Tanzania.php" }
+      ]
     }
   ]
 }

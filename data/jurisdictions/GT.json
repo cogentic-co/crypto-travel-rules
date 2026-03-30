@@ -13,6 +13,11 @@
         "notes": "SIB AML framework applies. No specific crypto regulation."
       },
       "authorityUrl": "https://www.sib.gob.gt/",
+      "sources": [
+        { "label": "Superintendencia de Bancos de Guatemala", "url": "https://www.sib.gob.gt/" },
+        { "label": "Ley contra el Lavado de Dinero u Otros Activos (Decreto 67-2001)", "url": "https://www.ivg.gob.gt/" },
+        { "label": "GAFILAT - Guatemala", "url": "https://www.gafilat.org/index.php/es/miembros/guatemala" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

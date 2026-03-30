@@ -14,6 +14,10 @@
         "notes": "BCSM blockchain entity framework. Aligned with EU TFR standards."
       },
       "authorityUrl": "https://www.bcsm.sm/",
+      "sources": [
+        { "label": "San Marino Delegated Decree No. 37/2019 on Blockchain Entities", "url": "https://www.bcsm.sm/" },
+        { "label": "MONEYVAL – San Marino Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/san-marino" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

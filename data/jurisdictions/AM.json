@@ -13,6 +13,10 @@
         "notes": "Central Bank regulates VASPs under AML law. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.cba.am/en/",
+      "sources": [
+        { "label": "Law on Combating Money Laundering and Terrorism Financing (Armenia)", "url": "https://www.cba.am/en/SitePages/pframlcft.aspx" },
+        { "label": "FATF - Armenia (MONEYVAL Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Armenia.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

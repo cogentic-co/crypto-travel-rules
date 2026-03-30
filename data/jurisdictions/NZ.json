@@ -13,6 +13,11 @@
         "notes": "AML/CFT Act applies to virtual asset service providers registered with DIA. Travel rule for wire transfers (including crypto) applies at NZD 1,000 threshold."
       },
       "authorityUrl": "https://www.dia.govt.nz/AML-CFT-Virtual-Asset-Service-Providers",
+      "sources": [
+        { "label": "New Zealand Anti-Money Laundering and Countering Financing of Terrorism Act 2009", "url": "https://www.legislation.govt.nz/act/public/2009/0035/latest/DLM2140720.html" },
+        { "label": "DIA – AML/CFT Virtual Asset Service Providers", "url": "https://www.dia.govt.nz/AML-CFT-Virtual-Asset-Service-Providers" },
+        { "label": "FATF – New Zealand Mutual Evaluation Report", "url": "https://www.fatf-gafi.org/en/countries/detail/New-Zealand.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "NZD",

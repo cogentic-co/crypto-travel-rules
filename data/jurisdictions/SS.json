@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of South Sudan — AML/CFT Framework", "url": "https://www.bankofsouthsudan.org/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — South Sudan", "url": "https://www.esaamlg.org/reports/SouthSudan.php" }
+      ]
     }
   ]
 }

@@ -13,6 +13,10 @@
         "notes": "Crypto transactions largely unregulated. Da Afghanistan Bank has issued warnings against virtual currency use."
       },
       "authorityUrl": "https://dab.gov.af/",
+      "sources": [
+        { "label": "Da Afghanistan Bank AML/CFT Regulations", "url": "https://dab.gov.af/" },
+        { "label": "FATF - Afghanistan Mutual Evaluation (APG)", "url": "https://www.fatf-gafi.org/en/countries/detail/Afghanistan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

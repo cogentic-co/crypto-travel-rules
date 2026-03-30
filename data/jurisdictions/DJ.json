@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque Centrale de Djibouti — AML/CFT Framework", "url": "https://www.banque-centrale.dj/" },
+        { "label": "FATF/MENAFATF — Djibouti AML/CFT Assessment", "url": "https://www.fatf-gafi.org/en/countries/detail/Djibouti.html" }
+      ]
     }
   ]
 }

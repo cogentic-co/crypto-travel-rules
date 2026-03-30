@@ -14,6 +14,11 @@
         "notes": "SAMA has not authorized crypto trading. CMA developing virtual asset regulations. AML law applies. Threshold in SAR."
       },
       "authorityUrl": "https://www.sama.gov.sa/en-us/",
+      "sources": [
+        { "label": "Anti-Money Laundering Law (Royal Decree M/31, Saudi Arabia)", "url": "https://www.sama.gov.sa/en-us/" },
+        { "label": "CMA Virtual Asset Regulatory Framework (Saudi Arabia)", "url": "https://cma.org.sa/en/" },
+        { "label": "FATF - Saudi Arabia Mutual Evaluation Report", "url": "https://www.fatf-gafi.org/en/countries/detail/Saudi-Arabia.html" }
+      ],
       "threshold": {
         "amount": 3750,
         "currency": "SAR",

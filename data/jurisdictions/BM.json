@@ -14,6 +14,11 @@
         "notes": "Digital Asset Business Act 2018 and BMA regulatory framework. Bermuda was an early mover in digital asset regulation. Threshold denominated in USD equivalent."
       },
       "authorityUrl": "https://www.bma.bm/digital-assets",
+      "sources": [
+        { "label": "Bermuda Monetary Authority - Digital Assets", "url": "https://www.bma.bm/digital-assets" },
+        { "label": "Digital Asset Business Act 2018", "url": "https://www.bma.bm/legislation#digital-asset-business" },
+        { "label": "FATF - Bermuda", "url": "https://www.fatf-gafi.org/en/countries/detail/Bermuda.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

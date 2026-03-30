@@ -13,6 +13,11 @@
         "notes": "DARE Act 2020. SCB registers and supervises digital asset businesses. Sand Dollar (CBDC) also active. Travel rule for all transfers."
       },
       "authorityUrl": "https://www.scb.gov.bs/",
+      "sources": [
+        { "label": "Securities Commission of The Bahamas", "url": "https://www.scb.gov.bs/" },
+        { "label": "Digital Assets and Registered Exchanges (DARE) Act 2020", "url": "https://www.scb.gov.bs/regulated-entities/digital-assets/" },
+        { "label": "CFATF - The Bahamas", "url": "https://www.cfatf-gafic.org/member-countries/the-bahamas" }
+      ],
       "threshold": {
         "amount": 0,
         "currency": "BSD",

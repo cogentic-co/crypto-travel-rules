@@ -13,6 +13,10 @@
         "notes": "Digital Assets Business Act 2020. ECCB oversees monetary policy. FSRC oversees VASP licensing."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Antigua and Barbuda Digital Assets Business Act 2020", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "CFATF – Antigua and Barbuda Mutual Evaluation", "url": "https://www.cfatf-gafic.org/member-assessments/antigua-and-barbuda" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

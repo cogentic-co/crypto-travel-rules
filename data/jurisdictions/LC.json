@@ -13,6 +13,11 @@
         "notes": "ECCB member. FSRA AML framework applies."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Eastern Caribbean Central Bank (ECCB)", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "Money Laundering (Prevention) Act - Saint Lucia", "url": "https://www.govt.lc/" },
+        { "label": "CFATF - St. Lucia", "url": "https://www.cfatf-gafic.org/member-countries/st-lucia" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banco de Cabo Verde — AML/CFT Framework", "url": "https://www.bcv.cv/" },
+        { "label": "GIABA Mutual Evaluation Report — Cabo Verde", "url": "https://www.giaba.org/reports/mutual-evaluation/Cabo-Verde.html" }
+      ]
     }
   ]
 }

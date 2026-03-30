@@ -13,6 +13,11 @@
         "notes": "Ley Fintech requires ITFs (Instituciones de Tecnología Financiera) operating with virtual assets to comply with AML/CFT travel rule. CURP or RFC required for Mexican originators."
       },
       "authorityUrl": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/FINTECH/Paginas/default.aspx",
+      "sources": [
+        { "label": "CNBV - Fintech Sector", "url": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/FINTECH/Paginas/default.aspx" },
+        { "label": "Ley para Regular las Instituciones de Tecnología Financiera (Ley Fintech, 2018)", "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LRITF.pdf" },
+        { "label": "FATF - Mexico", "url": "https://www.fatf-gafi.org/en/countries/detail/Mexico.html" }
+      ],
       "threshold": {
         "amount": 8000,
         "currency": "MXN",

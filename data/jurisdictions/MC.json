@@ -14,6 +14,10 @@
         "notes": "CCAF regulates digital asset service providers. Framework aligned with French/EU standards."
       },
       "authorityUrl": "https://ccaf.mc/en/",
+      "sources": [
+        { "label": "Monaco Law No. 1.549 on Digital Asset Service Providers", "url": "https://ccaf.mc/en/" },
+        { "label": "MONEYVAL – Monaco Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/monaco" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

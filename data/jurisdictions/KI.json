@@ -13,6 +13,10 @@
         "notes": "Uses AUD. Basic AML framework. No specific crypto regulation."
       },
       "authorityUrl": "https://www.kiribatitourism.gov.ki/",
+      "sources": [
+        { "label": "Kiribati Proceeds of Crime and Anti-Money Laundering Act", "url": "https://www.kiribatitourism.gov.ki/" },
+        { "label": "APG – Kiribati Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=61dd5ff3-c7f1-44e4-b5dd-dc5ed7fa7a34" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "AUD",

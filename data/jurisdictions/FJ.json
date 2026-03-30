@@ -13,6 +13,10 @@
         "notes": "Reserve Bank has cautioned against crypto. General AML/CFT framework applies."
       },
       "authorityUrl": "https://www.rbf.gov.fj/",
+      "sources": [
+        { "label": "Fiji Financial Transactions Reporting Act 2004", "url": "https://www.rbf.gov.fj/" },
+        { "label": "APG – Fiji Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=4a3e29d5-e648-42ba-b8c5-dc6a1c9e3895" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

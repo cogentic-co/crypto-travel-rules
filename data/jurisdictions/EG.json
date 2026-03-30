@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Egypt — AML/CFT Framework", "url": "https://www.cbe.org.eg/en/" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Egypt", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Egypt" }
+      ]
     }
   ]
 }

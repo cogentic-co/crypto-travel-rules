@@ -13,6 +13,10 @@
         "notes": "National Bank AML framework applies. Crypto regulation still developing."
       },
       "authorityUrl": "https://www.nbkr.kg/index.jsp?lang=ENG",
+      "sources": [
+        { "label": "Law on Combating Financing of Terrorism and Laundering of Criminal Proceeds (Kyrgyzstan)", "url": "https://www.nbkr.kg/index.jsp?lang=ENG" },
+        { "label": "FATF - Kyrgyzstan (EAG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Kyrgyzstan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -14,6 +14,11 @@
         "notes": "Virtual Assets Service Providers Act 2022. FSC registers VASPs. AML Regulations apply."
       },
       "authorityUrl": "https://www.bvifsc.vg/",
+      "sources": [
+        { "label": "BVI Financial Services Commission", "url": "https://www.bvifsc.vg/" },
+        { "label": "Virtual Assets Service Providers Act 2022", "url": "https://www.bvifsc.vg/regulation/virtual-assets" },
+        { "label": "CFATF - British Virgin Islands", "url": "https://www.cfatf-gafic.org/member-countries/british-virgin-islands" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

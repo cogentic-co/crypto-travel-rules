@@ -14,6 +14,11 @@
         "notes": "Licensed digital asset operators must comply with AMLO travel rule requirements. Thai citizen ID required for domestic originators."
       },
       "authorityUrl": "https://www.sec.or.th/EN/Pages/LawandRegulations/DigitalAssetBusiness.aspx",
+      "sources": [
+        { "label": "Emergency Decree on Digital Asset Businesses B.E. 2561 (2018, Thailand)", "url": "https://www.sec.or.th/EN/Pages/LawandRegulations/DigitalAssetBusiness.aspx" },
+        { "label": "Anti-Money Laundering Office (AMLO) Act B.E. 2542 (Thailand)", "url": "https://www.amlo.go.th/index.php/en/" },
+        { "label": "FATF - Thailand (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Thailand.html" }
+      ],
       "threshold": {
         "amount": 50000,
         "currency": "THB",

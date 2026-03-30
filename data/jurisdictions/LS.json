@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Lesotho — AML/CFT Framework", "url": "https://www.centralbank.org.ls/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Lesotho", "url": "https://www.esaamlg.org/reports/Lesotho.php" }
+      ]
     }
   ]
 }

@@ -13,6 +13,11 @@
         "notes": "BSP Circular 1108 requires VASPs to comply with AMLA travel rule for virtual asset transfers above PHP 50,000."
       },
       "authorityUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf",
+      "sources": [
+        { "label": "BSP Circular No. 1108 - Guidelines for Virtual Asset Service Providers", "url": "https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf" },
+        { "label": "Anti-Money Laundering Act (AMLA) Republic Act No. 9160 (Philippines)", "url": "https://www.amlc.gov.ph/" },
+        { "label": "FATF - Philippines (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Philippines.html" }
+      ],
       "threshold": {
         "amount": 50000,
         "currency": "PHP",

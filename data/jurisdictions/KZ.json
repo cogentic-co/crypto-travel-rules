@@ -14,6 +14,11 @@
         "notes": "AIFC Digital Asset Trading Facility framework. ARDFM oversees crypto exchanges in Astana International Financial Centre."
       },
       "authorityUrl": "https://www.gov.kz/memleket/entities/ardfm?lang=en",
+      "sources": [
+        { "label": "AIFC Digital Asset Trading Facility Rules (Kazakhstan)", "url": "https://afsa.aifc.kz/digital-assets/" },
+        { "label": "Law on Counteracting Legalization of Illegally Obtained Income (Kazakhstan)", "url": "https://www.gov.kz/memleket/entities/ardfm?lang=en" },
+        { "label": "FATF - Kazakhstan (EAG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Kazakhstan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

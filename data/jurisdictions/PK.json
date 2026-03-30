@@ -13,6 +13,10 @@
         "notes": "SBP has not authorized crypto. SECP exploring regulatory framework. AML Act applies."
       },
       "authorityUrl": "https://www.sbp.org.pk/",
+      "sources": [
+        { "label": "Anti-Money Laundering Act 2010 (Pakistan)", "url": "https://www.sbp.org.pk/" },
+        { "label": "FATF - Pakistan (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Pakistan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

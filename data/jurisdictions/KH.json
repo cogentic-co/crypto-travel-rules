@@ -13,6 +13,10 @@
         "notes": "NBC has warned against unauthorized crypto use. Bakong digital payment system is official. AML law applies."
       },
       "authorityUrl": "https://www.nbc.gov.kh/english/",
+      "sources": [
+        { "label": "Law on Anti-Money Laundering and Combating the Financing of Terrorism (Cambodia)", "url": "https://www.nbc.gov.kh/english/" },
+        { "label": "FATF - Cambodia (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Cambodia.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

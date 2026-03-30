@@ -13,6 +13,10 @@
         "notes": "BCTL AML framework applies. Uses USD as official currency. No crypto-specific regulation."
       },
       "authorityUrl": "https://www.bancocentral.tl/",
+      "sources": [
+        { "label": "Anti-Money Laundering and Combating Terrorism Financing Law (Timor-Leste)", "url": "https://www.bancocentral.tl/" },
+        { "label": "FATF - Timor-Leste (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Timor-Leste.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

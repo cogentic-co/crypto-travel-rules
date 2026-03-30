@@ -13,6 +13,10 @@
         "notes": "Bank of Albania regulates VASPs under AML/CFT law aligned with EU standards."
       },
       "authorityUrl": "https://www.bankofalbania.org/",
+      "sources": [
+        { "label": "Albania Law No. 9917 on AML/CFT (as amended)", "url": "https://www.bankofalbania.org/" },
+        { "label": "MONEYVAL – Albania Mutual Evaluation Report", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/albania" }
+      ],
       "threshold": {
         "amount": 1500,
         "currency": "EUR",

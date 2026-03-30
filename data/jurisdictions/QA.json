@@ -14,6 +14,11 @@
         "notes": "QFC Digital Assets Framework. Qatar Central Bank prohibits crypto for banks but QFCRA permits licensed digital asset services."
       },
       "authorityUrl": "https://www.qfcra.com/",
+      "sources": [
+        { "label": "QFC Digital Assets Framework (Qatar)", "url": "https://www.qfcra.com/" },
+        { "label": "AML/CFT Law No. 20 of 2019 (Qatar)", "url": "https://www.qcb.gov.qa/" },
+        { "label": "FATF - Qatar (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Qatar.html" }
+      ],
       "threshold": {
         "amount": 3650,
         "currency": "QAR",

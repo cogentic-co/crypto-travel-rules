@@ -13,6 +13,10 @@
         "notes": "NRBT AML framework applies. Tonga has explored Bitcoin legal tender proposals."
       },
       "authorityUrl": "https://www.reservebank.to/",
+      "sources": [
+        { "label": "Tonga Money Laundering and Proceeds of Crime Act 2000", "url": "https://www.reservebank.to/" },
+        { "label": "APG – Tonga Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=70af44ed-a03d-4a2d-8610-62de3cadb668" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

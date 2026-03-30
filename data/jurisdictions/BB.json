@@ -14,6 +14,11 @@
         "notes": "FSC regulates digital asset businesses. Central Bank AML/CFT framework applies."
       },
       "authorityUrl": "https://www.centralbank.org.bb/",
+      "sources": [
+        { "label": "Central Bank of Barbados", "url": "https://www.centralbank.org.bb/" },
+        { "label": "Money Laundering and Financing of Terrorism (Prevention and Control) Act", "url": "https://www.centralbank.org.bb/anti-money-laundering" },
+        { "label": "CFATF - Barbados", "url": "https://www.cfatf-gafic.org/member-countries/barbados" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "BBD",

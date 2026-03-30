@@ -13,6 +13,10 @@
         "notes": "Central Bank has banned crypto transactions. AML/CFT law applies to any detected activity."
       },
       "authorityUrl": "https://cbi.iq/",
+      "sources": [
+        { "label": "Anti-Money Laundering and Counter-Terrorism Financing Law No. 39 of 2015 (Iraq)", "url": "https://cbi.iq/" },
+        { "label": "FATF - Iraq (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Iraq.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

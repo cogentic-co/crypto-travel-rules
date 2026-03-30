@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque Centrale du Congo — AML/CFT Framework", "url": "https://www.bcc.cd/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Democratic Republic of Congo", "url": "https://www.esaamlg.org/reports/DRC.php" }
+      ]
     }
   ]
 }

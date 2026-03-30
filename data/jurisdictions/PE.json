@@ -13,6 +13,11 @@
         "notes": "SBS AML/CFT framework applies. Developing specific virtual asset regulation."
       },
       "authorityUrl": "https://www.sbs.gob.pe/",
+      "sources": [
+        { "label": "Superintendencia de Banca, Seguros y AFP (SBS)", "url": "https://www.sbs.gob.pe/" },
+        { "label": "Ley 27693 - Ley que crea la Unidad de Inteligencia Financiera", "url": "https://www.sbs.gob.pe/prevencion-de-lavado-activos" },
+        { "label": "GAFILAT - Peru", "url": "https://www.gafilat.org/index.php/es/miembros/peru" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

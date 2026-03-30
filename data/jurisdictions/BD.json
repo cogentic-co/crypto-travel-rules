@@ -13,6 +13,10 @@
         "notes": "Bangladesh Bank has not authorized cryptocurrency transactions. AML framework applies to any permitted virtual asset activity."
       },
       "authorityUrl": "https://www.bb.org.bd/",
+      "sources": [
+        { "label": "Money Laundering Prevention Act 2012 (Bangladesh)", "url": "https://www.bb.org.bd/aboutus/regulationguideline/amlcft.php" },
+        { "label": "FATF - Bangladesh (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Bangladesh.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

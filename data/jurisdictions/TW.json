@@ -14,6 +14,11 @@
         "notes": "FSC requires VASPs to register and comply with AML/CFT travel rule. Threshold aligned with FATF recommendation (approximately USD/EUR 1,000 equivalent)."
       },
       "authorityUrl": "https://www.fsc.gov.tw/en/",
+      "sources": [
+        { "label": "FSC Guidelines Governing Anti-Money Laundering for Virtual Currency Platforms (Taiwan)", "url": "https://www.fsc.gov.tw/en/" },
+        { "label": "Money Laundering Control Act (Taiwan)", "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=G0380131" },
+        { "label": "FATF - Taiwan (APG Mutual Evaluation of Chinese Taipei)", "url": "https://www.apgml.org/" }
+      ],
       "threshold": {
         "amount": 30000,
         "currency": "TWD",

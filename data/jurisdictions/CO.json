@@ -13,6 +13,11 @@
         "notes": "SFC regulatory sandbox for crypto. UIAF (FIU) oversees AML reporting. Developing comprehensive crypto regulation."
       },
       "authorityUrl": "https://www.superfinanciera.gov.co/",
+      "sources": [
+        { "label": "Superintendencia Financiera de Colombia", "url": "https://www.superfinanciera.gov.co/" },
+        { "label": "UIAF - Unidad de Información y Análisis Financiero (AML/CFT)", "url": "https://www.uiaf.gov.co/" },
+        { "label": "GAFILAT - Colombia", "url": "https://www.gafilat.org/index.php/es/miembros/colombia" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

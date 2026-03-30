@@ -14,6 +14,10 @@
         "notes": "Virtual Assets Law signed 2022. NSSMC oversees VASP licensing. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.nssmc.gov.ua/en/",
+      "sources": [
+        { "label": "Ukraine Law on Virtual Assets (2022)", "url": "https://www.nssmc.gov.ua/en/" },
+        { "label": "MONEYVAL – Ukraine Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/ukraine" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

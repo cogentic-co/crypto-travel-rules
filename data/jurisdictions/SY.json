@@ -13,6 +13,10 @@
         "notes": "Central Bank prohibits crypto. International sanctions severely limit financial activities."
       },
       "authorityUrl": "http://www.cb.gov.sy/",
+      "sources": [
+        { "label": "Anti-Money Laundering Law (Syria)", "url": "http://www.cb.gov.sy/" },
+        { "label": "FATF Statement on Syria (High-Risk Jurisdictions)", "url": "https://www.fatf-gafi.org/en/countries/detail/Syria.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -13,6 +13,10 @@
         "notes": "FRC regulates digital asset exchanges. AML/CFT law applies. Growing crypto mining sector."
       },
       "authorityUrl": "https://www.frc.mn/en",
+      "sources": [
+        { "label": "Law on Combating Money Laundering and Terrorism Financing (Mongolia)", "url": "https://www.frc.mn/en" },
+        { "label": "FATF - Mongolia (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Mongolia.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

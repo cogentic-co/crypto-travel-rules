@@ -13,6 +13,11 @@
         "notes": "Bolivia lifted its crypto ban in June 2024. ASFI developing regulatory framework. AML/CFT law applies."
       },
       "authorityUrl": "https://www.asfi.gob.bo/",
+      "sources": [
+        { "label": "Autoridad de Supervisión del Sistema Financiero (ASFI)", "url": "https://www.asfi.gob.bo/" },
+        { "label": "Ley No. 170 contra la Legitimación de Ganancias Ilícitas", "url": "https://www.asfi.gob.bo/normativa.html" },
+        { "label": "GAFILAT - Bolivia", "url": "https://www.gafilat.org/index.php/es/miembros/bolivia" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

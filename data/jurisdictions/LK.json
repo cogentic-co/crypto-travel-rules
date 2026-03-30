@@ -13,6 +13,10 @@
         "notes": "CBSL has not authorized crypto but is developing blockchain regulation framework. AML Act applies."
       },
       "authorityUrl": "https://www.cbsl.gov.lk/",
+      "sources": [
+        { "label": "Financial Transactions Reporting Act No. 6 of 2006 (Sri Lanka)", "url": "https://www.cbsl.gov.lk/" },
+        { "label": "FATF - Sri Lanka (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Sri-Lanka.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

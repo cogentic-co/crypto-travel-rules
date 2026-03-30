@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banque de la République du Burundi — AML/CFT Framework", "url": "https://www.brb.bi/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Burundi", "url": "https://www.esaamlg.org/reports/Burundi.php" }
+      ]
     }
   ]
 }

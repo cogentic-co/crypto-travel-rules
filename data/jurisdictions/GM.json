@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of The Gambia — AML/CFT Framework", "url": "https://www.cbg.gm/" },
+        { "label": "GIABA Mutual Evaluation Report — Gambia", "url": "https://www.giaba.org/reports/mutual-evaluation/Gambia.html" }
+      ]
     }
   ]
 }

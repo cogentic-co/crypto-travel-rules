@@ -29,7 +29,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Financial Services Authority Seychelles — Digital Asset Business Regulations", "url": "https://www.fsaseychelles.sc/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Seychelles", "url": "https://www.esaamlg.org/reports/Seychelles.php" }
+      ]
     }
   ]
 }

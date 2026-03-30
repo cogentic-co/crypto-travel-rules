@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Somalia — AML/CFT Framework", "url": "https://www.centralbank.gov.so/" },
+        { "label": "FATF — Somalia AML/CFT Assessment", "url": "https://www.fatf-gafi.org/en/countries/detail/Somalia.html" }
+      ]
     }
   ]
 }

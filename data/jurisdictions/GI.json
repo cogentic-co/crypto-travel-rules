@@ -13,6 +13,11 @@
         "notes": "GFSC DLT Provider framework requires travel rule for all transfers. Gibraltar was an early DLT regulatory pioneer."
       },
       "authorityUrl": "https://www.gfsc.gi/dlt",
+      "sources": [
+        { "label": "Financial Services (Distributed Ledger Technology Providers) Regulations 2020", "url": "https://www.gfsc.gi/dlt" },
+        { "label": "Proceeds of Crime Act 2015 (Gibraltar)", "url": "https://www.gfsc.gi/aml" },
+        { "label": "MONEYVAL – Gibraltar Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/gibraltar" }
+      ],
       "threshold": {
         "amount": 0,
         "currency": "GBP",

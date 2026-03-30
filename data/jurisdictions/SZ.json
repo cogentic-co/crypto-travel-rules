@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Central Bank of Eswatini — AML/CFT Framework", "url": "https://www.centralbank.org.sz/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Eswatini", "url": "https://www.esaamlg.org/reports/Eswatini.php" }
+      ]
     }
   ]
 }

@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Capital Markets Authority — Virtual Asset Service Providers Regulations", "url": "https://www.cma.or.ke/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Kenya", "url": "https://www.esaamlg.org/reports/Kenya.php" }
+      ]
     }
   ]
 }

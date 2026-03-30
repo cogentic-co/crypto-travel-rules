@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banco Nacional de Angola — AML/CFT Regulatory Framework", "url": "https://www.bna.ao/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Angola", "url": "https://www.esaamlg.org/reports/Angola.php" }
+      ]
     }
   ]
 }

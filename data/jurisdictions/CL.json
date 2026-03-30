@@ -14,6 +14,11 @@
         "notes": "Fintech Law (2023) requires VASP registration. CMF oversees compliance. RUT (tax ID) required for Chilean originators."
       },
       "authorityUrl": "https://www.cmfchile.cl/",
+      "sources": [
+        { "label": "Comisión para el Mercado Financiero (CMF)", "url": "https://www.cmfchile.cl/" },
+        { "label": "Ley Fintech No. 21,521 (2023)", "url": "https://www.cmfchile.cl/portal/principal/613/w3-propertyvalue-46215.html" },
+        { "label": "GAFILAT - Chile", "url": "https://www.gafilat.org/index.php/es/miembros/chile" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

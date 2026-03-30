@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Sierra Leone — AML/CFT Framework", "url": "https://www.bsl.gov.sl/" },
+        { "label": "GIABA Mutual Evaluation Report — Sierra Leone", "url": "https://www.giaba.org/reports/mutual-evaluation/Sierra-Leone.html" }
+      ]
     }
   ]
 }

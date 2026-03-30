@@ -14,6 +14,11 @@
         "notes": "FIU-IND requires registered VDA (Virtual Digital Asset) service providers to comply with PMLA travel rule obligations. PAN card or Aadhaar verification required for Indian originators."
       },
       "authorityUrl": "https://fiuindia.gov.in/",
+      "sources": [
+        { "label": "Prevention of Money Laundering Act 2002 (PMLA) - VDA Provisions", "url": "https://fiuindia.gov.in/" },
+        { "label": "FIU-IND Registration Requirements for VDA Service Providers (2023)", "url": "https://fiuindia.gov.in/files/content/VDA.html" },
+        { "label": "FATF - India Mutual Evaluation Report", "url": "https://www.fatf-gafi.org/en/countries/detail/India.html" }
+      ],
       "threshold": {
         "amount": 50000,
         "currency": "INR",

@@ -13,6 +13,10 @@
         "notes": "ECCB member. FSC AML framework applies."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Montserrat Proceeds of Crime Act / AML-CFT Framework", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "CFATF – Montserrat Mutual Evaluation", "url": "https://www.cfatf-gafic.org/member-assessments/montserrat" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

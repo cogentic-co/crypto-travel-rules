@@ -13,6 +13,10 @@
         "notes": "VFSC has introduced digital asset licensing framework. AML framework applies."
       },
       "authorityUrl": "https://www.vfsc.vu/",
+      "sources": [
+        { "label": "Vanuatu Anti-Money Laundering and Counter-Terrorism Financing Act 2014", "url": "https://www.vfsc.vu/" },
+        { "label": "APG – Vanuatu Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=6d95fd17-4b2e-4571-b0e0-6e3c1b9c3e0a" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

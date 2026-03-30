@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "BEAC — CEMAC AML/CFT Regulation", "url": "https://www.beac.int/" },
+        { "label": "GABAC — Central African Anti-Money Laundering Group", "url": "https://www.gabac.org/" }
+      ]
     }
   ]
 }

@@ -13,6 +13,10 @@
         "notes": "AMBD has not issued specific crypto regulations. General AML framework applies. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.ambd.gov.bn/",
+      "sources": [
+        { "label": "Criminal Asset Recovery Order 2012 / AML-CFT Guidelines (Brunei)", "url": "https://www.ambd.gov.bn/SitePages/AML-CFT.aspx" },
+        { "label": "FATF - Brunei Darussalam (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Brunei-Darussalam.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

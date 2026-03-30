@@ -14,6 +14,10 @@
         "notes": "AFA regulates digital asset service providers. Aligned with EU TFR principles."
       },
       "authorityUrl": "https://www.afa.ad/en/",
+      "sources": [
+        { "label": "Andorra Law 14/2017 on AML/CFT", "url": "https://www.afa.ad/en/" },
+        { "label": "FATF – Andorra Mutual Evaluation", "url": "https://www.fatf-gafi.org/en/countries/detail/Andorra.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

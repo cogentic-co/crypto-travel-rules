@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "National Bank of Ethiopia — AML/CFT Proclamation", "url": "https://nbebank.com/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Ethiopia", "url": "https://www.esaamlg.org/reports/Ethiopia.php" }
+      ]
     }
   ]
 }

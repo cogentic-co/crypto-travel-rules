@@ -13,6 +13,11 @@
         "notes": "Central Bank has warned against crypto. AML framework applies."
       },
       "authorityUrl": "https://www.brh.ht/",
+      "sources": [
+        { "label": "Banque de la République d'Haïti", "url": "https://www.brh.ht/" },
+        { "label": "Loi relative au blanchiment des avoirs provenant du trafic illicite", "url": "https://www.brh.ht/reglementation/" },
+        { "label": "CFATF - Haiti", "url": "https://www.cfatf-gafic.org/member-countries/haiti" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

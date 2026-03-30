@@ -14,6 +14,10 @@
         "notes": "CMA has not licensed crypto exchanges. Central Bank AML framework applies to any permitted activity. Threshold approximately USD 1,000 equivalent per FATF recommendation."
       },
       "authorityUrl": "https://www.cma.gov.kw/en/",
+      "sources": [
+        { "label": "Law No. 106 of 2013 on Anti-Money Laundering and Counter-Terrorism Financing (Kuwait)", "url": "https://www.cma.gov.kw/en/" },
+        { "label": "FATF - Kuwait (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Kuwait.html" }
+      ],
       "threshold": {
         "amount": 300,
         "currency": "KWD",

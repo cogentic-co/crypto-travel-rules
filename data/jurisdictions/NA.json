@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Namibia — AML/CFT Regulatory Framework", "url": "https://www.bon.com.na/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Namibia", "url": "https://www.esaamlg.org/reports/Namibia.php" }
+      ]
     }
   ]
 }

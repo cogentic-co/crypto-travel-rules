@@ -14,6 +14,11 @@
         "notes": "SC-registered DAX operators must comply with AMLA travel rule requirements. MyKad number required for Malaysian originators."
       },
       "authorityUrl": "https://www.sc.com.my/regulation/guidelines/recognizedmarkets/guidelines-on-digital-assets",
+      "sources": [
+        { "label": "SC Guidelines on Digital Assets (Malaysia)", "url": "https://www.sc.com.my/regulation/guidelines/recognizedmarkets/guidelines-on-digital-assets" },
+        { "label": "Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 (AMLA)", "url": "https://amlcft.bnm.gov.my/" },
+        { "label": "FATF - Malaysia (APG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Malaysia.html" }
+      ],
       "threshold": {
         "amount": 3000,
         "currency": "MYR",

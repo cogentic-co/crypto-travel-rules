@@ -13,6 +13,10 @@
         "notes": "Central Bank AML framework applies. Limited crypto-specific regulation."
       },
       "authorityUrl": "https://bqk-kos.org/?lang=en",
+      "sources": [
+        { "label": "Kosovo Law on Prevention of Money Laundering and Combating Terrorist Financing", "url": "https://bqk-kos.org/?lang=en" },
+        { "label": "FATF – Kosovo is not a FATF/MONEYVAL member; Central Bank AML framework applies", "url": "https://bqk-kos.org/?lang=en" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

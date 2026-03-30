@@ -13,6 +13,10 @@
         "notes": "Central Bank AML framework applies. No specific crypto regulation."
       },
       "authorityUrl": "https://www.cbs.gov.ws/",
+      "sources": [
+        { "label": "Samoa Money Laundering Prevention Act 2007", "url": "https://www.cbs.gov.ws/" },
+        { "label": "APG – Samoa Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=3fba9f8f-edf2-49f0-b116-0df6e6c2d4c7" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

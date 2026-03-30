@@ -13,6 +13,11 @@
         "notes": "Central Bank AML framework applies. Limited crypto regulation."
       },
       "authorityUrl": "https://www.cbvs.sr/",
+      "sources": [
+        { "label": "Centrale Bank van Suriname", "url": "https://www.cbvs.sr/" },
+        { "label": "Wet Identificatieplicht Dienstverleners (AML/CFT)", "url": "https://www.cbvs.sr/" },
+        { "label": "CFATF - Suriname", "url": "https://www.cfatf-gafic.org/member-countries/suriname" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

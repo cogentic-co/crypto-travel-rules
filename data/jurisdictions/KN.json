@@ -13,6 +13,11 @@
         "notes": "ECCB member. Virtual Asset Business Act. FSRC oversees licensing."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Eastern Caribbean Central Bank (ECCB)", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "Virtual Asset Business Act - St. Kitts and Nevis", "url": "https://www.fsrc.kn/" },
+        { "label": "CFATF - St. Kitts and Nevis", "url": "https://www.cfatf-gafic.org/member-countries/st-kitts-and-nevis" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

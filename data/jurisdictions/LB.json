@@ -13,6 +13,10 @@
         "notes": "Banque du Liban has not authorized crypto. AML/CFT framework applies. Crypto adoption driven by banking crisis."
       },
       "authorityUrl": "https://www.bdl.gov.lb/",
+      "sources": [
+        { "label": "Law No. 44 on Fighting Money Laundering and Terrorist Financing (Lebanon)", "url": "https://www.bdl.gov.lb/" },
+        { "label": "FATF - Lebanon (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Lebanon.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

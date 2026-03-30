@@ -13,6 +13,11 @@
         "notes": "CNBS AML/CFT framework. Special economic zones (ZEDEs) had explored crypto adoption."
       },
       "authorityUrl": "https://www.cnbs.gob.hn/",
+      "sources": [
+        { "label": "Comisión Nacional de Bancos y Seguros (CNBS)", "url": "https://www.cnbs.gob.hn/" },
+        { "label": "Ley contra el Delito de Lavado de Activos", "url": "https://www.cnbs.gob.hn/marco-legal/" },
+        { "label": "GAFILAT - Honduras", "url": "https://www.gafilat.org/index.php/es/miembros/honduras" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -13,6 +13,10 @@
         "notes": "National Bank AML/CFT law applies to VASPs. EU accession candidate aligning with TFR."
       },
       "authorityUrl": "https://www.nbrm.mk/",
+      "sources": [
+        { "label": "North Macedonia Law on Prevention of Money Laundering and Financing of Terrorism", "url": "https://www.nbrm.mk/" },
+        { "label": "MONEYVAL – North Macedonia Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/north-macedonia" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

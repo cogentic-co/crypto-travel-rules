@@ -13,6 +13,10 @@
         "notes": "Uses AUD. Basic AML framework. No specific crypto regulation."
       },
       "authorityUrl": "https://www.naurugov.nr/",
+      "sources": [
+        { "label": "Nauru Anti-Money Laundering and Counter-Terrorism Financing Act 2008", "url": "https://www.naurugov.nr/" },
+        { "label": "APG – Nauru Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=f36f6e7e-cbed-4090-b7e9-9e6faa44a9fb" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "AUD",

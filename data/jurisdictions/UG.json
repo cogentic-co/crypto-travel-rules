@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Uganda — Anti-Money Laundering Act", "url": "https://www.bou.or.ug/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Uganda", "url": "https://www.esaamlg.org/reports/Uganda.php" }
+      ]
     }
   ]
 }

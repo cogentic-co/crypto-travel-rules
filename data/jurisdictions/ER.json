@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Eritrea — AML/CFT Framework", "url": "https://www.bfreatrea.gov.er/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Eritrea", "url": "https://www.esaamlg.org/reports/Eritrea.php" }
+      ]
     }
   ]
 }

@@ -13,6 +13,10 @@
         "notes": "Hi-Tech Park (HTP) decree provides crypto framework. National Bank oversees AML compliance. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.nbrb.by/en/",
+      "sources": [
+        { "label": "Decree No. 8 on the Development of the Digital Economy (Hi-Tech Park)", "url": "https://president.gov.by/en/documents/dekret-8-ot-21-dekabrja-2017-g-17716" },
+        { "label": "EAG – Belarus Mutual Evaluation Report", "url": "https://eurasiangroup.org/en/belarus" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -13,6 +13,11 @@
         "notes": "NAPP regulates crypto exchange activities. Licensed crypto exchanges operate under AML framework."
       },
       "authorityUrl": "https://napp.uz/en/",
+      "sources": [
+        { "label": "Presidential Decree on Development of Digital Economy (Uzbekistan, 2018)", "url": "https://napp.uz/en/" },
+        { "label": "Law on Counteracting Legalization of Proceeds of Crime (Uzbekistan)", "url": "https://cbu.uz/en/" },
+        { "label": "FATF - Uzbekistan (EAG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Uzbekistan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

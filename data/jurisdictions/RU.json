@@ -14,6 +14,11 @@
         "notes": "Digital Financial Assets Law (2020). Mining legalized (2024). Exchange activities restricted for residents. Central Bank oversees AML compliance."
       },
       "authorityUrl": "https://www.cbr.ru/eng/",
+      "sources": [
+        { "label": "Federal Law No. 259-FZ on Digital Financial Assets (2020)", "url": "https://www.cbr.ru/eng/analytics/d_ok/law_259-fz/" },
+        { "label": "Federal Law No. 115-FZ on AML/CFT", "url": "https://www.cbr.ru/eng/" },
+        { "label": "EAG – Russia Mutual Evaluation Report", "url": "https://eurasiangroup.org/en/russian-federation" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

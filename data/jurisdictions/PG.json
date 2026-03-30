@@ -13,6 +13,10 @@
         "notes": "Bank of PNG general AML/CFT framework applies. No specific crypto regulation."
       },
       "authorityUrl": "https://www.bankpng.gov.pg/",
+      "sources": [
+        { "label": "Papua New Guinea Anti-Money Laundering and Counter Terrorist Financing Act 2015", "url": "https://www.bankpng.gov.pg/" },
+        { "label": "APG – Papua New Guinea Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=1b1e6744-28d5-4e2a-baf0-dc48e6e83e11" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

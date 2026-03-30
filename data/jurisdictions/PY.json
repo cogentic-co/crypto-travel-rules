@@ -13,6 +13,11 @@
         "notes": "SEPRELAD (FIU) AML framework. Paraguay has significant crypto mining. Virtual asset service regulation in development."
       },
       "authorityUrl": "https://www.bcp.gov.py/",
+      "sources": [
+        { "label": "Banco Central del Paraguay", "url": "https://www.bcp.gov.py/" },
+        { "label": "Ley 1015/97 - Prevención y Represión de Actos Ilícitos de Lavado de Dinero", "url": "https://www.seprelad.gov.py/" },
+        { "label": "GAFILAT - Paraguay", "url": "https://www.gafilat.org/index.php/es/miembros/paraguay" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

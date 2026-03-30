@@ -13,6 +13,10 @@
         "notes": "Central Bank enforces AML law aligned with EU acquis. Montenegro is an EU accession candidate."
       },
       "authorityUrl": "https://www.cbcg.me/en/",
+      "sources": [
+        { "label": "Montenegro Law on Prevention of Money Laundering and Terrorism Financing", "url": "https://www.cbcg.me/en/" },
+        { "label": "MONEYVAL – Montenegro Mutual Evaluation", "url": "https://www.coe.int/en/web/moneyval/jurisdictions/montenegro" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "EUR",

@@ -13,6 +13,10 @@
         "notes": "Central Bank has not regulated crypto. Ongoing conflict limits regulatory capacity."
       },
       "authorityUrl": "https://www.centralbank.gov.ye/",
+      "sources": [
+        { "label": "Anti-Money Laundering and Counter-Terrorism Financing Law (Yemen)", "url": "https://www.centralbank.gov.ye/" },
+        { "label": "FATF - Yemen (MENAFATF Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Yemen.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

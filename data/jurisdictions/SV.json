@@ -13,6 +13,12 @@
         "notes": "El Salvador adopted Bitcoin as legal tender (2021). Digital Assets Commission oversees the sector. Travel rule applies to all Bitcoin/digital asset transfers via licensed providers."
       },
       "authorityUrl": "https://www.ssf.gob.sv/",
+      "sources": [
+        { "label": "Superintendencia del Sistema Financiero (SSF)", "url": "https://www.ssf.gob.sv/" },
+        { "label": "Ley Bitcoin (2021) - Bitcoin as Legal Tender", "url": "https://www.asamblea.gob.sv/" },
+        { "label": "Ley contra el Lavado de Dinero y de Activos", "url": "https://www.ssf.gob.sv/lavado-de-dinero/" },
+        { "label": "GAFILAT - El Salvador", "url": "https://www.gafilat.org/index.php/es/miembros/el-salvador" }
+      ],
       "threshold": {
         "amount": 0,
         "currency": "USD",

@@ -13,6 +13,11 @@
         "notes": "Ecuador uses USD. Central Bank has cautioned against crypto. AML framework applies."
       },
       "authorityUrl": "https://www.superbancos.gob.ec/",
+      "sources": [
+        { "label": "Superintendencia de Bancos del Ecuador", "url": "https://www.superbancos.gob.ec/" },
+        { "label": "Ley Orgánica de Prevención, Detección y Erradicación del Delito de Lavado de Activos", "url": "https://www.uafe.gob.ec/" },
+        { "label": "GAFILAT - Ecuador", "url": "https://www.gafilat.org/index.php/es/miembros/ecuador" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

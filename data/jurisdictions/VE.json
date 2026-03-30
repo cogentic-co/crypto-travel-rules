@@ -13,6 +13,11 @@
         "notes": "SUNACRIP regulates all crypto activity. Petro (PTR) state crypto. Travel rule applies to all VASP transfers. High crypto adoption."
       },
       "authorityUrl": "https://sunacrip.gob.ve/",
+      "sources": [
+        { "label": "Superintendencia Nacional de Criptoactivos (SUNACRIP)", "url": "https://sunacrip.gob.ve/" },
+        { "label": "Decreto Constituyente sobre el Sistema Integral de Criptoactivos", "url": "https://sunacrip.gob.ve/marco-legal/" },
+        { "label": "GAFILAT - Venezuela", "url": "https://www.gafilat.org/index.php/es/miembros/venezuela" }
+      ],
       "threshold": {
         "amount": 0,
         "currency": "USD",

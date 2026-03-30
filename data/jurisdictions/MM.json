@@ -13,6 +13,10 @@
         "notes": "Central Bank has not authorized cryptocurrency transactions. AML/CFT law applies to any detected activity."
       },
       "authorityUrl": "https://www.cbm.gov.mm/",
+      "sources": [
+        { "label": "Anti-Money Laundering Law (2014, amended) - Myanmar", "url": "https://www.cbm.gov.mm/" },
+        { "label": "FATF Statement on Myanmar (High-Risk Jurisdictions)", "url": "https://www.fatf-gafi.org/en/countries/detail/Myanmar.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

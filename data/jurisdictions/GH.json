@@ -29,7 +29,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Ghana — AML/CFT Regulatory Framework", "url": "https://www.bog.gov.gh/" },
+        { "label": "GIABA Mutual Evaluation Report — Ghana", "url": "https://www.giaba.org/reports/mutual-evaluation/Ghana.html" }
+      ]
     }
   ]
 }

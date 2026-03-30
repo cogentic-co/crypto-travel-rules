@@ -14,6 +14,11 @@
         "notes": "TTSEC and CBTT developing virtual asset framework. AML/CFT Act applies."
       },
       "authorityUrl": "https://www.central-bank.org.tt/",
+      "sources": [
+        { "label": "Central Bank of Trinidad and Tobago", "url": "https://www.central-bank.org.tt/" },
+        { "label": "Proceeds of Crime Act - AML/CFT Framework", "url": "https://www.central-bank.org.tt/core-functions/aml-cft" },
+        { "label": "CFATF - Trinidad and Tobago", "url": "https://www.cfatf-gafic.org/member-countries/trinidad-and-tobago" }
+      ],
       "threshold": {
         "amount": 6800,
         "currency": "TTD",

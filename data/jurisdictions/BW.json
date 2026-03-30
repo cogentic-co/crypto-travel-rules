@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank of Botswana — AML/CFT Regulatory Framework", "url": "https://www.bankofbotswana.bw/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Botswana", "url": "https://www.esaamlg.org/reports/Botswana.php" }
+      ]
     }
   ]
 }

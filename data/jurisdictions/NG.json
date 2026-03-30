@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "SEC Nigeria — Rules on Virtual Assets Service Providers", "url": "https://sec.gov.ng/digital-assets/" },
+        { "label": "GIABA Mutual Evaluation Report — Nigeria", "url": "https://www.giaba.org/reports/mutual-evaluation/Nigeria.html" }
+      ]
     }
   ]
 }

@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "BCRG (Central Bank of Guinea) — AML/CFT Framework", "url": "https://www.bcrg-guinee.org/" },
+        { "label": "GIABA Mutual Evaluation Report — Guinea", "url": "https://www.giaba.org/reports/mutual-evaluation/Guinea.html" }
+      ]
     }
   ]
 }

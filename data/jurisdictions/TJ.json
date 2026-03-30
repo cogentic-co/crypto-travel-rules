@@ -13,6 +13,10 @@
         "notes": "National Bank AML/CFT framework. Crypto regulation still developing."
       },
       "authorityUrl": "https://nbt.tj/en/",
+      "sources": [
+        { "label": "Law on Combating Money Laundering and Financing of Terrorism (Tajikistan)", "url": "https://nbt.tj/en/" },
+        { "label": "FATF - Tajikistan (EAG Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Tajikistan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

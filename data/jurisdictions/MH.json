@@ -13,6 +13,10 @@
         "notes": "Marshall Islands explored SOV (national digital currency). Uses USD. Basic AML framework."
       },
       "authorityUrl": "https://www.rmiparliament.org/",
+      "sources": [
+        { "label": "Marshall Islands Banking Act / AML Framework", "url": "https://www.rmiparliament.org/" },
+        { "label": "APG – Marshall Islands Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=c5a3d403-d146-4af3-9b6e-2b71ffae7e1b" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

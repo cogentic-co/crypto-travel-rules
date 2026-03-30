@@ -13,6 +13,10 @@
         "notes": "Palau has explored national stablecoin initiatives. Basic AML framework applies."
       },
       "authorityUrl": "https://www.palaugov.pw/",
+      "sources": [
+        { "label": "Palau Financial Institutions Act / AML Framework", "url": "https://www.palaugov.pw/" },
+        { "label": "APG – Palau Mutual Evaluation Report", "url": "https://www.apgml.org/members-and-observers/members/details.aspx?m=2aadaab3-6219-4e6c-9a5a-36ccea55bb50" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

@@ -29,7 +29,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Bank Al-Maghrib — AML/CFT Regulatory Framework", "url": "https://www.bkam.ma/" },
+        { "label": "FATF/MENAFATF Mutual Evaluation Report — Morocco", "url": "https://www.menafatf.org/information-center/mutual-evaluation/Morocco" }
+      ]
     }
   ]
 }

@@ -28,7 +28,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Banco de Moçambique — AML/CFT Framework", "url": "https://www.bancomoc.mz/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Mozambique", "url": "https://www.esaamlg.org/reports/Mozambique.php" }
+      ]
     }
   ]
 }

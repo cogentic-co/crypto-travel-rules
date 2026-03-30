@@ -13,6 +13,11 @@
         "notes": "BCU developing crypto regulatory framework. AML/CFT law applies."
       },
       "authorityUrl": "https://www.bcu.gub.uy/",
+      "sources": [
+        { "label": "Banco Central del Uruguay", "url": "https://www.bcu.gub.uy/" },
+        { "label": "Ley 19.574 - Ley Integral contra el Lavado de Activos", "url": "https://www.bcu.gub.uy/Servicios-Financieros-SSF/Paginas/Prevencion-Lavado-de-Activos.aspx" },
+        { "label": "GAFILAT - Uruguay", "url": "https://www.gafilat.org/index.php/es/miembros/uruguay" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

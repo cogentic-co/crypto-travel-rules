@@ -29,7 +29,11 @@
           "fullName",
           "accountNumber"
         ]
-      }
+      },
+      "sources": [
+        { "label": "Financial Services Commission — Virtual Asset and Initial Token Offering Services Act", "url": "https://www.fscmauritius.org/" },
+        { "label": "ESAAMLG Mutual Evaluation Report — Mauritius", "url": "https://www.esaamlg.org/reports/Mauritius.php" }
+      ]
     }
   ]
 }

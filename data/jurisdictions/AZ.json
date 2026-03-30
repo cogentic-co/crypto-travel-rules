@@ -13,6 +13,10 @@
         "notes": "CBAR AML/CFT framework applies to virtual asset activities. Threshold in USD equivalent."
       },
       "authorityUrl": "https://www.cbar.az/",
+      "sources": [
+        { "label": "Law on Prevention of Money Laundering and Financing of Terrorism (Azerbaijan)", "url": "https://www.cbar.az/page-41/aml-cft" },
+        { "label": "FATF - Azerbaijan (MONEYVAL Mutual Evaluation)", "url": "https://www.fatf-gafi.org/en/countries/detail/Azerbaijan.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

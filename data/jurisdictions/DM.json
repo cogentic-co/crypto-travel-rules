@@ -13,6 +13,11 @@
         "notes": "ECCB member. Financial Services Unit AML framework applies."
       },
       "authorityUrl": "https://www.eccb-centralbank.org/",
+      "sources": [
+        { "label": "Eastern Caribbean Central Bank (ECCB)", "url": "https://www.eccb-centralbank.org/" },
+        { "label": "Money Laundering (Prevention) Act - Dominica", "url": "https://www.dominica.gov.dm/laws" },
+        { "label": "CFATF - Dominica", "url": "https://www.cfatf-gafic.org/member-countries/dominica" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "XCD",

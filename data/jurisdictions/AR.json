@@ -14,6 +14,11 @@
         "notes": "UIF (FIU) oversees AML/CFT compliance. CNV regulates crypto asset service providers. CUIT/CUIL tax ID required for Argentine originators. Threshold denominated in USD equivalent."
       },
       "authorityUrl": "https://www.argentina.gob.ar/cnv",
+      "sources": [
+        { "label": "Comisión Nacional de Valores (CNV) - Argentina", "url": "https://www.argentina.gob.ar/cnv" },
+        { "label": "UIF - Resolución 76/2019 AML/CFT Obligations", "url": "https://www.argentina.gob.ar/uif" },
+        { "label": "FATF - Argentina", "url": "https://www.fatf-gafi.org/en/countries/detail/Argentina.html" }
+      ],
       "threshold": {
         "amount": 1000,
         "currency": "USD",

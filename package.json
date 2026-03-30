@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "tsc",
     "validate": "tsc --noEmit",
     "test": "vitest run",
     "prepublishOnly": "npm run validate && npm run test && npm run build",

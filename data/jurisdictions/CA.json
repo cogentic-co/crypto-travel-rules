@@ -31,7 +31,7 @@
           "address"
         ]
       },
-      "notes": "FINTRAC travel rule for virtual currency transfers of CAD 1,000 or more. Legally effective June 1, 2021, with grace period for full compliance until March 31, 2022. FINTRAC requires beneficiary address in addition to name and account number."
+      "notes": "FINTRAC travel rule for virtual currency transfers of CAD 1,000 or more. Legally effective June 1, 2021, with grace period for full compliance until March 31, 2022. FINTRAC requires beneficiary address in addition to name and account number. Sources: FINTRAC Travel Rule Guidance (https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/travel-acheminement/1-eng); Proceeds of Crime (Money Laundering) and Terrorist Financing Act (https://laws-lois.justice.gc.ca/eng/acts/P-24.501/)."
     }
   ]
 }

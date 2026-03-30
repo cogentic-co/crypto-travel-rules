@@ -27,11 +27,10 @@
         ],
         "beneficiary": [
           "fullName",
-          "accountNumber",
-          "address"
+          "accountNumber"
         ]
       },
-      "notes": "BSA Travel Rule under 31 CFR 1010.410, in effect since 1996 for all funds transfers at or above $3,000."
+      "notes": "BSA Travel Rule under 31 CFR 1010.410, in effect since 1996 for all funds transfers at or above $3,000. FinCEN's application to CVC/LTDA was clarified via a final rule published in 2020 (effective 2021). For non-established customers only, an identification number (SSN/EIN or passport) is also required under paragraph (e)(2). Beneficiary address is a pass-through obligation (transmit if received), not a mandatory collection requirement. Sources: 31 CFR 1010.410 (https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-E/section-1010.410); 2020 final rule (85 FR 37771)."
     },
     {
       "versionId": "US-2028-001",
@@ -57,11 +56,10 @@
         ],
         "beneficiary": [
           "fullName",
-          "accountNumber",
-          "address"
+          "accountNumber"
         ]
       },
-      "notes": "Amendment published September 2024 (89 FR 72274) explicitly extending the Travel Rule to CVC/LTDA. Effective date delayed to 2028-01-01 per 91 FR 36 (January 2, 2026)."
+      "notes": "Amendment published September 2024 (89 FR 72274) explicitly extending the Travel Rule to CVC/LTDA. Effective date delayed to 2028-01-01 per 91 FR 36 (January 2, 2026). Sources: 89 FR 72274 (https://www.federalregister.gov/documents/2024/09/04/2024-19504); delay notice 91 FR 36."
     }
   ]
 }

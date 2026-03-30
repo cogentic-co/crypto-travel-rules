@@ -31,7 +31,7 @@
           "accountNumber"
         ]
       },
-      "notes": "FINMA Guidance 02/2019 requires travel rule compliance for ALL VASP-to-VASP transactions with no de minimis threshold. One of the strictest regimes globally. AMLO-FINMA amendment (February 2020) lowered customer identification threshold from CHF 5,000 to CHF 1,000. The CHF 1,000 threshold applies to unhosted wallet verification, not the travel rule trigger."
+      "notes": "FINMA Guidance 02/2019 requires travel rule compliance for ALL VASP-to-VASP transactions with no de minimis threshold. One of the strictest regimes globally. AMLO-FINMA amendment (February 2020) lowered customer identification threshold from CHF 5,000 to CHF 1,000. The CHF 1,000 threshold applies to unhosted wallet verification, not the travel rule trigger. Sources: FINMA Guidance 02/2019 (https://www.finma.ch/en/documentation/finma-guidance/guidance/finma-guidance-02-2019/); AMLO-FINMA SR 955.033.0 (https://www.fedlex.admin.ch/eli/cc/2010/821/en)."
     }
   ]
 }

@@ -28,7 +28,17 @@
           "accountNumber"
         ]
       },
-      "notes": "MAS Notice PSN02 applies to all DPT transfers regardless of amount. Basic info (name, account number) required for all transfers. For transfers >= SGD 1,500: enhanced originator info required — one of address, national ID, or date/place of birth (alternatives, not all mandatory). Originally effective January 28, 2020; revised April 2024. Sources: MAS Notice PSN02 (https://www.mas.gov.sg/regulation/notices/psn02-aml-cft-notice---digital-payment-token-service); MAS Guidelines to PSN02 (https://www.mas.gov.sg/regulation/guidelines/guidelines-to-notice-psn02-on-aml-and-cft---dpt)."
+      "notes": "MAS Notice PSN02 applies to all DPT transfers regardless of amount. Basic info (name, account number) required for all transfers. For transfers >= SGD 1,500: enhanced originator info required — one of address, national ID, or date/place of birth (alternatives, not all mandatory). Originally effective January 28, 2020; revised April 2024.",
+      "sources": [
+        {
+          "label": "MAS Notice PSN02",
+          "url": "https://www.mas.gov.sg/regulation/notices/psn02-aml-cft-notice---digital-payment-token-service"
+        },
+        {
+          "label": "MAS Guidelines to PSN02",
+          "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-to-notice-psn02-on-aml-and-cft---dpt"
+        }
+      ]
     }
   ]
 }

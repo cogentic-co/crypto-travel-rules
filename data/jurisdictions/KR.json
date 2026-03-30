@@ -30,7 +30,17 @@
           "accountNumber"
         ]
       },
-      "notes": "Travel rule under the Specific Financial Information Act, effective March 25, 2022. The Virtual Asset User Protection Act (VAUPA, July 19, 2024) addresses user protection and VASP supervision but is a separate instrument from the travel rule. Sources: Specific Financial Information Act (https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=53051&type=part&key=39); FSC press release on travel rule (https://www.fsc.go.kr/eng/pr010101)."
+      "notes": "Travel rule under the Specific Financial Information Act, effective March 25, 2022. The Virtual Asset User Protection Act (VAUPA, July 19, 2024) addresses user protection and VASP supervision but is a separate instrument from the travel rule.",
+      "sources": [
+        {
+          "label": "Specific Financial Information Act",
+          "url": "https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=53051&type=part&key=39"
+        },
+        {
+          "label": "FSC Press Release",
+          "url": "https://www.fsc.go.kr/eng/pr010101"
+        }
+      ]
     }
   ]
 }

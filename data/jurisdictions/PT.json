@@ -33,7 +33,17 @@
           "accountNumber"
         ]
       },
-      "notes": "EU TFR (Regulation 2023/1113, https://eur-lex.europa.eu/eli/reg/2023/1113/oj/eng) applies zero threshold to all CASP-to-CASP crypto transfers from December 30, 2024 (Art. 38). Originator must provide name, account number, and one of: address + official document number + customer ID, OR date and place of birth (Art. 14(1)(d) — alternatives, not all mandatory simultaneously). EBA Q&A 2024_6969 addresses interpretation of the 'or alternatively' clause."
+      "notes": "EU TFR (Regulation 2023/1113, .europa.eu/eli/reg/2023/1113/oj/eng) applies zero threshold to all CASP-to-CASP crypto transfers from December 30, 2024 (Art. 38). Originator must provide name, account number, and one of: address + official document number + customer ID, OR date and place of birth (Art. 14(1)(d) — alternatives, not all mandatory simultaneously). EBA Q&A 2024_6969 addresses interpretation of the 'or alternatively' clause.",
+      "sources": [
+        {
+          "label": "EU TFR - Regulation 2023/1113",
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1113/oj/eng"
+        },
+        {
+          "label": "EBA Travel Rule Guidelines",
+          "url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/anti-money-laundering-and-countering-financing-terrorism/guidelines-information-requirements-relation-transfers-funds-and-certain-crypto-assets-transfers"
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,7 @@ export interface TravelRuleVersion {
     notes?: string;
   };
   authorityUrl: string;
+  sources?: { label: string; url: string }[];
 }
 
 export interface JurisdictionData {

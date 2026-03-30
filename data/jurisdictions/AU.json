@@ -31,7 +31,13 @@
           "townAndCountry"
         ]
       },
-      "notes": "AML/CTF Amendment Bill passed late 2024. General obligations effective March 31, 2026; travel rule for virtual asset transfers effective July 1, 2026. Zero threshold — applies to all virtual asset transfers regardless of value. No crypto-specific travel rule existed prior to this reform. Sources: AUSTRAC Travel Rule Reform (https://www.austrac.gov.au/amlctf-reform/reforms-guidance/other-guidance/travel-rule-reform); AML/CTF Amendment Bill 2024 (see AUSTRAC reform page for full text)."
+      "notes": "AML/CTF Amendment Bill passed late 2024. General obligations effective March 31, 2026; travel rule for virtual asset transfers effective July 1, 2026. Zero threshold — applies to all virtual asset transfers regardless of value. No crypto-specific travel rule existed prior to this reform.",
+      "sources": [
+        {
+          "label": "AUSTRAC Travel Rule Reform",
+          "url": "https://www.austrac.gov.au/amlctf-reform/reforms-guidance/other-guidance/travel-rule-reform"
+        }
+      ]
     }
   ]
 }

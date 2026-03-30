@@ -28,7 +28,17 @@
           "accountNumber"
         ]
       },
-      "notes": "AMLO Chapter 12 amendments effective June 1, 2023. Travel rule applies to ALL virtual asset transfers regardless of amount. Basic info (name, account number) required for all transfers. For transfers >= HKD 8,000: expanded originator info required (address, ID document number). Both SFC (for VATPs) and HKMA (for authorized institutions) enforce AMLO travel rule requirements. Sources: AMLO Chapter 12 (https://www.elegislation.gov.hk/hk/cap615); SFC AML Guidelines (https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines)."
+      "notes": "AMLO Chapter 12 amendments effective June 1, 2023. Travel rule applies to ALL virtual asset transfers regardless of amount. Basic info (name, account number) required for all transfers. For transfers >= HKD 8,000: expanded originator info required (address, ID document number). Both SFC (for VATPs) and HKMA (for authorized institutions) enforce AMLO travel rule requirements.",
+      "sources": [
+        {
+          "label": "AMLO Chapter 12",
+          "url": "https://www.elegislation.gov.hk/hk/cap615"
+        },
+        {
+          "label": "SFC AML Guidelines",
+          "url": "https://www.sfc.hk/en/Rules-and-standards/Anti-money-laundering/Guidelines"
+        }
+      ]
     }
   ]
 }

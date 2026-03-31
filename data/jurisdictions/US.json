@@ -30,7 +30,7 @@
           "accountNumber"
         ]
       },
-      "notes": "BSA Travel Rule under 31 CFR 1010.410, in effect since 1996 for all funds transfers at or above $3,000. FinCEN's application to CVC/LTDA was clarified via a final rule published in 2020 (effective 2021). For non-established customers only, an identification number (SSN/EIN or passport) is also required under paragraph (e)(2). Beneficiary address is a pass-through obligation (transmit if received), not a mandatory collection requirement.",
+      "notes": "BSA Travel Rule under 31 CFR 1010.410, in effect since 1996 for all funds transfers at or above $3,000. FinCEN's application to CVC/LTDA was clarified via a final rule published in 2020 (effective 2021). For non-established customers only, an identification number (SSN/EIN or passport) is also required under paragraph (e)(2). Beneficiary address is a pass-through obligation (transmit if received), not a mandatory collection requirement. A 2024 amendment (89 FR 72274) would explicitly codify CVC/LTDA in the regulation text, but its effective date has been delayed to 2028-01-01 (per 91 FR 36, January 2, 2026) and does not change the practical requirements.",
       "sources": [
         {
           "label": "31 CFR 1010.410 (BSA Travel Rule)",
@@ -39,40 +39,9 @@
         {
           "label": "2020 Final Rule - CVC/LTDA (85 FR 37771)",
           "url": "https://www.federalregister.gov/documents/2020/10/27/2020-23756/requirements-for-certain-transactions-involving-convertible-virtual-currency-or-digital-assets"
-        }
-      ]
-    },
-    {
-      "versionId": "US-2028-001",
-      "status": "pending",
-      "effectiveFrom": "2028-01-01",
-      "effectiveTo": null,
-      "unhostedWallets": {
-        "verificationRequired": false,
-        "verificationThreshold": null,
-        "notes": "The 2020 FinCEN proposed rulemaking on unhosted wallets was never finalized."
-      },
-      "authorityUrl": "https://www.federalregister.gov/documents/2024/09/04/2024-19504",
-      "threshold": {
-        "amount": 3000,
-        "currency": "USD",
-        "isZeroThreshold": false
-      },
-      "requiredFields": {
-        "originator": [
-          "fullName",
-          "accountNumber",
-          "address"
-        ],
-        "beneficiary": [
-          "fullName",
-          "accountNumber"
-        ]
-      },
-      "notes": "Amendment published September 2024 (89 FR 72274) explicitly extending the Travel Rule to CVC/LTDA. Effective date delayed to 2028-01-01 per 91 FR 36 (January 2, 2026).",
-      "sources": [
+        },
         {
-          "label": "2024 Amendment (89 FR 72274)",
+          "label": "2024 Amendment (89 FR 72274) - delayed to 2028",
           "url": "https://www.federalregister.gov/documents/2024/09/04/2024-19504"
         }
       ]

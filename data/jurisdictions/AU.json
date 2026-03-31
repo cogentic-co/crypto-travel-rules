@@ -12,7 +12,7 @@
         "verificationRequired": true,
         "notes": "AUSTRAC Reform 2026 requires due diligence on transfers involving self-hosted wallets."
       },
-      "authorityUrl": "https://www.austrac.gov.au/business/obligations/travel-rule",
+      "authorityUrl": "https://www.austrac.gov.au/amlctf-reform/reforms-guidance/other-guidance/travel-rule-reform/travel-rule-overview-reform",
       "threshold": {
         "amount": 0,
         "currency": "AUD",

@@ -407,6 +407,80 @@ If a country announces new rules or amends thresholds:
 - Use `isZeroThreshold: true` only when the regulation applies to all transfers regardless of amount
 - Filename must match the `countryCode` field inside the JSON
 
+# Help Wanted: Expand Coverage for Beneficiary Obligations & Reporting Thresholds
+
+We have **208 jurisdictions** covered for Travel Rule thresholds and required fields — but only **41** have beneficiary obligation and reporting threshold data. Help us close the gap.
+
+## What's needed
+
+Each jurisdiction needs up to three JSON files in `data/`:
+
+| Data type | Directory | Current coverage | Target |
+|---|---|---|---|
+| Travel Rule thresholds | `data/jurisdictions/` | ✅ 208 | — |
+| Beneficiary VASP obligations | `data/beneficiary-obligations/` | 41 / 208 | 208 |
+| Reporting thresholds (STR/CTR) | `data/reporting/` | 41 / 208 | 208 |
+
+## Priority jurisdictions
+
+These are the highest-impact gaps — major crypto markets and G20 economies missing beneficiary obligation and/or reporting data. Pick one and open a PR.
+
+### 🔴 Critical — Top crypto markets
+
+- [ ] 🇯🇵 Japan (JP) — Zero-threshold, FSA/JFSA, large VASP population
+- [ ] 🇰🇷 South Korea (KR) — Active enforcement, KFIU
+- [ ] 🇭🇰 Hong Kong (HK) — SFC/HKMA dual regime
+- [ ] 🇧🇷 Brazil (BR) — CVM/Banco Central, growing market
+- [ ] 🇮🇳 India (IN) — FIU-IND, rapidly evolving framework
+- [ ] 🇲🇽 Mexico (MX) — CNBV, Fintech Law
+- [ ] 🇹🇷 Turkey (TR) — MASAK, new VASP regulations
+
+### 🟠 High — G20 & major financial centres
+
+- [ ] 🇮🇩 Indonesia (ID) — Bappebti/OJK transition
+- [ ] 🇸🇦 Saudi Arabia (SA) — SAMA
+- [ ] 🇦🇷 Argentina (AR) — CNV/UIF
+- [ ] 🇷🇺 Russia (RU) — Rosfinmonitoring (complex sanctions context)
+- [ ] 🇮🇹 Italy (IT) — OAM, EU TFR implementation
+- [ ] 🇳🇱 Netherlands (NL) — DNB, EU TFR implementation
+- [ ] 🇵🇱 Poland (PL) — KNF, EU TFR implementation
+- [ ] 🇮🇪 Ireland (IE) — CBI, EU TFR implementation
+- [ ] 🇱🇺 Luxembourg (LU) — CSSF, major fund domicile
+
+### 🟡 Medium — Regional hubs & emerging markets
+
+- [ ] 🇹🇭 Thailand (TH) — SEC Thailand
+- [ ] 🇵🇭 Philippines (PH) — BSP
+- [ ] 🇻🇳 Vietnam (VN) — SBV, framework in development
+- [ ] 🇳🇬 Nigeria (NG) — SEC Nigeria, large P2P market
+- [ ] 🇰🇪 Kenya (KE) — CMA
+- [ ] 🇿🇦 South Africa (ZA) — FSCA/FIC
+- [ ] 🇨🇱 Chile (CL) — CMF, new Fintech Law
+- [ ] 🇨🇴 Colombia (CO) — SFC/UIAF
+- [ ] 🇧🇭 Bahrain (BH) — CBB, zero-threshold regime
+- [ ] 🇶🇦 Qatar (QA) — QFCRA/QCB
+
+## How to contribute
+
+1. **Fork** the repo, create a branch: `git checkout -b add/XX-country-name`
+2. **Pick a jurisdiction** from the list above
+3. **Create the JSON file(s)** — use existing files as templates:
+   - [`data/beneficiary-obligations/DE.json`](data/beneficiary-obligations/DE.json) — beneficiary obligations template
+   - [`data/reporting/US.json`](data/reporting/US.json) — reporting thresholds template
+4. **Include an `authorityUrl`** pointing to the primary regulatory text (not a news article)
+5. **Validate**: `npm run validate && npm run validate:data`
+6. **Open a PR** with a note on which regulatory source you referenced
+
+You don't need to add all file types at once — a single beneficiary obligations or reporting file for one jurisdiction is a valuable contribution.
+
+## Schema reference
+
+See [`src/types.ts`](src/types.ts) for the full TypeScript type definitions. The README has detailed field-by-field documentation.
+
+## Questions?
+
+Open an issue if you're unsure about a jurisdiction's requirements or need help interpreting regulatory text. We're happy to help.
+
 ## Disclaimer
 
 This project is provided for informational purposes only and does not constitute legal, regulatory, or compliance advice. While every effort is made to keep the data accurate and up to date, regulatory requirements change frequently. Always verify rules against the primary regulatory sources cited in each jurisdiction file before making compliance decisions.

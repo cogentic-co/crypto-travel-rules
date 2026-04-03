@@ -60,20 +60,13 @@ Contributions welcome — especially new jurisdictions and data accuracy improve
 5. **Validate**: `npm run validate && npm run validate:data`
 6. **Open a PR** with a note on which regulatory text you referenced
 
+You don't need to add all three file types at once — any single contribution is valuable.
+
 **Updating an existing jurisdiction?** Just add a new entry to the `rules` array with `status: "pending"` and the future `effectiveFrom` date. The engine picks the correct rule by date automatically.
 
-## Documentation
+### Help Wanted: Beneficiary Obligations & Reporting Thresholds
 
-- **[SCHEMA.md](SCHEMA.md)** — Detailed field-by-field documentation for all data types (jurisdiction objects, PII fields, beneficiary obligations, reporting thresholds)
-- **[data/DIRECTORY.md](data/DIRECTORY.md)** — Full directory of all 208 jurisdictions with status and thresholds
-
-# Help Wanted: Expand Coverage for Beneficiary Obligations & Reporting Thresholds
-
-We have **208 jurisdictions** covered for Travel Rule thresholds and required fields — but only **41** have beneficiary obligation and reporting threshold data. Help us close the gap.
-
-## What's needed
-
-Each jurisdiction needs up to three JSON files in `data/`:
+We have **208 jurisdictions** covered for travel rule thresholds — but only **41** have beneficiary obligation and reporting threshold data. Help us close the gap.
 
 | Data type | Directory | Current coverage | Target |
 |---|---|---|---|
@@ -81,11 +74,9 @@ Each jurisdiction needs up to three JSON files in `data/`:
 | Beneficiary VASP obligations | `data/beneficiary-obligations/` | 41 / 208 | 208 |
 | Reporting thresholds (STR/CTR) | `data/reporting/` | 41 / 208 | 208 |
 
-## Priority jurisdictions
+Use existing files as templates: [`data/beneficiary-obligations/DE.json`](data/beneficiary-obligations/DE.json), [`data/reporting/US.json`](data/reporting/US.json).
 
-These are the highest-impact gaps — major crypto markets and G20 economies missing beneficiary obligation and/or reporting data. Pick one and open a PR.
-
-### 🔴 Critical — Top crypto markets
+#### 🔴 Critical — Top crypto markets
 
 - [ ] 🇯🇵 Japan (JP) — Zero-threshold, FSA/JFSA, large VASP population
 - [ ] 🇰🇷 South Korea (KR) — Active enforcement, KFIU
@@ -95,7 +86,7 @@ These are the highest-impact gaps — major crypto markets and G20 economies mis
 - [ ] 🇲🇽 Mexico (MX) — CNBV, Fintech Law
 - [ ] 🇹🇷 Turkey (TR) — MASAK, new VASP regulations
 
-### 🟠 High — G20 & major financial centres
+#### 🟠 High — G20 & major financial centres
 
 - [ ] 🇮🇩 Indonesia (ID) — Bappebti/OJK transition
 - [ ] 🇸🇦 Saudi Arabia (SA) — SAMA
@@ -107,7 +98,7 @@ These are the highest-impact gaps — major crypto markets and G20 economies mis
 - [ ] 🇮🇪 Ireland (IE) — CBI, EU TFR implementation
 - [ ] 🇱🇺 Luxembourg (LU) — CSSF, major fund domicile
 
-### 🟡 Medium — Regional hubs & emerging markets
+#### 🟡 Medium — Regional hubs & emerging markets
 
 - [ ] 🇹🇭 Thailand (TH) — SEC Thailand
 - [ ] 🇵🇭 Philippines (PH) — BSP
@@ -120,26 +111,12 @@ These are the highest-impact gaps — major crypto markets and G20 economies mis
 - [ ] 🇧🇭 Bahrain (BH) — CBB, zero-threshold regime
 - [ ] 🇶🇦 Qatar (QA) — QFCRA/QCB
 
-## How to contribute
+Open an issue if you're unsure about a jurisdiction's requirements or need help interpreting regulatory text.
 
-1. **Fork** the repo, create a branch: `git checkout -b add/XX-country-name`
-2. **Pick a jurisdiction** from the list above
-3. **Create the JSON file(s)** — use existing files as templates:
-   - [`data/beneficiary-obligations/DE.json`](data/beneficiary-obligations/DE.json) — beneficiary obligations template
-   - [`data/reporting/US.json`](data/reporting/US.json) — reporting thresholds template
-4. **Include an `authorityUrl`** pointing to the primary regulatory text (not a news article)
-5. **Validate**: `npm run validate && npm run validate:data`
-6. **Open a PR** with a note on which regulatory source you referenced
+## Documentation
 
-You don't need to add all file types at once — a single beneficiary obligations or reporting file for one jurisdiction is a valuable contribution.
-
-## Schema reference
-
-See [`src/types.ts`](src/types.ts) for the full TypeScript type definitions. The README has detailed field-by-field documentation.
-
-## Questions?
-
-Open an issue if you're unsure about a jurisdiction's requirements or need help interpreting regulatory text. We're happy to help.
+- **[SCHEMA.md](SCHEMA.md)** — Detailed field-by-field documentation for all data types (jurisdiction objects, PII fields, beneficiary obligations, reporting thresholds)
+- **[data/DIRECTORY.md](data/DIRECTORY.md)** — Full directory of all 208 jurisdictions with status and thresholds
 
 ## Disclaimer
 

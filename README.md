@@ -1,5 +1,7 @@
 # Crypto Travel Rules
 
+[![npm version](https://img.shields.io/npm/v/@cogentic-co/crypto-travel-rules?registry_uri=https%3A%2F%2Fnpm.pkg.github.com)](https://github.com/cogentic-co/crypto-travel-rules/packages) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE) [![jurisdictions](https://img.shields.io/badge/jurisdictions-208-brightgreen)](data/DIRECTORY.md)
+
 Machine-readable JSON directory of global Travel Rule requirements with a TypeScript SDK.
 
 The FATF Travel Rule requires VASPs to exchange originator and beneficiary information during crypto transfers — but 208+ jurisdictions are implementing it at different times, with different thresholds, and different data requirements. This is the **Sunrise Problem**. This project provides structured, IVMS101-aligned data for every jurisdiction and a compliance engine that resolves which rules apply for a given country and date.

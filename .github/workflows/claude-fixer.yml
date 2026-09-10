@@ -1,0 +1,36 @@
+name: Claude Fixer
+
+# Thin trigger stub. The dispatch trigger has to live in this repo; everything
+# else (trusted default-branch checkout, toolchain, tool allowlist, result
+# contract, timeout) lives in the shared reusable workflow. To change
+# behaviour, edit cogentic-co/github-actions, not this file.
+# Requires the org secret CLAUDE_CODE_OAUTH_TOKEN; NPM_PKG_READ_TOKEN is
+# picked up too when this repo has one (secrets: inherit).
+#
+# Kill switch: repository variable CLAUDE_FIXER_DISABLED=true.
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: What to fix. Trusted text — you are the author.
+        type: string
+        required: true
+      slug:
+        description: Short name for the branch (claude-fixer/<slug>-<run_id>).
+        type: string
+        default: task
+
+jobs:
+  fix:
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: read
+    uses: cogentic-co/github-actions/.github/workflows/claude-fixer.yml@main
+    with:
+      prompt: ${{ inputs.prompt }}
+      slug: ${{ inputs.slug }}
+    secrets: inherit

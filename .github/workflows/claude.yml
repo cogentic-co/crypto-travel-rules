@@ -1,0 +1,28 @@
+name: Claude Code
+
+# Thin trigger stub. These events can only be subscribed to from a workflow file
+# in this repo; all logic (the @claude gate, the pinned action ref, the tool
+# allowlist, the job timeout) lives in the shared reusable workflow. To change
+# behaviour, edit cogentic-co/github-actions, not this file.
+# Requires the org secret CLAUDE_CODE_OAUTH_TOKEN (secrets: inherit).
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  claude:
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: write
+      id-token: write
+      actions: read
+    uses: cogentic-co/github-actions/.github/workflows/claude.yml@main
+    secrets: inherit

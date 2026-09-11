@@ -1,0 +1,25 @@
+name: Claude Code Review
+
+# Thin trigger stub. The pull_request trigger must live in this repo; all logic
+# (the bot/draft skip, the action ref, the review prompt, the job timeout and
+# per-PR concurrency) lives in the shared reusable workflow. To change
+# behaviour, edit cogentic-co/github-actions, not this file.
+# Requires the org secret CLAUDE_CODE_OAUTH_TOKEN (secrets: inherit).
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+
+jobs:
+  claude-review:
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: read
+      id-token: write
+      # So the review can read CI results on the PR. A reusable callee cannot
+      # request more than its caller grants, and the shared workflow declares
+      # this, so omitting it hard-fails the run at startup_failure.
+      actions: read
+    uses: cogentic-co/github-actions/.github/workflows/claude-code-review.yml@main
+    secrets: inherit
